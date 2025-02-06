@@ -1,0 +1,72 @@
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Flexiblere Höhe der oberen und unteren Zeilen */
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  padding: 40px;
+  /* Reduziertes Padding, um mehr Platz zu lassen */
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  /* Flexbox zur Ausrichtung */
+  justify-content: center;
+  /* Inhalte zentrieren */
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--light);
+
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  /* Flexbox zur Ausrichtung */
+  justify-content: center;
+  /* Inhalte zentrieren */
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--danger);
+}
+
+/* Original styles */
+
+/* Responsive styles added */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}

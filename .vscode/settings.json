@@ -1,0 +1,32 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "hosting-data.ionos.de",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "user_management",
+            "username": " dbu1330002",
+            "database": "dbs13584230",
+            "password": "Chakalakachakalaka1312."
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "hosting-data.ionos.de",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "use_management",
+            "database": "dbs13584230",
+            "username": "dbu1330002",
+            "password": "Chakalakachakalaka1312."
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+/* home.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.leftSection,
+.rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Inhalte gleichmäßig verteilen */
+}
+
+.leftSection {
+    gap: 2rem;
+}
+
+.rightSection {
+    gap: 1rem;
+}
+
+
+.slider {
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    max-width: 800px;
+}
+
+.sliderContainer {
+    width: 80%;
+}
+
+.mainSlider {
+    .mainSlider {
+        width: 100%;
+        height: 100%;
+        /* Füllt die gesamte Höhe der Spalte */
+        aspect-ratio: auto;
+        /* Verhindert Verzerrungen */
+        border-radius: 8px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+}
+
+
+.aboutUs {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    color: var(--light);
+    margin: 0.5rem 0;
+}
+
+.aboutUs h2 {
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+
+.companyInfo {
+    margin-top: 1rem;
+}
+
+.companyInfo ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.companyInfo li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.companyInfo li:before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+}
+
+
+/* Additional Style Tweaks */
+.aboutUs:hover {
+    box-shadow: 0 0 12px var(--secondary-dark);
+}
+
+/* Original styles */
+
+/* Responsive styles added */
+@media (max-width: 768px) {
+    .hero {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        font-size: 16px;
+    }
+}
