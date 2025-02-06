@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "paths": {
+    "@/*": [
+      "./*"
+    ],
+    "@/components/*": [
+      "./components/*"
+    ],
+    "@/layout/*": [
+      "components/navigation/*"
+    ],
+    "@/ui/*": [
+      "./components/ui/*"
+    ],
+    "@/features/*": [
+      "./components/features/*"
+    ],
+    "@/styles/*": [
+      "./styles/*"
+    ],
+    "@/public/*": [
+      "./public/*"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

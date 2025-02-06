@@ -1,0 +1,22 @@
+/* Original styles */
+
+/* Responsive styles added */
+@media (max-width: 768px) {
+
+    /* Adjust layout for tablets and small devices */
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Adjust layout for phones */
+    .button {
+        padding: 6px 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,91 @@
+/* navigation.module.css */
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background-color: var(--primary);
+
+}
+
+
+.navigation p {
+    color: var(--primary);
+    background-color: black, 0.5, 0.5;
+    text-decoration: none;
+}
+
+
+.navContainer {
+    display: flex;
+}
+
+.leftNav img {
+    width: 25%;
+}
+
+.leftNav img {
+    margin-right: 10px;
+    /* Abstand zwischen Logo und Text */
+    width: 200px;
+    height: auto;
+}
+
+.rightNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hotButton {
+    padding: 7px 12px;
+    border-radius: 50px;
+    background-color: red;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin: 0 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hotButton:hover {
+    background-color: #ff0000;
+    color: white;
+    box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+    transform: scale(1.2);
+}
+
+.normalButton {
+    padding: 7px 12px;
+    border-radius: 50px;
+    color: aliceblue;
+    background-color: blue;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin: 0 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.normalButton:hover {
+    background-color: #0000ff;
+    color: white;
+    box-shadow: 0 0 10px #0000ff, 0 0 40px #0000ff, 0 0 80px #0000ff;
+    transform: scale(1.1);
+}
+
+.middleBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: none;
+}
+
+.slide:active {
+    background-color: black;
+
+}

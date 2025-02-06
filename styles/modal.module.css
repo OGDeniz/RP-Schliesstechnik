@@ -1,0 +1,103 @@
+/*
+    In diesem Modul definieren wir die Styles für das Modal. Das Modal wird in der Datei components/Modal.js verwendet. 
+    Modal bezeichnet ein Fenster, das über dem eigentlichen Inhalt der Webseite erscheint. In unserem Fall wird das Modal verwendet, 
+    um die Details eines Produkts anzuzeigen und dem Benutzer die Möglichkeit zu geben, das Produkt zu kaufen. Das Modal wird angezeigt, wenn der Benutzer auf ein Produkt klickt. 
+*/
+
+/* styles/modal.module.css */
+.modalContent {
+    padding: 2rem;
+}
+
+.productHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.productInfo {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.productInfo h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary-dark);
+    margin-top: 0.5rem;
+}
+
+.paymentOptions h4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.paymentButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.paymentButton {
+    width: 150px;
+    height: 75px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.paymentIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#basic-nav-dropdown {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+}
+
+/* Original styles */
+
+/* Responsive styles added */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        font-size: 14px;
+    }
+}
