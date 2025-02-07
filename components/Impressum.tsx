@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
+// @ts-ignore
 const ImpressumOut = ({ contactInfo }) => {
     return (
         <div className="container mt-4" style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', lineHeight: '1.6' }}>
-            <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Impressum</h1>
 
             <section>
                 <h2>Angaben gemäß § 5 TMG</h2>
@@ -17,8 +17,8 @@ const ImpressumOut = ({ contactInfo }) => {
                     Telefon: {contactInfo?.phone}<br />
                     E-Mail: <a href={`mailto:${contactInfo?.email}`}>{contactInfo?.email}</a><br />
                     Website: <a href={contactInfo?.website} target="_blank" rel="noopener noreferrer">
-                    {contactInfo?.website.replace('https://', '').replace('www.', '')}
-                </a>
+                        {contactInfo?.website.replace('https://', '').replace('www.', '')}
+                    </a>
                 </p>
             </section>
 
@@ -41,8 +41,8 @@ const ImpressumOut = ({ contactInfo }) => {
                 <h2>Streitschlichtung</h2>
                 <p>
                     Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href={contactInfo?.odrLink} target="_blank" rel="noopener noreferrer">
-                    {contactInfo?.odrLink}
-                </a>.<br />
+                        {contactInfo?.odrLink}
+                    </a>.<br />
                     Unsere E-Mail-Adresse finden Sie oben im Impressum.<br />
                     Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                 </p>

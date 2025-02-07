@@ -1,14 +1,21 @@
 /* navigation.module.css */
 
+
 .navigation {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     padding: 1rem;
     background-color: var(--primary);
 
 }
 
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 40px;
+    background-color: var(--primary);
+}
 
 .navigation p {
     color: var(--light);
@@ -16,21 +23,43 @@
     text-decoration: none;
 }
 
+.navigation h1 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation h2 {
+    text-align: center;
+    text-shadow: var(--text-shadow-light);
+
+}
+
+.navigation h3 {
+    text-align: center;
+    color: var(--secondary);
+    text-shadow: var(--text-shadow-dark);
+}
+
 
 .navContainer {
     display: flex;
 }
 
-.leftNav img {
-    width: 25%;
-}
+
 
 .leftNav img {
-    margin-right: 10px;
-    /* Abstand zwischen Logo und Text */
-    width: 200px;
-    height: auto;
+    cursor: pointer;
+    width: 100%;
+
+
 }
+
+.rightTopNav {
+    width: 60%;
+}
+
 
 .rightNav {
     display: flex;
@@ -38,43 +67,13 @@
     justify-content: center;
 }
 
-.hotButton {
-    padding: 7px 12px;
-    border-radius: 50px;
-    background-color: red;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    margin: 0 5px;
-    font-weight: 700;
-    text-align: center;
-}
+.rightBottomNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-evenly;
+    padding: .3rem;
 
-.hotButton:hover {
-    background-color: #ff0000;
-    color: white;
-    box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
-    transform: scale(1.2);
-}
-
-.normalButton {
-    padding: 7px 12px;
-    border-radius: 50px;
-    color: aliceblue;
-    background-color: blue;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    margin: 0 5px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.normalButton:hover {
-    background-color: #0000ff;
-    color: white;
-    box-shadow: 0 0 10px #0000ff, 0 0 40px #0000ff, 0 0 80px #0000ff;
-    transform: scale(1.1);
 }
 
 .middleBottom {
@@ -82,20 +81,74 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     background: none;
 }
 
-.slide {
+.asideNav {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    width: 10%;
 
+}
+
+.asideNav img {
+    cursor: pointer;
+}
+
+.asideNav img:hover {
+    transform: scale(1.1);
+}
+
+.asideNav li {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-family: var(--font-family-primary);
+}
+
+.asideNavGridItem {
+    text-align: center;
+}
+
+.item1 {
+    color: var(--danger);
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: var(--text-shadow-dark);
+    margin: .5rem;
+}
+
+.item2 {
+    color: var(--light);
+}
+
+.item3 {
+    color: var(--light);
 }
 
 .slide:active {
     transform: scale(0.9);
     text-align: center;
     color: tomato;
+}
+
+
+.button {
+    padding: 7px 12px;
+    background-color: var(--primary);
+    border-style: none;
+    font-weight: 650;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(199, 199, 199, 0.29), 0 0 40px rgba(199, 199, 199, 0.29), 0 0 80px rgba(199, 199, 199, 0.29);
+    transform: scale(1.1);
 }

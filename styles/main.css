@@ -9,9 +9,16 @@
   --success: #08eb00a4;
   --danger: #FF0000;
 
+  ;
+
   /* Schrift */
   --font-family-primary: 'Roboto', sans-serif;
   --font-family-secondary: 'Arial', sans-serif;
+
+  /* Schriftschatten */
+  --text-shadow-light: 2px 2px rgba(151, 140, 141, 0.479);
+
+  --text-shadow-dark: 2.5px 2px rgba(0, 0, 0, 0.479);
 
   /* Abstände */
   --padding-small: 8px;
@@ -32,7 +39,7 @@
 body {
   font-family: var(--font-family-primary);
   color: var(--dark);
-  background-color: var(--light);
+  background-color: var(--primary);
   line-height: 1.6;
 }
 

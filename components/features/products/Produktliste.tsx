@@ -1,8 +1,9 @@
 // components/features/products/Produktliste.jsx
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useRouter } from 'next/router';
-import jsonDb from "@/components/data/produkte";
+import jsonDb from "../../data/produkte";
 import Image from "next/image";
 import styles from "@/styles/cards.module.css";
 import modalStyles from "@/styles/modal.module.css";
@@ -23,7 +24,7 @@ export default function Produktliste() {
     };
 
     const handlePaymentSelection = (paymentMethod) => {
-        switch(paymentMethod) {
+        switch (paymentMethod) {
             case 'paypal':
                 router.push('/checkout/paypal');
                 break;
@@ -41,7 +42,7 @@ export default function Produktliste() {
         <>
             <div className={styles.cards}>
                 {jsonDb.produkte.map((produkt, index) => (
-                    <div key={produkt.id || index} className={styles.cardWrapper}>
+                    <div key={produkt.produktId || index} className={styles.cardWrapper}>
                         <div className={styles.card}>
                             <div className={styles.cardImageContainer}>
                                 <Image
@@ -52,15 +53,15 @@ export default function Produktliste() {
                                     className={styles.cardImage}
                                 />
                             </div>
-                            
+
                             <div className={styles.cardContent}>
                                 <h2 className={styles.cardTitle}>{produkt.name}</h2>
                                 <p className={styles.cardDescription}>{produkt.produktbeschreibung}</p>
                             </div>
-                            
+
                             <div className={styles.cardActions}>
                                 <span className={styles.cardPrice}>{produkt.preis} €</span>
-                                <button 
+                                <button
                                     className={styles.cardButton}
                                     onClick={() => handleBuchen(produkt)}
                                 >
@@ -72,8 +73,8 @@ export default function Produktliste() {
                 ))}
             </div>
 
-            <Modal 
-                show={showModal} 
+            <Modal
+                show={showModal}
                 onHide={handleClose}
                 centered
             >
@@ -84,47 +85,47 @@ export default function Produktliste() {
                             <span>50 €</span>
                         </div>
                     </div>
-                    
+
                     <div className={modalStyles.paymentOptions}>
                         <h4>Wählen Sie Ihre Zahlungsart:</h4>
                         <div className={modalStyles.paymentButtons}>
                             <button
-                            className={`${modalStyles.paymentButton} ${modalStyles.paypal}`}
-                            onClick={() => handlePaymentSelection('paypal')}
+                                className={`${modalStyles.paymentButton} ${modalStyles.paypal}`}
+                                onClick={() => handlePaymentSelection('paypal')}
                             >
-                            <Image
-                                src="/svg/paypal.svg"
-                                alt="PayPal Express Checkout"
-                                width={50}
-                                height={50}
-                                className={modalStyles.paymentIcon}
-                            />
+                                <Image
+                                    src="/svg/paypal.svg"
+                                    alt="PayPal Express Checkout"
+                                    width={50}
+                                    height={50}
+                                    className={modalStyles.paymentIcon}
+                                />
                             </button>
                             <button
-                            className={`${modalStyles.paymentButton} ${modalStyles.sofort}`}
-                            onClick={() => handlePaymentSelection('sofort')}
+                                className={`${modalStyles.paymentButton} ${modalStyles.sofort}`}
+                                onClick={() => handlePaymentSelection('sofort')}
                             >
-                            <Image
-                                src="/svg/sofort.svg"
-                                alt="Sofort Überweisung"
-                                width={50}
-                                height={50}
-                                className={modalStyles.paymentIcon}
-                            />
+                                <Image
+                                    src="/svg/sofort.svg"
+                                    alt="Sofort Überweisung"
+                                    width={50}
+                                    height={50}
+                                    className={modalStyles.paymentIcon}
+                                />
                             </button>
                             <button
-                            className={`${modalStyles.paymentButton} ${modalStyles.rechnung}`}
-                            onClick={() => handlePaymentSelection('rechnung')}
+                                className={`${modalStyles.paymentButton} ${modalStyles.rechnung}`}
+                                onClick={() => handlePaymentSelection('rechnung')}
                             >
-                            <Image
-                                src="/svg/rechnung.svg"
-                                alt="Rechnung"
-                                width={50}
-                                height={50}
-                                className={modalStyles.paymentIcon}
-                            />
+                                <Image
+                                    src="/svg/rechnung.svg"
+                                    alt="Rechnung"
+                                    width={50}
+                                    height={50}
+                                    className={modalStyles.paymentIcon}
+                                />
                             </button>
-                            
+
                         </div>
                     </div>
                 </div>

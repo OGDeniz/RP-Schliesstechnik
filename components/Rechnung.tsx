@@ -1,7 +1,7 @@
-// pages/checkout.jsx
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import styles from '@/styles/checkout.module.css';
+
 
 export default function Rechnung() {
     const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ export default function Rechnung() {
 
             <Form onSubmit={handleSubmit} className={styles.checkoutForm}>
                 <h2>Rechnungsadresse</h2>
-                
+
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
                         <Form.Label >Vorname*</Form.Label>
@@ -131,8 +131,8 @@ export default function Rechnung() {
                     </Form.Group>
                 </div>
 
-                <Button 
-                    type="submit" 
+                <Button
+                    type="submit"
                     className={styles.submitButton}
                 >
                     Kostenpflichtig bestellen

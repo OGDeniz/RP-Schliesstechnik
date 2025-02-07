@@ -1,13 +1,9 @@
 
-import reviews from "@/components/data/reviews";
-import Image from "next/image";
 import { useMemo } from "react";
 import homeStyles from "../styles/home.module.css";
-
-import Slider from "@/components/ui/Slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
+import Slider from "../components/ui/Slider";
 
 export default function Home() {
   const sliderImages = useMemo(() => [
@@ -39,7 +35,7 @@ export default function Home() {
   ], []);
 
   return (
-    <div className={homeStyles.container}>
+    <div className={homeStyles.container} >
       <Slider images={sliderImages} className={homeStyles.slider} />
 
     </div>
