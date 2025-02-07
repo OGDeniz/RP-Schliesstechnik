@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import homestyles from '@/styles/home.module.css';
+import homestyles from '../styles/home.module.css';
 import Image from 'next/image';
 
 const ContactUs = () => {
@@ -36,7 +36,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="container mt-4">
+        <div className={homestyles.container}>
             <section className={homestyles.aboutus}>
 
             </section>

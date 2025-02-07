@@ -1,7 +1,7 @@
 import React from 'react';
-import homestyles from '@/styles/home.module.css';
+import homestyles from '../../styles/home.module.css';
 import Link from 'next/link';
-import Contact from '@/components/Contact';
+import Contact from '../../components/Contact';
 import Image from 'next/image';
 import styles from '@/styles/aboutus.module.css';
 

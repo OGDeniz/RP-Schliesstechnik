@@ -5,8 +5,8 @@ import { Modal } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import jsonDb from "../../data/produkte";
 import Image from "next/image";
-import styles from "@/styles/cards.module.css";
-import modalStyles from "@/styles/modal.module.css";
+import styles from "../../../styles/cards.module.css";
+import modalStyles from "../../../styles/modal.module.css";
 
 export default function Produktliste() {
     const [showModal, setShowModal] = useState(false);
