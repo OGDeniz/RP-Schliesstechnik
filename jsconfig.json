@@ -1,34 +1,41 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
     "target": "es6",
-    "module": "esnext",
-    "moduleResolution": "node"
+    "module": "commonjs",
+    "checkJs": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@/*": [
+        "./*",
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    }
   },
-  "paths": {
-    "@/*": [
-      "./*"
-    ],
-    "@/components/*": [
-      "./components/*"
-    ],
-    "@/layout/*": [
-      "components/navigation/*"
-    ],
-    "@/ui/*": [
-      "./components/ui/*"
-    ],
-    "@/features/*": [
-      "./components/features/*"
-    ],
-    "@/styles/*": [
-      "./styles/*"
-    ],
-    "@/public/*": [
-      "./public/*"
-    ]
-  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]
