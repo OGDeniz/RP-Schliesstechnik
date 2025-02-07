@@ -20,28 +20,36 @@ export default function Navigation() {
         <div className={styles.leftNav}>
           <Link href="/">
             <Image
-              src="/bilder/img5.png"
+              src="/RP_Logos/RP_Logo_white3D.png"
               alt="RP-Schließtechnik"
               width={150}
               height={100}
             />
           </Link>
+          <p >RP Schliesstechnik</p>
         </div>
 
 
-
-        <div className={styles.rightNav}>
-          {/* Dynamisch alle Buttons aus buttonData anzeigen */}
-          {buttonData.map((button) => (
-            <button
-              key={button.id} // Eindeutige ID für React (wichtig bei Listen) 
-              onClick={button.handleClick}
-              className={button.className} // CSS-Klasse anwenden
-            >
-              {button.label}
-            </button>
-          ))}
+        <div>
+          <div className={styles.asideNav}>
+            <div className={styles.asideNavGridItem}>
+              <li className={styles.item1}>Ausgesperrt?</li>
+            </div>
+          </div>
+          <div className={styles.rightNav}>
+            {/* Dynamisch alle Buttons aus buttonData anzeigen */}
+            {buttonData.map((button) => (
+              <button
+                key={button.id} // Eindeutige ID für React (wichtig bei Listen) 
+                onClick={button.handleClick}
+                className={button.className} // CSS-Klasse anwenden
+              >
+                {button.label}
+              </button>
+            ))}
+          </div>
         </div>
+
 
 
         <div className={styles.asideNav}>
@@ -49,16 +57,11 @@ export default function Navigation() {
             onClick={() => { window.location.href = "tel:+4917623687542"; }}>
 
           </Image>
-          <div className={styles.asideNavGrid}>
-            <div className={styles.asideNavGridItem}>
-              <li className={styles.item1}>Ausgesperrt?</li>
-              <li className={styles.item2}>24H Notrufnummer</li>
-              <li className={styles.item3}>+49 176 236 875 42</li>
-            </div>
-          </div>
         </div>
       </div>
+      <hr className={styles.line} />
     </nav >
+
 
   );
 }

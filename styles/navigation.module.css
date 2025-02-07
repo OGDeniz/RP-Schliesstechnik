@@ -6,6 +6,9 @@
     padding: 1rem;
     background-color: var(--primary);
 
+
+
+
 }
 
 .navContainer {
@@ -14,8 +17,10 @@
     justify-content: space-around;
     align-items: center;
     column-gap: 40px;
+
     background-color: var(--primary);
 }
+
 
 .navigation p {
     color: var(--light);
@@ -43,18 +48,16 @@
 }
 
 
-.navContainer {
-    display: flex;
-}
-
-
-
 .leftNav img {
     cursor: pointer;
-    width: 100%;
-
-    background-color: var(--secondary);
     margin: .5rem;
+    width: 85%;
+
+}
+
+.leftNav p {
+    letter-spacing: 1px;
+    text-shadow: var(--text-shadow-dark);
 }
 
 .rightTopNav {
@@ -64,7 +67,7 @@
 
 .rightNav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -76,6 +79,7 @@
     padding: .3rem;
 
 }
+
 
 .middleBottom {
     display: flex;
@@ -91,8 +95,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 10%;
-
 }
 
 .asideNav img {
@@ -104,6 +106,7 @@
 }
 
 .asideNav li {
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -166,4 +169,9 @@
     font-size: 1.2rem;
     text-align: center;
 
+}
+
+.line {
+    height: 5px;
+    background-color: white;
 }
