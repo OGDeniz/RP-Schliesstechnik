@@ -39,18 +39,20 @@ export default function Home() {
 
   return (
     <div className={homeStyles.container} >
-      <h1 className={homeStyles.title}>Schlüsseldienst</h1>
+      <h1 className={homeStyles.title}>24H Schlüsselnotdienst in Bruchsal und umgebung</h1>
+      <p className={homeStyles.description}>
+        RP Schließtechnik – Ihr zuverlässiger Partner für Schließsysteme und Sicherheitstechnik. Wir bieten Ihnen professionelle Lösungen für Privatkunden, Gewerbe und öffentliche Einrichtungen. Ob Schließanlagen, Zylinderschlösser oder elektronische Schließsysteme – wir sind für Sie da, wenn es um Ihre Sicherheit geht.
+      </p>
 
 
-      <div className={styles.middleTop}>
+      <div className={styles.description}>
         <h3>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar! </h3>
       </div>
-      <div className={styles.middleBottom}>
 
-        <div className={styles.TexSlider}>
-          <TexSlider />
-        </div>
+      <div className={styles.textSlider}>
+        <TexSlider />
       </div>
+
 
 
       <Slider images={sliderImages} className={homeStyles.slider} />
