@@ -1,7 +1,7 @@
 // pages/checkout.jsx
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import styles from '@/styles/checkout.module.css';
+import styles from '../../styles/checkout.module.css';
 
 export default function Checkout() {
     const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ export default function Checkout() {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         try {
             const response = await fetch('/api/sendInvoice', {
                 method: 'POST',
@@ -33,7 +33,7 @@ export default function Checkout() {
                 },
                 body: JSON.stringify(formData),
             });
-    
+
             if (response.ok) {
                 alert('Die Rechnung wurde erfolgreich gesendet!');
             } else {
@@ -46,11 +46,11 @@ export default function Checkout() {
     };
     return (
         <div className={styles.checkoutContainer}>
-            <h1 class="text-center mb-4">Bestellung abschließen</h1>
+            <h1>Bestellung abschließen</h1>
 
             <Form onSubmit={handleSubmit} className={styles.checkoutForm}>
                 <h2>Rechnungsadresse</h2>
-                
+
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
 
@@ -147,7 +147,7 @@ export default function Checkout() {
                         />
                     </Form.Group>
                 </div>
-            
+
                 <h2>Bestellung</h2>
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
@@ -163,8 +163,8 @@ export default function Checkout() {
                     </Form.Group>
                 </div>
 
-                <Button 
-                    type="submit" 
+                <Button
+                    type="submit"
                     className={styles.submitButton}
                 >
                     Kostenpflichtig bestellen
