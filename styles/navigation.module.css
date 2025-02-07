@@ -11,7 +11,7 @@
 
 
 .navigation p {
-    color: var(--primary);
+    color: var(--light);
     font-size: 1.5rem;
     text-decoration: none;
 }
@@ -86,7 +86,16 @@
     background: none;
 }
 
-.slide:active {
-    background-color: black;
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 
+}
+
+.slide:active {
+    transform: scale(0.9);
+    text-align: center;
+    color: tomato;
 }

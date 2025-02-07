@@ -5,7 +5,8 @@ const nextConfig = {
     /* config options here */
     reactStrictMode: true,
     images: {
-        domains: ["server.tuthub.io", "localhost", "www.tuthub.io"]
+        CanvasPattern: true,
+
     },
     env: {
         API_URL: process.env.API_URL || 'http://localhost:3000/api',

@@ -26,18 +26,20 @@ export default function Navigation() {
                 width={150}
                 height={100}
               />
-              <p className={styles.leftNavText}>RP-Schließtechnik</p>
+              <p className={styles.leftNavText}>Immer für Sie da!</p>
             </Link>
           </div>
 
 
 
           <div className={styles.rightNav}>
+
             <div className={styles.rightTopNav}>
               <div className={styles.middleTop}>
                 <h1>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar!</h1>
               </div>
               <div className={styles.middleBottom}>
+
                 <div className={styles.TexSlider}>
                   <TexSlider />
                 </div>
@@ -65,7 +67,7 @@ export default function Navigation() {
 
 
         </div>
-      </nav>
-    </div>
+      </nav >
+    </div >
   );
 }
