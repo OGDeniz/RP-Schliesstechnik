@@ -31,31 +31,17 @@ export default function Navigation() {
 
 
         <div className={styles.rightNav}>
-          <div className={styles.middleTop}>
-            <h3>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar! </h3>
-          </div>
-          <div className={styles.middleBottom}>
-
-            <div className={styles.TexSlider}>
-              <TexSlider />
-            </div>
-            <div className={styles.rightBottomNav}>
-              {/* Dynamisch alle Buttons aus buttonData anzeigen */}
-              {buttonData.map((button) => (
-                <button
-                  key={button.id} // Eindeutige ID für React (wichtig bei Listen) 
-                  onClick={button.handleClick}
-                  className={button.className} // CSS-Klasse anwenden
-                >
-                  {button.label}
-                </button>
-              ))}
-
-            </div>
-          </div>
+          {/* Dynamisch alle Buttons aus buttonData anzeigen */}
+          {buttonData.map((button) => (
+            <button
+              key={button.id} // Eindeutige ID für React (wichtig bei Listen) 
+              onClick={button.handleClick}
+              className={button.className} // CSS-Klasse anwenden
+            >
+              {button.label}
+            </button>
+          ))}
         </div>
-
-
 
 
         <div className={styles.asideNav}>

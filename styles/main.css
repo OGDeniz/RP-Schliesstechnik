@@ -1,15 +1,15 @@
 :root {
   /* Farben */
-  --primary: #2274A5;
+  --primary: #7678ED;
   --primary-dark: #1B1B3A;
   --secondary: #FFD500;
-  --secondary-dark: #0A212F;
+  --secondary-dark: #0c3d5b;
   --light: #FFFFFF;
-  --dark: #171717;
+  --dark: #150c51;
   --success: #08eb00a4;
   --danger: #FF0000;
 
-  ;
+
 
   /* Schrift */
   --font-family-primary: 'Roboto', sans-serif;
