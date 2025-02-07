@@ -1,5 +1,5 @@
 import React from "react";
-import Produktliste from "@/components/features/products/Produktliste";
+import Produktliste from "../../components/features/products/Produktliste";
 
 export default function Produkte() {
     return (
