@@ -27,6 +27,10 @@
     gap: 1rem;
 }
 
+.description {
+    color: var(--dark);
+    font-size: 1.2rem;
+}
 
 .slider {
     margin: 2rem auto;
