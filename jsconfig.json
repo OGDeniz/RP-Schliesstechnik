@@ -1,7 +1,17 @@
+// This file is used to configure the JavaScript language service and the TypeScript compiler.
+// The presence of a jsconfig.json file in a directory indicates that the directory is the root of a JavaScript Project.
+// The jsconfig.json file specifies the root files and the options for the features provided by the JavaScript language service.
+// The presence of a jsconfig.json file in a directory indicates that the directory is the root of a JavaScript Project. The file specifies the root files and the options for the features provided by the JavaScript language service.
 {
   "compilerOptions": {
-    "target": "es6",
+    // Specify the target JavaScript version to compile to.
+    "target": "esnext",
+    // Specify module code generation.
     "module": "commonjs",
+    // Enable strict null checks.
+    "strict": true,
+    // Enable strict Property Initialization checks.
+    "strictPropertyInitialization": false,
     "checkJs": true,
     "jsx": "react",
     "baseUrl": "./",
