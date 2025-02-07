@@ -7,11 +7,11 @@ import styles from '@/styles/aboutus.module.css';
 
 const ContactUs = () => {
     return (
-        <div className="container  mt-4">
+        <div className="container  my-5">
             <section className={homestyles.aboutus}>
                 <h1 className='text-center mb-4'
                 >Kontakt</h1>
-                <p>
+                <p className='text-center'>
                     Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Möchten Sie einen Termin vereinbaren oder ein individuelles Angebot erhalten? Kontaktieren Sie uns – wir sind gerne für Sie da!
                 </p>
             </section>

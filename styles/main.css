@@ -1,6 +1,7 @@
 :root {
   /* Farben */
-  --primary: #2274A5;
+  --primary: #104077;
+  --priamry-light: #90a8c3;
   --primary-dark: #1B1B3A;
   --secondary: #FFD500;
   --secondary-dark: #0A212F;
@@ -39,7 +40,7 @@
 body {
   font-family: var(--font-family-primary);
   color: var(--dark);
-  background-color: var(--primary);
+  background: var(--priamry-light) !important;
   line-height: 1.6;
 }
 
