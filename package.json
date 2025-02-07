@@ -5,26 +5,30 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@paypal/react-paypal-js": "^8.7.0",
     "@radix-ui/react-slot": "^1.1.1",
     "@stripe/react-stripe-js": "^3.0.0",
     "@stripe/stripe-js": "^5.2.0",
-    "auth": "^1.2.3",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.2",
     "class-variance-authority": "^0.7.1",
     "critters": "^0.0.23",
     "mariadb": "^3.4.0",
     "mute-stream": "^2.0.0",
+    "mysql": "^2.18.1",
     "mysql2": "^3.12.0",
-    "next": "latest",
+    "next": "^15.1.6",
     "next.js": "latest",
     "nodemailer": "^6.9.4",
     "postcss": "^8.4.21",
@@ -36,20 +40,15 @@
     "react-slick": "^0.30.3",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^3.0.1",
     "wrap-ansi": "^9.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.4.2",
-    "@types/prop-types": "^15.7.14",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "css-loader": "^7.1.2",
-    "eslint": "^8.55.0",
-    "eslint-config-next": "^14.0.4",
-    "postcss-loader": "^8.1.1",
-    "style-loader": "^4.0.0",
-    "typescript": "^5.7.3",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.9.1"
+    "@types/node": "22.13.1",
+    "eslint": "^8.10.0",
+    "eslint-config-next": "^12.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1"
   }
 }

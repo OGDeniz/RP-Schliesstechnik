@@ -9,6 +9,15 @@
     align-items: center;
 }
 
+.title {
+    padding: 30px;
+}
+
+.description {
+    color: var(--dark);
+    font-size: 1.2rem;
+}
+
 .leftSection,
 .rightSection {
     flex: 1;

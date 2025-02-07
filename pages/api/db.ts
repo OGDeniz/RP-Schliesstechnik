@@ -7,7 +7,7 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
-export async function query(sql, values) {
+export async function query(sql: string, values: any[] = []): Promise<any> {
   const [results] = await pool.execute(sql, values);
   return results;
 }

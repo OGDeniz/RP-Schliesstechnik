@@ -1,12 +1,19 @@
-import React from 'react';
-import Register from '../components/Contact'; // Import der Komponente
+// register.ts - Backend-Handler für Registrierung oder Hilfsfunktion
+export const registerUser = async (username: string, email: string, password: string) => {
+    try {
+        const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, email, password }),
+        });
 
-export default function RegisterPage() {
-    return (
-        <div>
-            <h1>Registrierungsseite</h1>
-            <Register /> {/* Register-Komponente einfügen */}
-        </div>
-    );
-}
+        if (!response.ok) {
+            throw new Error('Registrierung fehlgeschlagen');
+        }
 
+        return await response.json();
+    } catch (error) {
+        console.error('Fehler bei der Registrierung:', error);
+        throw error;
+    }
+};
