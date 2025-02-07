@@ -1,4 +1,5 @@
 /* navigation.module.css */
+
 .navigation {
     width: 100%;
     display: flex;
@@ -11,7 +12,7 @@
 
 .navigation p {
     color: var(--primary);
-    background-color: black, 0.5, 0.5;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 

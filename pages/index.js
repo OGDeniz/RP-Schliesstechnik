@@ -7,6 +7,7 @@ import homeStyles from "../styles/home.module.css";
 import Slider from "@/components/ui/Slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React from "react";
 
 export default function Home() {
   const sliderImages = useMemo(() => [

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import Navigation from "@/components/navigation/Navigation";
 import Fusszeile from "@/components/navigation/Fusszeile";
 import Head from "next/head";
+import React from "react";
 
-
-export default function Layout({children}) {
+export default function Layout({ children }) {
     return (
         <div>
             <Head>
@@ -14,7 +14,7 @@ export default function Layout({children}) {
             </Head>
             <Navigation />
             {children}
-            <Fusszeile/>
+            <Fusszeile />
         </div>
     );
 }

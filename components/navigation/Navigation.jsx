@@ -17,6 +17,7 @@ export default function Navigation() {
     <div className={styles.container}>
       <nav className={styles.navigation}>
         <div className={styles.navContainer}>
+
           <div className={styles.leftNav}>
             <Link href="/">
               <Image
@@ -28,6 +29,9 @@ export default function Navigation() {
               <p className={styles.leftNavText}>RP-Schließtechnik</p>
             </Link>
           </div>
+
+
+
           <div className={styles.rightNav}>
             <div className={styles.rightTopNav}>
               <div className={styles.middleTop}>
@@ -39,6 +43,9 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
+
+
+
             <div className={styles.rightBottomNav}>
               {/* Dynamisch alle Buttons aus buttonData anzeigen */}
               {buttonData.map((button) => (
@@ -52,7 +59,11 @@ export default function Navigation() {
               ))}
 
             </div>
+
           </div>
+
+
+
         </div>
       </nav>
     </div>
