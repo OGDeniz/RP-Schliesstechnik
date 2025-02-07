@@ -53,7 +53,8 @@
     cursor: pointer;
     width: 100%;
 
-
+    background-color: var(--secondary);
+    margin: .5rem;
 }
 
 .rightTopNav {

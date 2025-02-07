@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import styles from '../styles/impressum.module.css';
 
 // @ts-ignore
 const ImpressumOut = ({ contactInfo }) => {
     return (
-        <div className="container mt-4" style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', lineHeight: '1.6' }}>
+        <div className={styles.container}>
 
             <section>
                 <h2>Angaben gemäß § 5 TMG</h2>
@@ -14,14 +16,74 @@ const ImpressumOut = ({ contactInfo }) => {
             <section>
                 <h2>Kontakt</h2>
                 <p>
-                    Telefon: {contactInfo?.phone}<br />
-                    E-Mail: <a href={`mailto:${contactInfo?.email}`}>{contactInfo?.email}</a><br />
-                    Website: <a href={contactInfo?.website} target="_blank" rel="noopener noreferrer">
-                        {contactInfo?.website.replace('https://', '').replace('www.', '')}
-                    </a>
+                    <a href={`mailto:${contactInfo?.email}`}>{contactInfo?.email}</a><br />
+                    <a href={`tel:${contactInfo?.phone}`}>{contactInfo?.phone}</a>
+                </p>
+            </section>
+            <section>
+                <h2>Haftung für Inhalte</h2>
+                <p>
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
+                    eigene Inhalte auf diesen Seiten nach den allgemeinen
+                    Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
+                    als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+                    oder gespeicherte fremde Informationen zu überwachen oder
+                    nach Umständen zu forschen, die auf eine rechtswidrige
+                    Tätigkeit hinweisen.
                 </p>
             </section>
 
+            <section>
+                <h2>Urheberrecht</h2>
+                <p>
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke
+                    auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+                    Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+                    der Verwertung außerhalb der Grenzen des Urheberrechtes
+                    bedürfen der schriftlichen Zustimmung des jeweiligen Autors
+                    bzw. Erstellers. Downloads und Kopien dieser Seite sind nur
+                    für den privaten, nicht kommerziellen Gebrauch gestattet.
+                </p>
+            </section>
+            <section>
+                <h2>Urheberrechtshinweis</h2>
+                <p>
+                    Alle Inhalte dieses Internetauftritts (
+                    Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht
+                    der Bundesrepublik Deutschland. Bitte fragen Sie uns bevor
+                    Sie die Inhalte dieses Internet-Auftritts verb
+                </p>
+            </section>
+            <section>
+
+
+                <h2>Haftung für Links</h2>
+                <p>
+                    Unser Angebot enthält Links zu externen Websites Dritter,
+                    auf deren Inhalte wir keinen Einfluss haben. Deshalb können
+                    wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+                    Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+                    Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten
+                    Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
+                    überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung
+                    nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten
+                    Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung
+                    nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
+                    derartige Links umgehend entfernen.
+                </p>
+            </section>
+            <section>
+                <h2>Haftung für Inhalte</h2>
+                <p>
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
+                    eigene Inhalte auf diesen Seiten nach den allgemeinen
+                    Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
+                    als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+                    oder gespeicherte fremde Informationen zu überwachen oder
+                    nach Umständen zu forschen, die auf eine rechtswidrige
+                    Tätigkeit hinweisen.
+                </p>
+            </section>
             <section>
                 <h2>Umsatzsteuer-ID</h2>
                 <p>
