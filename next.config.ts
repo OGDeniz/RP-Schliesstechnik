@@ -1,26 +1,31 @@
-// @ts-check
+import { NextConfig } from 'next';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    /* config options here */
-    reactStrictMode: true,
-    images: {
-        domains: ["server.tuthub.io", "localhost", "www.tuthub.io"]
+const nextConfig: NextConfig = {
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/components/*": ["components/*"],
+            "@/pages/*": ["pages/*"],
+            "@/styles/*": ["styles/*"],
+            "@/utils/*": ["utils/*"],
+        },
+        "jsx": "react-jsx",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "target": "esnext",
+        "module": "esnext",
+
+        reactStrictMode: true, // Aktiviert strenge React-Prüfungen
+        images: {
+            // Verwende "domains", nicht "domain"
+            domains: ["server.tuthub.io", "localhost", "www.tuthub.io"],
+        },
+        env: {
+            // Umgebungsvariablen definieren
+            API_URL: process.env.API_URL,
+            APP_URL: process.env.APP_URL,
+        },
     },
-    env: {
-        API_URL: process.env.API_URL || 'http://localhost:3000/api',
-        APP_URL: process.env.APP_URL || 'http://localhost:3000',
-        API_KEY: process.env.API_KEY || 'tuthub',
-        API_SECRET: process.env.API_SECRET || 'tuthub',
-        API_VERSION: process.env.API_VERSION || 'v1',
-        API_PORT: process.env.API_PORT || '3000',
-        API_PROTOCOL: process.env.API_PROTOCOL || 'http',
-        API_HOST: process.env.API_HOST || 'localhost',
-        API_PATH: process.env.API_PATH || 'api',
-    },
-
-}
-
-
-
-module.exports = nextConfig
+};
+module.exports = nextConfig;

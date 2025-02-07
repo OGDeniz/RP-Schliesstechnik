@@ -5,6 +5,7 @@ import Image from 'next/image';
 const ContactUs = () => {
     const [status, setStatus] = useState('');
 
+    // @ts-ignore
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
@@ -37,7 +38,7 @@ const ContactUs = () => {
     return (
         <div className="container mt-4">
             <section className={homestyles.aboutus}>
-              
+
             </section>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 {/* Linke Seite: Formular */}

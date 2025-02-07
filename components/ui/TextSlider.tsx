@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"; // Import von useEffect hinzugefügt
-import { slidesData } from "@/components/data/slidesData";
+import { slidesData } from "../../components/data/slidesData";
 
 const TextSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
