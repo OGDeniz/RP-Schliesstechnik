@@ -34,6 +34,8 @@ export default function Navigation() {
           <div className={styles.asideNav}>
             <div className={styles.asideNavGridItem}>
               <li className={styles.item1}>Ausgesperrt?</li>
+              <li className={styles.item1}>24H Notdienst</li>
+
             </div>
           </div>
           <div className={styles.rightNav}>

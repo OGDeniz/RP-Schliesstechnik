@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import jsonDb from '@/components/data/produkte';
+import jsonDb from '../../components/data/produkte';
 import Image from "next/image";
 import cardStyles from '@/styles/cards.module.css';
 

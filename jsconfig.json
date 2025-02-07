@@ -4,48 +4,29 @@
 // The presence of a jsconfig.json file in a directory indicates that the directory is the root of a JavaScript Project. The file specifies the root files and the options for the features provided by the JavaScript language service.
 {
   "compilerOptions": {
-    // Specify the target JavaScript version to compile to.
-    "target": "esnext",
-    // Specify module code generation.
-    "module": "commonjs",
-    // Enable strict null checks.
-    "strict": true,
-    // Enable strict Property Initialization checks.
-    "strictPropertyInitialization": false,
-    "checkJs": true,
-    "jsx": "react",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "*": [
-        "node_modules/*"
-      ],
       "@/*": [
-        "./*",
+        "./*"
       ],
       "@components/*": [
-        "components/*"
+        "./components/*"
       ],
       "@pages/*": [
-        "pages/*"
-      ],
-      "@/public/*": [
-        "public/*"
+        "./pages/*"
       ],
       "@styles/*": [
-        "styles/*"
+        "./styles/*"
       ],
-      "@utils/*": [
-        "utils/*"
-      ]
-    }
+      "@ui/*": [
+        "./components/ui/*"
+      ],
+    },
+    "jsx": "preserve",
+    "target": "es6",
+    "module": "ESNext",
+    "moduleResolution": "node",
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx"
-  ],
   "exclude": [
     "node_modules"
   ]

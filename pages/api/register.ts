@@ -1,4 +1,6 @@
-﻿import { query } from './db'; // Prüfe, ob der Pfad zu db.js korrekt ist.
+﻿import { query } from './db';
+import { hash } from 'bcryptjs';
+
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
