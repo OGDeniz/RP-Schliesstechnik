@@ -10,9 +10,9 @@ const buttonData = [
     },
     {
         id: 2,
-        label: "Leistungen",
+        label: "Diensleistungen",
         handleClick: () => {
-            alert("Service angeklickt!");
+            window.location.href = "/produkte";
         },
         className: styles.normalButton,
     },

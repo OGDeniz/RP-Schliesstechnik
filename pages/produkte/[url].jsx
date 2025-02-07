@@ -1,3 +1,4 @@
+import React from 'react';
 import { useRouter } from 'next/router';
 import jsonDb from '@/components/data/produkte';
 import Image from "next/image";
@@ -57,7 +58,7 @@ export default function Produktseite() {
                         <div className={cardStyles.cardFooter}>
                             <span className={cardStyles.cardPrice}>{produkt.preis} €</span>
                             {produkt.kategorie === "Dienstleistung" ? (
-                                <button 
+                                <button
                                     className={cardStyles.cardButton}
                                     onClick={handleBooking}
                                 >
