@@ -1,9 +1,12 @@
-// pages/checkout.jsx
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import styles from '../../styles/checkout.module.css';
+import dynamic from 'next/dynamic';
 
-export default function Checkout() {
+// ✅ Dynamische Importierung der Komponente, um SSR zu deaktivieren
+const CheckoutComp = dynamic(() => Promise.resolve(Checkout), { ssr: false });
+
+const Checkout = () => {
     const [formData, setFormData] = useState({
         vorname: '',
         nachname: '',
@@ -22,6 +25,7 @@ export default function Checkout() {
             [e.target.name]: e.target.value
         });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -44,6 +48,7 @@ export default function Checkout() {
             alert('Ein unerwarteter Fehler ist aufgetreten.');
         }
     };
+
     return (
         <div className={styles.checkoutContainer}>
             <h1>Bestellung abschließen</h1>
@@ -53,7 +58,6 @@ export default function Checkout() {
 
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
-
                         <Form.Label>Vorname*</Form.Label>
                         <Form.Control
                             type="text"
@@ -151,7 +155,6 @@ export default function Checkout() {
                 <h2>Bestellung</h2>
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
-
                         <Form.Label>Kurze Beschreibung:</Form.Label>
                         <Form.Control
                             as="textarea"
@@ -163,13 +166,13 @@ export default function Checkout() {
                     </Form.Group>
                 </div>
 
-                <Button
-                    type="submit"
-                    className={styles.submitButton}
-                >
+                <Button type="submit" className={styles.submitButton}>
                     Kostenpflichtig bestellen
                 </Button>
             </Form>
         </div>
     );
-}
+};
+
+// ✅ Export mit dynamischer Importierung
+export default CheckoutComp;

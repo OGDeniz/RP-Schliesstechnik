@@ -1,12 +1,27 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import jsonDb from '../../components/data/produkte';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
-import cardStyles from '@/styles/cards.module.css';
+import cardStyles from "../../styles/cards.module.css";
+import dynamic from "next/dynamic";
 
-export default function Produktseite() {
+// 🟢 Verhindert SSR-Fehler
+const Produktseite = dynamic(() => Promise.resolve(PageComponent), { ssr: false });
+
+const PageComponent = () => {
     const router = useRouter();
     const { url } = router.query;
+    const [produkt, setProdukt] = useState(null);
+
+    useEffect(() => {
+        if (router.isReady) {
+            import("../../components/data/produkte")
+                .then((module) => {
+                    const gefundenesProdukt = module.default.produkte.find((a) => a.url === url);
+                    setProdukt(gefundenesProdukt);
+                })
+                .catch((error) => console.error("Fehler beim Laden der Produkte:", error));
+        }
+    }, [router.isReady, url]);
 
     if (!router.isReady) {
         return (
@@ -18,8 +33,6 @@ export default function Produktseite() {
         );
     }
 
-    const produkt = jsonDb.produkte.find((a) => a.url === url);
-
     if (!produkt) {
         return (
             <div className="container mt-4">
@@ -30,11 +43,6 @@ export default function Produktseite() {
             </div>
         );
     }
-
-    const handleBooking = () => {
-        // Hier kommt später die Buchungsfunktion hin
-        console.log('Buchung für:', produkt.name);
-    };
 
     return (
         <div className="container mt-4">
@@ -60,7 +68,7 @@ export default function Produktseite() {
                             {produkt.kategorie === "Dienstleistung" ? (
                                 <button
                                     className={cardStyles.cardButton}
-                                    onClick={handleBooking}
+                                    onClick={() => console.log("Buchung für:", produkt.name)}
                                 >
                                     Jetzt buchen
                                 </button>
@@ -73,4 +81,6 @@ export default function Produktseite() {
             </div>
         </div>
     );
-}
+};
+
+export default Produktseite;

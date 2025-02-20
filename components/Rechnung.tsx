@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import styles from '@/styles/checkout.module.css';
+import dynamic from 'next/dynamic';
 
-
-export default function Rechnung() {
+const Rechnung = () => {
     const [formData, setFormData] = useState({
         vorname: '',
         nachname: '',
@@ -18,26 +18,23 @@ export default function Rechnung() {
     const handleChange = (e) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Hier später: Bestellung absenden
         console.log('Bestellung auf Rechnung:', formData);
     };
 
     return (
         <div className={styles.checkoutContainer}>
             <h1 className="text-center mb-4">Bestellung abschließen</h1>
-
             <Form onSubmit={handleSubmit} className={styles.checkoutForm}>
                 <h2>Rechnungsadresse</h2>
-
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
-                        <Form.Label >Vorname*</Form.Label>
+                        <Form.Label>Vorname*</Form.Label>
                         <Form.Control
                             type="text"
                             name="vorname"
@@ -58,7 +55,6 @@ export default function Rechnung() {
                         />
                     </Form.Group>
                 </div>
-
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
                         <Form.Label>E-Mail*</Form.Label>
@@ -82,7 +78,6 @@ export default function Rechnung() {
                         />
                     </Form.Group>
                 </div>
-
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
                         <Form.Label>Straße*</Form.Label>
@@ -106,7 +101,6 @@ export default function Rechnung() {
                         />
                     </Form.Group>
                 </div>
-
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
                         <Form.Label>PLZ*</Form.Label>
@@ -130,7 +124,6 @@ export default function Rechnung() {
                         />
                     </Form.Group>
                 </div>
-
                 <Button
                     type="submit"
                     className={styles.submitButton}
@@ -140,4 +133,7 @@ export default function Rechnung() {
             </Form>
         </div>
     );
-}
+};
+
+// Dynamischer Export ohne SSR
+export default dynamic(() => Promise.resolve(Rechnung), { ssr: false });

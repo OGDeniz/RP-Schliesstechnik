@@ -1,8 +1,8 @@
 :root {
   /* Farben */
-  --primary: #104077;
+  --primary: #016fb6;
   --priamry-light: #90a8c3;
-  --primary-dark: #1B1B3A;
+  --primary-dark: #535f74;
   --secondary: #FFD500;
   --secondary-dark: #0A212F;
   --light: #FFFFFF;
@@ -29,6 +29,7 @@
   /* Schatten */
   --box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.1);
   --box-shadow-dark: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  --box-shadow-main: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 * {
@@ -69,6 +70,10 @@ body {
 h1 {
   text-shadow: 1px 1px rgba(134, 117, 118, 0.479);
 
+}
+
+h2 {
+  text-align: center;
 }
 
 h3 {

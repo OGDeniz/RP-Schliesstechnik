@@ -7,15 +7,45 @@
     max-width: 1400px;
     margin: 0 auto;
     align-items: center;
+    padding-bottom: 3rem;
+    color: var(--light);
+    background-image: url("../public/bilder/bg.jpg");
+    background-size: cover;
+
 }
 
-.title {
-    padding: 30px;
+.one {
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.two {
+    margin-top: 1rem;
+    width: 45%;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: var(--primary-dark);
+}
+
+.two:hover {
+    background-color: var(--primary);
+    transition: 0.5s;
+}
+
+
+.three {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .description {
-    color: var(--dark);
+    text-align: center;
     font-size: 1.2rem;
+    margin: 0;
+    list-style: none;
+
 }
 
 .leftSection,
@@ -35,20 +65,14 @@
     gap: 1rem;
 }
 
-.description {
-    color: var(--dark);
-    font-size: 1.2rem;
-}
+
 
 .slider {
-    margin: 2rem auto;
+    margin: 3rem auto;
     border-radius: 0.5rem;
-    max-width: 800px;
+    max-width: 900px;
 }
 
-.sliderContainer {
-    width: 80%;
-}
 
 .mainSlider {
     .mainSlider {
@@ -62,20 +86,6 @@
         animation: fadeIn 1s ease-in-out;
     }
 
-}
-
-
-.aboutUs {
-    background: var(--secondary);
-    padding: 2rem;
-    border-radius: 8px;
-    color: var(--light);
-    margin: 0.5rem 0;
-}
-
-.aboutUs h2 {
-    color: var(--light);
-    margin-bottom: 1rem;
 }
 
 .companyInfo {
@@ -101,18 +111,21 @@
 }
 
 
-/* Additional Style Tweaks */
-.aboutUs:hover {
-    box-shadow: 0 0 12px var(--secondary-dark);
-}
-
-/* Original styles */
-
 /* Responsive styles added */
 @media (max-width: 768px) {
     .hero {
         padding: 10px;
         text-align: center;
+    }
+
+    .two {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .three {
+        display: flex;
+        flex-direction: column;
     }
 }
 

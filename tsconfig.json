@@ -22,7 +22,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/api/index.ts"
+    "pages/api/index.jsx",
+    "pages/register.js",
+    "pages/api/sendEmail.js"
   ],
   "exclude": [
     "node_modules"
