@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/navigation.module.css";
+import TextSlider from "../ui/TextSlider";
 
 
 
@@ -55,8 +56,12 @@ export default function Navigation() {
           </button>
         </div>
       </div>
-      <div className={styles.promt}>hallo</div>
+
+      <div className={styles.prompt}>
+        <TextSlider />
+      </div>
     </nav >
+
 
 
   );
