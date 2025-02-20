@@ -1,5 +1,11 @@
 import styles from "../../styles/navigation.module.css";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
+const Button = dynamic(() => import("react-bootstrap/Button"), { ssr: false });
+
 const buttonData = [
+
+
 
     {
         id: 1,
