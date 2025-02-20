@@ -1,16 +1,8 @@
-import { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-
+/** @type {import('next').NextConfig} */
+const nextConfig = {
     reactStrictMode: true,
-
-
-    async rewrites() {
-        return [
-            {
-                source: '/api/:path*',
-                destination: 'http://localhost:3001/api/:path*',
-            },
-        ];
-    },
+    output: "export", // Generiert statische Seiten für "out/"-Ordner
+    trailingSlash: true, // Stellt sicher, dass alle URLs mit "/" enden
 };
+
+export default nextConfig;
