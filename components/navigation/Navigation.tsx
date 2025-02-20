@@ -37,17 +37,19 @@ export default function Navigation() {
           {/* Menüleiste unterhalb des Schriftzugs */}
           <ul className={styles.menu}>
             <li>
-              <Link href="/dienstleistungen">Dienstleistungen</Link>
+              <Link href="/">Startseite</Link>
             </li>
             <li>
-              <Link href="/kontakt">Kontakt</Link>
+              <Link href="/produkte">Leistungen</Link>
+            </li>
+            <li>
+              <Link href="/contact">Kontakt</Link>
             </li>
             <li>
               <Link href="/impressum">Impressum</Link>
             </li>
           </ul>
         </div>
-
 
 
         <div className={styles.rightNav}>
@@ -58,7 +60,7 @@ export default function Navigation() {
       </div>
 
       <div className={styles.prompt}>
-        <TextSlider />
+
       </div>
     </nav >
 

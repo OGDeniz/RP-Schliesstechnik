@@ -7,6 +7,7 @@ import styles from '../styles/impressum.module.css';
 const ImpressumOut = ({ contactInfo }) => {
     return (
         <div className={styles.container}>
+            <h1>Impressum</h1>
 
             <section>
                 <h2>Angaben gemäß § 5 TMG</h2>
