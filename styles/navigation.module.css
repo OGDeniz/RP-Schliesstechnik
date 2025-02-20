@@ -83,10 +83,13 @@
     background-color: rgb(182, 12, 12);
 }
 
-.promt {
-    color: var(--danger);
+.prompt {
+
+    color: var(--success);
     font-size: 1.2rem;
     font-weight: bold;
+    width: 100%;
+    text-align: center;
 }
 
 /* Responsive Anpassung */
