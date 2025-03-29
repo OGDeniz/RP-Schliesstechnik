@@ -92,6 +92,18 @@ export default function Home() {
           </ul>
         </div >
       </div >
-    </div>
+      <h2>Unsere Leistungen</h2>
+      <ul className={homeStyles.description}>
+        <li>
+          <strong>Schließanlagen:</strong> Planung, Installation und Wartung von mechanischen und digitalen Schließsystemen.
+        </li>
+        <li>
+          <strong>Sicherheitsberatung:</strong> Analyse und Optimierung bestehender Sicherheitskonzepte.
+        </li>
+        <li>
+          <strong>Notdienst:</strong> 24/7-Service für Türöffnungen, Schlüsselverlust und Einbruchschäden.
+        </li>
+      </ul>
+    </div >
   );
 }

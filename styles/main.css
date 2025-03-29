@@ -81,6 +81,7 @@ h3 {
   text-shadow: 1px 1px rgba(134, 117, 118, 0.479);
 }
 
+
 @media screen and(max-width: 900px) {
   h3 {
     font-size: .5rem;

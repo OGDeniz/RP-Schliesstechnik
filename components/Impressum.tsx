@@ -3,11 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/impressum.module.css';
 
-// @ts-ignore
-const ImpressumOut = ({ contactInfo }) => {
+const Impressum = ({ contactInfo }) => {
     return (
-        <div className={styles.container}>
-            <h1>Impressum</h1>
+        <div className={styles.container} style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', lineHeight: '1.6' }}>
+            <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Impressum</h1>
 
             <section>
                 <h2>Angaben gemäß § 5 TMG</h2>
@@ -15,76 +14,29 @@ const ImpressumOut = ({ contactInfo }) => {
             </section>
 
             <section>
-                <h2>Kontakt</h2>
                 <p>
-                    <a href={`mailto:${contactInfo?.email}`}>{contactInfo?.email}</a><br />
-                    <a href={`tel:${contactInfo?.phone}`}>{contactInfo?.phone}</a>
+                    Kontakt: <br />
+                    Name: Robin Prijs<br />
+                    Adresse: Schwimmbadstr. 18, 76646 Bruchsal<br />
+                    Telefon: +49 176 236 875 42<br />
+                    E-Mail: <a href="mailto:info@schluesselrp.de">info@schluesselrp.com</a><br />
                 </p>
             </section>
+
             <section>
                 <h2>Haftung für Inhalte</h2>
                 <p>
-                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
-                    eigene Inhalte auf diesen Seiten nach den allgemeinen
-                    Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
-                    als Diensteanbieter jedoch nicht verpflichtet, übermittelte
-                    oder gespeicherte fremde Informationen zu überwachen oder
-                    nach Umständen zu forschen, die auf eine rechtswidrige
-                    Tätigkeit hinweisen.
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
                 </p>
             </section>
 
             <section>
                 <h2>Urheberrecht</h2>
                 <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke
-                    auf diesen Seiten unterliegen dem deutschen Urheberrecht.
-                    Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
-                    der Verwertung außerhalb der Grenzen des Urheberrechtes
-                    bedürfen der schriftlichen Zustimmung des jeweiligen Autors
-                    bzw. Erstellers. Downloads und Kopien dieser Seite sind nur
-                    für den privaten, nicht kommerziellen Gebrauch gestattet.
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
                 </p>
             </section>
-            <section>
-                <h2>Urheberrechtshinweis</h2>
-                <p>
-                    Alle Inhalte dieses Internetauftritts (
-                    Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht
-                    der Bundesrepublik Deutschland. Bitte fragen Sie uns bevor
-                    Sie die Inhalte dieses Internet-Auftritts verb
-                </p>
-            </section>
-            <section>
 
-
-                <h2>Haftung für Links</h2>
-                <p>
-                    Unser Angebot enthält Links zu externen Websites Dritter,
-                    auf deren Inhalte wir keinen Einfluss haben. Deshalb können
-                    wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-                    Für die Inhalte der verlinkten Seiten ist stets der jeweilige
-                    Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten
-                    Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
-                    überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung
-                    nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten
-                    Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung
-                    nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
-                    derartige Links umgehend entfernen.
-                </p>
-            </section>
-            <section>
-                <h2>Haftung für Inhalte</h2>
-                <p>
-                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
-                    eigene Inhalte auf diesen Seiten nach den allgemeinen
-                    Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
-                    als Diensteanbieter jedoch nicht verpflichtet, übermittelte
-                    oder gespeicherte fremde Informationen zu überwachen oder
-                    nach Umständen zu forschen, die auf eine rechtswidrige
-                    Tätigkeit hinweisen.
-                </p>
-            </section>
             <section>
                 <h2>Umsatzsteuer-ID</h2>
                 <p>
@@ -95,17 +47,17 @@ const ImpressumOut = ({ contactInfo }) => {
             <section>
                 <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <p>
-                    {contactInfo?.name}<br />
-                    {contactInfo?.address}
+                    Name: Robin Prijs<br />
+                    Adresse: Schwimmbadstr. 18, 76646 Bruchsal<br />
+                    Telefon: +49 176 236 875 42<br />
+                    E-Mail: <a href="mailto:info@schluesselrp.de">info@schluesselrp.com</a><br />
                 </p>
             </section>
 
             <section>
                 <h2>Streitschlichtung</h2>
                 <p>
-                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href={contactInfo?.odrLink} target="_blank" rel="noopener noreferrer">
-                        {contactInfo?.odrLink}
-                    </a>.<br />
+                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href={contactInfo?.odrLink} target="_blank" rel="noopener noreferrer">{contactInfo?.odrLink}</a>.<br />
                     Unsere E-Mail-Adresse finden Sie oben im Impressum.<br />
                     Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
@@ -126,11 +78,6 @@ const ImpressumOut = ({ contactInfo }) => {
                 <p>
                     Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
                 </p>
-
-                <h3>Urheberrecht</h3>
-                <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                </p>
             </section>
         </div>
     );
@@ -142,7 +89,7 @@ export async function getServerSideProps() {
         address: "Schwimmbadstr. 18, 76646 Bruchsal",
         phone: "+49 176 236 875 42",
         email: "info@schluesselrp.de",
-        website: "https://www.schluesselrp.de",
+        website: "https://www.schluesselrp.de" + "http://www.schluesselrp.com",
         ustId: "USt-IdNr. wird nachgereicht",
         odrLink: "https://ec.europa.eu/consumers/odr"
     };
@@ -154,4 +101,4 @@ export async function getServerSideProps() {
     };
 }
 
-export default ImpressumOut;
+export default Impressum;
