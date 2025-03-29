@@ -6,6 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "../components/ui/Slider";
 import Link from "next/link";
+import Image from "next/image";
+import cardStyles from "../styles/cards.module.css";
+
+
 
 export default function Home() {
   const sliderImages = useMemo(() => [
@@ -52,6 +56,18 @@ export default function Home() {
 
             Unser Anspruch: höchste Qualität, individuelle Beratung und maximale Sicherheit.
           </p>
+          {/*
+            Define the 'produkt' object with the required properties.
+          */}
+          <Image
+            src="/bilder/img4.png"
+            alt="Schlüsseldienst Bild 4"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
+            width={500}
+            height={500}
+            className={cardStyles.cardImage}
+          />
         </div>
 
         <div className={homeStyles.two} >
@@ -92,18 +108,25 @@ export default function Home() {
           </ul>
         </div >
       </div >
-      <h2>Unsere Leistungen</h2>
-      <ul className={homeStyles.description}>
-        <li>
-          <strong>Schließanlagen:</strong> Planung, Installation und Wartung von mechanischen und digitalen Schließsystemen.
-        </li>
-        <li>
-          <strong>Sicherheitsberatung:</strong> Analyse und Optimierung bestehender Sicherheitskonzepte.
-        </li>
-        <li>
-          <strong>Notdienst:</strong> 24/7-Service für Türöffnungen, Schlüsselverlust und Einbruchschäden.
-        </li>
-      </ul>
+      <div className={homeStyles.three} >
+        <div className={homeStyles.two} >
+          <h2>Unsere Leistungen</h2>
+          <ul className={homeStyles.description}>
+            <li>
+              <strong>Schließanlagen:</strong> Planung, Installation und Wartung von mechanischen und digitalen Schließsystemen.
+            </li>
+            <li>
+              <strong>Sicherheitsberatung:</strong> Analyse und Optimierung bestehender Sicherheitskonzepte.
+            </li>
+            <li>
+              <strong>Notdienst:</strong> 24/7-Service für Türöffnungen, Schlüsselverlust und Einbruchschäden.
+            </li>
+            <Link href="/produkte" className={styles.button}>
+              Mehr erfahren
+            </Link>
+          </ul>
+        </div>
+      </div>
     </div >
   );
 }

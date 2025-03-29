@@ -26,11 +26,12 @@ export default function Navigation() {
         <div className={styles.logo}>
           <Link href="/">
             <Image
-              src="/RP_Logos/RP_Logo_white3D.png"
+              src="/RP_Logos/RP_Logo_whiteShadow.png"
               alt="RP-Schließtechnik"
-              width={150}
-              height={100}
+              width={125}
+              height={50}
             />
+            <p>Schliesstechnik</p>
           </Link>
         </div>
 

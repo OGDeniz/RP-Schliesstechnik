@@ -8,6 +8,48 @@
     background-color: var(--primary);
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-dark);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation p {
+    color: var(--light);
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--light);
+    transition: color 0.3s;
+    margin: 10px 0;
+    padding-top: 10px;
+}
+
+/* Logo-Bereich */
+.navigation .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0;
+    top: 1rem;
+    position: relative;
+    z-index: 10;
+
+
 }
 
 /* Kopfbereich mit Logo und Call-Button */
@@ -16,14 +58,32 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1420px;
+    max-width: 1920px;
+    margin: 0 auto 10px auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+    background-color: var(--primary-dark);
+
 }
 
 .navigation h1 {
     color: var(--light);
     font-size: 2rem;
+    padding: 10px 0;
+    margin: 0;
 
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Poppins', bold, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px rgba(134, 117, 118, 0.479);
+    background-color: var(--danger);
+    font-style: bold;
+    text-align: center;
+    margin: 0;
 }
 
 /* Burger-Icon: Standardmäßig ausblenden (Desktop) */
@@ -55,7 +115,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: background 0.3s;
 }
@@ -74,7 +134,7 @@
 .menu {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 5rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -127,6 +187,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 0 1rem;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
     }
 
     /* Desktop Menü ausblenden */
@@ -134,12 +198,58 @@
         display: none;
     }
 
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 0;
+        top: 1rem;
+        gap: 2rem;
+        position: relative;
+        z-index: 10;
+    }
+
     /* Responsive Logo-Größe */
     .logo img {
-        width: 100px;
+        width: 80px;
         /* kleineres Logo */
         height: auto;
+        /* Höhe automatisch anpassen */
+        max-width: 100%;
+        /* Maximale Breite 100% */
+        max-height: 100%;
+        /* Maximale Höhe 100% */
+        object-fit: contain;
+        /* Bildinhalt anpassen */
+        margin: 0 auto;
+        /* zentrieren */
+        display: block;
+        /* Block-Element */
+        padding: 0;
+
+
     }
+
+    .logo h1 {
+        font-size: 1.5rem;
+        /* kleinere Schriftgröße */
+        margin: 0;
+        /* kein zusätzlicher Abstand */
+        padding: 0;
+        /* kein zusätzlicher Abstand */
+    }
+
+    .logo p {
+        font-size: 0.8rem;
+        /* kleinere Schriftgröße */
+        margin: 0;
+        /* kein zusätzlicher Abstand */
+        padding: 0;
+        /* kein zusätzlicher Abstand */
+    }
+
 
     /* Responsive Call-Button */
     .callButton {
@@ -150,5 +260,79 @@
     /* Mobile Menü anzeigen, wenn aktiv (über React-Zustand) */
     .menuMobile {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-dark);
+        width: 100%;
+        padding: 1rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .menuMobile ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menuMobile li {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .menuMobile li a {
+        text-decoration: none;
+        color: var(--light);
+        transition: color 0.3s;
+    }
+
+    .menuMobile li a:hover {
+        color: var(--secondary);
+    }
+
+    .menuMobile.active {
+        display: flex;
+    }
+
+    .menuMobile ul li {
+        margin: 1rem 0;
+    }
+
+    .menuMobile ul li a {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .menuMobile ul li a:hover {
+        background-color: var(--secondary);
+        color: var(--light);
+        border-radius: 5px;
+    }
+
+    .menuMobile ul li a.active {
+        background-color: var(--secondary);
+        color: var(--light);
+        border-radius: 5px;
+    }
+
+    .menuMobile ul li a.active:hover {
+        background-color: var(--secondary);
+        color: var(--light);
+        border-radius: 5px;
+    }
+
+    .menuMobile ul li a.active {
+        background-color: var(--secondary);
+        color: var(--light);
+        border-radius: 5px;
     }
 }
