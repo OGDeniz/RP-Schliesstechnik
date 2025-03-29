@@ -24,8 +24,10 @@ const Slider = ({ images, className }) => {
                                 priority={index === 0}
                                 quality={75}
                                 loading={index === 0 ? "eager" : "lazy"}
-                                style={{ objectFit: 'cover' }}
-                                className="rounded"
+                                style={{ objectFit: 'inherit' }}
+                                className="rounded-top"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                             />
                         </div>
                     </Carousel.Item>

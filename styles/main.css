@@ -41,8 +41,8 @@
 
 body {
   font-family: var(--font-family-primary);
-  color: var(--dark);
-  background: var(--priamry-light) !important;
+  color: var(--light);
+  background-color: var(--primary-dark);
   line-height: 1.6;
 }
 

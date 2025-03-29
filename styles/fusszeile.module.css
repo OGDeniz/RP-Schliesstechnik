@@ -1,6 +1,7 @@
 .fusszeileContainer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--dark);
     color: var(--light);
@@ -37,6 +38,18 @@
     text-decoration: none;
     margin: 0;
     font-size: 1rem;
+}
+
+.contentzone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light);
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: var(--dark);
 }
 
 @media screen and (max-width: 768px) {
