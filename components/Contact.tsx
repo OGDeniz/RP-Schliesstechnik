@@ -37,12 +37,10 @@ const ContactUs = () => {
 
     return (
         <div className={homestyles.container}>
-            <section className={homestyles.aboutus}>
 
-            </section>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className={homestyles.contactForm}>
                 {/* Linke Seite: Formular */}
-                <form onSubmit={handleSubmit} style={{ backgroundColor: '#FFD500', padding: '2rem', borderRadius: '8px', width: '45%' }}>
+                <form onSubmit={handleSubmit} style={{ backgroundColor: '#FFD500', padding: '2rem', borderRadius: '8px', width: '100%' }}>
                     <h2>Kontaktieren Sie uns</h2>
                     <div style={{ marginBottom: '1rem' }}>
                         <label htmlFor="name">Name:</label>
@@ -61,10 +59,6 @@ const ContactUs = () => {
                     </button>
                     {status && <p style={{ marginTop: '1rem', color: status.includes('erfolgreich') ? 'green' : 'red' }}>{status}</p>}
                 </form>
-                {/* Rechte Seite: Bild */}
-                <div style={{ width: '45%' }}>
-                    <Image src="/bilder/Contact-Us.jpg" alt="Contact Us" width={600} height={400} layout="responsive" />
-                </div>
             </div>
         </div>
     );

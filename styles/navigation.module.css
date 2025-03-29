@@ -1,40 +1,76 @@
+/* navigation.module.css */
+
+/* Gesamtcontainer */
 .navigation {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: var(--primary);
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Kopfbereich mit Logo und Call-Button */
 .navContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1420px;
 }
 
-/* Logo links */
-.leftNav {
-    flex: 1;
-}
-
-/* Schriftzug in der Mitte */
-.middleNav {
-    flex: 2;
-    text-align: center;
-}
-
-.middleNav h1 {
-    font-size: 1.8rem;
+.navigation h1 {
     color: var(--light);
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+
+    font-weight: bold;
 }
 
-/* Menüleiste */
+/* Burger-Icon: Standardmäßig ausblenden (Desktop) */
+.burgerMenu {
+    display: none;
+}
+
+/* Burger-Striche */
+.burgerMenu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light);
+    margin: 3px 0;
+}
+
+
+/* Rechte Seite: Call-Button */
+.rightNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Call-Button Styling */
+.callButton {
+    background-color: var(--danger);
+    color: rgb(214, 206, 206);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.callButton:hover {
+    background-color: rgb(182, 12, 12);
+}
+
+/* Desktop Menü (unterhalb des Kopfbereichs) */
+.desktopMenu {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -58,57 +94,61 @@
     color: var(--secondary);
 }
 
-/* Button rechts */
-.rightNav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.callButton {
-    background-color: var(--danger);
-    color: rgb(214, 206, 206);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background 0.3s;
-    box-shadow: var(--box-shadow-main);
-
-}
-
-.callButton:hover {
-    background-color: rgb(182, 12, 12);
-}
-
-.prompt {
-
-    color: var(--success);
-    font-size: 1.2rem;
-    font-weight: bold;
+/* Mobile Menü (Dropdown) – initial ausgeblendet */
+.menuMobile {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary);
     width: 100%;
-    text-align: center;
+    padding: 1rem 0;
 }
 
-/* Responsive Anpassung */
+.menuMobile ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive Anpassungen */
 @media (max-width: 768px) {
+
+    /* Burger-Icon anzeigen */
+    .burgerMenu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    /* Kopfbereich neu anordnen: Elemente in einer Zeile */
     .navContainer {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .middleNav h1 {
-        font-size: 1.5rem;
+    /* Desktop Menü ausblenden */
+    .desktopMenu {
+        display: none;
     }
 
-    .menu {
-        flex-direction: column;
-        gap: 0.8rem;
+    /* Responsive Logo-Größe */
+    .logo img {
+        width: 100px;
+        /* kleineres Logo */
+        height: auto;
     }
 
-    .rightNav {
-        justify-content: center;
+    /* Responsive Call-Button */
+    .callButton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Mobile Menü anzeigen, wenn aktiv (über React-Zustand) */
+    .menuMobile {
+        display: flex;
     }
 }
