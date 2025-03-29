@@ -1,20 +1,48 @@
 import Link from "next/link";
+import styles from "../../styles/fusszeile.module.css";
+
 
 
 export default function Fusszeile() {
   return (
-    <div className="d-flex justify-content-center fixed-bottom text-secondary bg-light">
-      <h4>
-        🔓 RP Schlüsseldienst | 📞 +49 176 236 875 42 | ⌚ Mo-So: 0:00-24:00
-      </h4>
+    <div className={styles.fusszeile}>
 
-      <Link href="/">
+      <div className={styles.fusszeileContainer}>
 
-        <p className="nav-link">Impressum</p>
+        <h2 className="text-center">Ihr Schlüsseldienst in Bruchsal</h2>
+        <div className={styles.contentzone}>
+          <p className="text-center">
+            Wir sind Ihr zuverlässiger Partner für alle Schlüsseldienstleistung
+            in Bruchsal.
+          </p>
+          <p className="text-center">
+            24 Stunden Notdienst | 365 Tage im Jahr
+          </p>
+        </div>
+        <div className={styles.links}>
+          <Link href="/" className={styles.navLink}>
+            <p className="nav-link">Startseite</p>
+          </Link>
+          <Link href="/" className={styles.navLink}>
+            <p className="nav-link">Über uns</p>
+          </Link>
+          <Link href="/produkte" className={styles.navLink}>
 
-      </Link>
+            <p className="nav-link">Leistungen</p>
+          </Link>
+          <Link href="/contact" className={styles.navLink}>
+            <p className="nav-link">Kontakt</p>
 
-
+          </Link>
+          <Link href="/impressum" className={styles.navLink}>
+            <p className="nav-link">Impressum</p>
+          </Link>
+        </div>
+        <h4>
+          🔓 RP Schlüsseldienst | 📞 +49 176 236 875 42 | ⌚ Mo-So: 0:00-24:00
+        </h4>
+      </div>
     </div>
+
   );
 }

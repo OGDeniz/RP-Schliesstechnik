@@ -1,14 +1,15 @@
 :root {
   /* Farben */
-  --primary: #016fb6;
+  --primary: #6EC1E4;
   --priamry-light: #90a8c3;
-  --primary-dark: #535f74;
-  --secondary: #FFD500;
+  --primary-dark: #000000;
+  --secondary: #54595F;
   --secondary-dark: #0A212F;
   --light: #FFFFFF;
   --dark: #171717;
-  --success: #08eb00a4;
+  --accent: #61CE70;
   --danger: #FF0000;
+  --text: #7A7A7A;
 
   ;
 
