@@ -2,6 +2,7 @@
 import { useMemo } from "react";
 import homeStyles from "../styles/home.module.css";
 import styles from "../styles/navigation.module.css";
+import openerStyles from "../styles/opener.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "../components/ui/Slider";
@@ -9,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import cardStyles from "../styles/cards.module.css";
 import IconLinks from "../components/IconLinks";
+import Opener from "../components/Opener";
 
 
 
@@ -43,11 +45,10 @@ export default function Home() {
 
   return (
 
-    <div className={homeStyles.container} >
-
-      <Slider images={sliderImages} className={homeStyles.slider} />
-
-
+    <div className={homeStyles.container}>
+      <div className={homeStyles.header}>
+        <Opener />
+      </div>
 
       <div className={homeStyles.three} >
 

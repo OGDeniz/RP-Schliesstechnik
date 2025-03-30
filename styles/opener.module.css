@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin-top: 10rem;
+    /* Abstand vom oberen Rand */
+    padding: 2rem;
+    /* Innenabstand */
+    box-sizing: border-box;
+    /* Box-Modell */
+    width: 100%;
+    /* Breite des Containers */
+    max-width: 1200px;
+    /* Maximale Breite */
+    border-radius: 10px;
+    /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Schatteneffekt */
+    transition: transform 0.3s ease-in-out;
+    /* Animationseffekt */
+    overflow: hidden;
+    /* Überlauf verstecken */
+    position: relative;
+    /* Positionierung relativ für absolute Kinder */
+    z-index: 1;
+    /* Z-Index für Überlagerung */
+}
+
+.header {
+    font-size: 2rem;
+    color: #6d6c6c;
+    margin-bottom: 1rem;
+    width: 80%;
+
+}
+
+.header h2 {
+    font-size: 6rem;
+    color: var(--primary-dark);
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 0.5rem;
+    text-align: center;
+    /* Zentrierung des Textes */
+    font-weight: 700;
+    /* Fettdruck */
+}
+
+@media (max-width: 768px) {
+    .header h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-top: 5rem;
+        /* Abstand vom oberen Rand */
+        padding: 1rem;
+        /* Innenabstand */
+        height: fit-content;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        /* Kleinere Schriftgröße für kleinere Bildschirme */
+    }
+
+    .header h2 {
+        font-size: 3rem;
+        /* Kleinere Schriftgröße für kleinere Bildschirme */
+        margin-bottom: 1rem;
+        /* Weniger Abstand nach unten */
+    }
+
+    .header h2:hover {
+        text-decoration: none;
+        /* Keine Unterstreichung bei Hover */
+    }
+
+    .header h2:active {
+        text-decoration: none;
+        /* Keine Unterstreichung bei Klick */
+    }
+
+    .header h2:focus {
+        text-decoration: none;
+        /* Keine Unterstreichung bei Fokus */
+    }
+
+
+}
