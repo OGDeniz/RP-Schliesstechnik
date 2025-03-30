@@ -10,9 +10,9 @@ export default function IconLinks() {
         <div className={styles.containerIconLinks}>
             <div className={styles.iconLinks}>
                 <div className={styles.iconLinksItem}>
-                    <a href="/produkte" className={styles.iconLinks}>
+                    <Link href="/produkte" className={styles.iconLinks}>
                         <FaCar />
-                    </a>
+                    </Link>
                 </div>
                 <p>Fahrzeugöffnung</p> {/* Text unter dem Icon */}
             </div>
