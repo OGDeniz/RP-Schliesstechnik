@@ -3,106 +3,101 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin-top: 10rem;
-    /* Abstand vom oberen Rand */
-    padding: 2rem;
-    /* Innenabstand */
-    box-sizing: border-box;
-    /* Box-Modell */
-    width: 100%;
-    /* Breite des Containers */
-    max-width: 1200px;
-    /* Maximale Breite */
-    border-radius: 10px;
-    /* Abgerundete Ecken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Schatteneffekt */
-    transition: transform 0.3s ease-in-out;
-    /* Animationseffekt */
     overflow: hidden;
-    /* Überlauf verstecken */
+
+    background-color: #f0f0f0;
+
+    box-sizing: border-box;
+    width: 90%;
+    /* Adjusted for smaller screens */
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
     position: relative;
-    /* Positionierung relativ für absolute Kinder */
-    z-index: 1;
-    /* Z-Index für Überlagerung */
+    z-index: 10;
 }
 
 .header {
     font-size: 2rem;
     color: #6d6c6c;
     margin-bottom: 1rem;
-    width: 80%;
-
+    width: 100%;
+    height: auto;
+    /* Full width for better alignment */
+    text-align: center;
+    /* Center-align text */
 }
 
 .header h2 {
-    font-size: 6rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    /* Dynamische Schriftgröße */
     color: var(--primary-dark);
-    margin-bottom: 4rem;
-    margin-top: 2rem;
+    margin: 1rem 0;
+    /* Reduzierter Abstand */
     text-decoration: underline;
-    text-decoration-thickness: 0.3rem;
+    text-decoration-thickness: 0.15rem;
+    /* Dünnere Unterstreichung */
     text-decoration-color: var(--primary);
-    text-underline-offset: 0.5rem;
+    text-underline-offset: 0.2rem;
+    /* Kleinere Unterstreichungsabstände */
     text-align: center;
-    /* Zentrierung des Textes */
     font-weight: 700;
-    /* Fettdruck */
+    word-break: break-word;
+    /* Lange Wörter umbrechen */
+    line-height: 1.2;
+    /* Verbesserte Lesbarkeit */
+    max-width: 90%;
+    /* Begrenzte Breite für bessere Darstellung */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+    /* Zusätzliche Sicherheit für Wortumbrüche */
 }
 
 @media (max-width: 768px) {
+    .container {
+        margin: 3rem auto;
+        padding: 1.5rem;
+        height: auto;
+        /* Adjust height for smaller screens */
+    }
+
+    .header {
+        font-size: 1.8rem;
+    }
+
     .header h2 {
-        font-size: 4rem;
-        margin-bottom: 2rem;
-        margin-top: 1rem;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        /* Kleinere Schriftgröße für Tablets */
+        margin: 1rem 0;
+        /* Weniger Abstand */
     }
 }
 
 @media (max-width: 480px) {
-    .header h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        margin-top: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
     .container {
-        margin-top: 5rem;
-        /* Abstand vom oberen Rand */
+        margin: 2rem auto;
         padding: 1rem;
-        /* Innenabstand */
-        height: fit-content;
     }
 
     .header {
         font-size: 1.5rem;
-        /* Kleinere Schriftgröße für kleinere Bildschirme */
     }
 
     .header h2 {
-        font-size: 3rem;
-        /* Kleinere Schriftgröße für kleinere Bildschirme */
-        margin-bottom: 1rem;
-        /* Weniger Abstand nach unten */
+        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+        /* Noch kleinere Schriftgröße für Smartphones */
+        margin: 0.8rem 0;
+        /* Noch weniger Abstand */
     }
+}
 
-    .header h2:hover {
-        text-decoration: none;
-        /* Keine Unterstreichung bei Hover */
-    }
-
-    .header h2:active {
-        text-decoration: none;
-        /* Keine Unterstreichung bei Klick */
-    }
-
-    .header h2:focus {
-        text-decoration: none;
-        /* Keine Unterstreichung bei Fokus */
-    }
-
-
+.header h2:hover,
+.header h2:active,
+.header h2:focus {
+    text-decoration: none;
+    /* Consistent hover, active, and focus styles */
+    color: var(--primary-dark-hover);
+    /* Optional: Add hover color for better UX */
 }
