@@ -6,6 +6,10 @@
 
 }
 
+.container p {
+    line-height: 2;
+}
+
 
 .backButton {
     padding: 20px;

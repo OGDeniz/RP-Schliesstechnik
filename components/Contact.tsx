@@ -40,7 +40,7 @@ const ContactUs = () => {
 
             <div className={homestyles.contactForm}>
                 {/* Linke Seite: Formular */}
-                <form onSubmit={handleSubmit} style={{ backgroundColor: '#FFD500', padding: '2rem', borderRadius: '8px', width: '100%' }}>
+                <form onSubmit={handleSubmit} style={{ color: 'white', backgroundColor: '#002f5c', padding: '5rem', borderRadius: '8px', width: '100%', maxWidth: '600px', margin: '0 auto' }}>
                     <h2>Kontaktieren Sie uns</h2>
                     <div style={{ marginBottom: '1rem' }}>
                         <label htmlFor="name">Name:</label>
@@ -52,7 +52,7 @@ const ContactUs = () => {
                     </div>
                     <div style={{ marginBottom: '1rem' }}>
                         <label htmlFor="message">Message:</label>
-                        <textarea id="message" name="message" required style={{ width: '100%', padding: '0.5rem', marginTop: '0.5rem' }} />
+                        <textarea id="message" name="message" required style={{ width: '100%', height: '300px', padding: '0.5rem', marginTop: '0.5rem' }} />
                     </div>
                     <button type="submit" style={{ padding: '0.8rem 1.5rem', backgroundColor: '#333', color: '#FFF', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
                         Senden

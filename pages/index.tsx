@@ -58,7 +58,7 @@ export default function Home() {
       <div className={homeStyles.sliderContainer}>
         <Slider images={sliderImages} className={undefined} />
       </div>
-
+      {/* 
       <div className={homeStyles.three} >
 
         <h2>Über uns – RP Schließtechnik</h2>
@@ -69,9 +69,9 @@ export default function Home() {
         </p>
         {/*
             Define the 'produkt' object with the required properties.
-          */}
+          }
 
-      </div>
+      </div> */}
 
       <div className={homeStyles.three} >
         <h2>Unser Anspruch</h2>
