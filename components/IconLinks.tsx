@@ -14,7 +14,7 @@ export default function IconLinks() {
                         <FaCar />
                     </Link>
                 </div>
-                <p>Fahrzeugöffnung</p> {/* Text unter dem Icon */}
+                <p>Fahrzeugöffnung</p>
             </div>
             <div className={styles.iconLinks}>
                 <div className={styles.iconLinksItem}>

@@ -1,5 +1,5 @@
 
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import homeStyles from "../styles/home.module.css";
 import styles from "../styles/navigation.module.css";
 import openerStyles from "../styles/opener.module.css";
@@ -42,6 +42,11 @@ export default function Home() {
       sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
   ], []);
+
+  useEffect(() => {
+    fetch("/api/views", { method: "POST" });
+  }, []);
+
 
   return (
 
