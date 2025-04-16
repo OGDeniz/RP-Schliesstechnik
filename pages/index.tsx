@@ -50,6 +50,10 @@ export default function Home() {
         <Opener />
       </div>
 
+      <div className={homeStyles.sliderContainer}>
+        <Slider images={sliderImages} className={undefined} />
+      </div>
+
       <div className={homeStyles.three} >
 
         <h2>Über uns – RP Schließtechnik</h2>
@@ -61,15 +65,7 @@ export default function Home() {
         {/*
             Define the 'produkt' object with the required properties.
           */}
-        <Image
-          src="/bilder/img4.png"
-          alt="Schlüsseldienst Bild 4"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
-          width={1920}
-          height={1080}
-          className={cardStyles.cardImage}
-        />
       </div>
 
       <div className={homeStyles.three} >
