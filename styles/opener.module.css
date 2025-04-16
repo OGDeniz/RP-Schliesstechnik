@@ -5,9 +5,9 @@
     justify-content: center;
     background-color: #f0f0f0;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     /* Adjusted for smaller screens */
-    max-width: 1200px;
+    max-width: 1320px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
