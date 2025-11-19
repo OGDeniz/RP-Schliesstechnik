@@ -1,0 +1,319 @@
+/* Shared Auth Styles für Login & Register */
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+}
+
+.authCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.authCard h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--light);
+  font-weight: 700;
+  position: relative;
+}
+
+.authCard h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--danger));
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s ease;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--font-family-primary);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+.inputGroup input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 4px rgba(110, 193, 228, 0.15);
+}
+
+.inputGroup input:focus + label {
+  color: var(--primary);
+}
+
+/* Floating Label Effect */
+.floatingInput {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.floatingInput input {
+  padding: 1.25rem 1rem 0.5rem;
+}
+
+.floatingInput label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.floatingInput input:focus ~ label,
+.floatingInput input:not(:placeholder-shown) ~ label {
+  top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--danger) 0%, #c70000 100%);
+  color: var(--light);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.submitButton:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  background: linear-gradient(135deg, #666 0%, #444 100%);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.message.success {
+  background-color: rgba(97, 206, 112, 0.2);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.message.error {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.message.info {
+  background-color: rgba(110, 193, 228, 0.2);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.divider span {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: var(--light);
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* Row Layout für Name-Felder */
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .authCard {
+    padding: 2rem;
+  }
+
+  .authCard h1 {
+    font-size: 1.75rem;
+  }
+
+  .nameRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .authContainer {
+    padding: 1rem;
+  }
+
+  .authCard {
+    padding: 1.5rem;
+  }
+
+  .authCard h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .inputGroup input {
+    padding: 0.875rem;
+  }
+
+  .submitButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Loading State */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--light);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

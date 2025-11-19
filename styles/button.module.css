@@ -1,22 +1,225 @@
-/* Original styles */
+/* Button Design System */
 
-/* Responsive styles added */
+/* Base Button Styles */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-family-primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Button Variants */
+
+/* Primary Button (Danger/Red) */
+.buttonPrimary {
+    background: linear-gradient(135deg, var(--danger) 0%, #c70000 100%);
+    color: var(--light);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.buttonPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* Secondary Button (Blue) */
+.buttonSecondary {
+    background: linear-gradient(135deg, var(--primary) 0%, #4a9dc7 100%);
+    color: var(--light);
+    box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3);
+}
+
+.buttonSecondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(110, 193, 228, 0.4);
+}
+
+/* Outlined Button */
+.buttonOutline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    box-shadow: none;
+}
+
+.buttonOutline:hover {
+    background: var(--primary);
+    color: var(--light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3);
+}
+
+/* Ghost Button */
+.buttonGhost {
+    background: transparent;
+    color: var(--light);
+    box-shadow: none;
+}
+
+.buttonGhost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Success Button (Green) */
+.buttonSuccess {
+    background: linear-gradient(135deg, var(--accent) 0%, #4ab85a 100%);
+    color: var(--light);
+    box-shadow: 0 4px 15px rgba(97, 206, 112, 0.3);
+}
+
+.buttonSuccess:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(97, 206, 112, 0.4);
+}
+
+/* Dark Button */
+.buttonDark {
+    background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+    color: var(--light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.buttonDark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Sizes */
+
+.buttonSmall {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.buttonMedium {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.buttonLarge {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+/* Full Width Button */
+.buttonFull {
+    width: 100%;
+}
+
+/* Icon Button */
+.buttonIcon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.buttonIcon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Loading State */
+.buttonLoading {
+    position: relative;
+    pointer-events: none;
+}
+
+.buttonLoading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--light);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-
-    /* Adjust layout for tablets and small devices */
     .button {
-        padding: 8px 12px;
-        font-size: 14px;
-        width: 100%;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .buttonSmall {
+        padding: 0.625rem 1rem;
+        font-size: 0.8125rem;
+    }
+
+    .buttonLarge {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-
-    /* Adjust layout for phones */
     .button {
-        padding: 6px 10px;
-        font-size: 12px;
-        text-align: center;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .buttonSmall {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.75rem;
+    }
+
+    .buttonLarge {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9375rem;
+    }
+
+    /* Mobile buttons are often full width */
+    .buttonMobile {
+        width: 100%;
     }
 }
