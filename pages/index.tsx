@@ -11,6 +11,9 @@ import Image from "next/image";
 import cardStyles from "../styles/cards.module.css";
 import IconLinks from "../components/IconLinks";
 import Opener from "../components/Opener";
+import Head from "next/head";
+import TextSlider from "../components/ui/TextSlider";
+import textStyles from "../styles/textSlider.module.css";
 
 
 
@@ -41,6 +44,22 @@ export default function Home() {
       alt: "Schlüsseldienst Bild 5",
       sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
+
+    {
+      url: "/bilder/24std.png",
+      alt: "Schlüsseldienst Bild 6",
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+    },
+    {
+      url: "/bilder/türöffnung.webp",
+      alt: "Schlüsseldienst Bild 7",
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+    },
+    {
+      url: "/bilder/abus1.webp",
+      alt: "Schlüsseldienst abus",
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+    },
   ], []);
 
   useEffect(() => {
@@ -50,9 +69,46 @@ export default function Home() {
 
   return (
 
+
+
     <div className={homeStyles.container}>
+      <Head>
+        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schließtechnik</title>
+        <meta name="description" content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung, Einbruchschutz & Sicherheitstechnik. Ihr Experte – RP Schließtechnik!" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
+        <meta property="og:description" content="Schnelle & günstige Türöffnungen, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung." />
+        <meta property="og:image" content="/bilder/opengraph-preview.jpg" />
+        <meta property="og:url" content="https://schluesselrp.de" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://schluesselrp.de/" />
+
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "RP Schließtechnik",
+            "image": "https://schluesselrp.de/bilder/logo.png",
+            "url": "https://schluesselrp.de",
+            "telephone": "+49 176 236 875 42",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Schwimmbadstraße 18",
+              "addressLocality": "Bruchsal",
+              "postalCode": "76646",
+              "addressCountry": "DE"
+            },
+            "openingHours": "Mo-So 00:00-24:00"
+          })
+        }} />
+
+      </Head>
       <div className={homeStyles.header}>
-        <Opener />
+        <div className={homeStyles.textslide}>
+          <Slider images={sliderImages} className={homeStyles.slider} />
+          <Opener />
+        </div>
       </div>
 
       <div className={homeStyles.sliderContainer}>
@@ -60,18 +116,19 @@ export default function Home() {
       </div>
       {/* 
       <div className={homeStyles.three} >
-
-        <h2>Über uns – RP Schließtechnik</h2>
-        <p className={homeStyles.description}>
-          RP Schließtechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
-
-          Unser Anspruch: höchste Qualität, individuelle Beratung und maximale Sicherheit.
-        </p>
-        {/*
-            Define the 'produkt' object with the required properties.
-          }
-
+      
+      <h2>Über uns – RP Schließtechnik</h2>
+      <p className={homeStyles.description}>
+      RP Schließtechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
+      
+      Unser Anspruch: höchste Qualität, individuelle Beratung und maximale Sicherheit.
+      </p>
+      {/*
+      Define the 'produkt' object with the required properties.
+      }
+      
       </div> */}
+
 
       <div className={homeStyles.three} >
         <h2>Unser Anspruch</h2>
@@ -96,6 +153,9 @@ export default function Home() {
         </p>
       </div>
 
+      <div className={textStyles.textSliderContainer} >
+        <TextSlider />
+      </div>
       <div className={homeStyles.three} >
         <h2>Warum RP Schließtechnik?</h2>
         <ul className={homeStyles.description}>

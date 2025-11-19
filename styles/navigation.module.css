@@ -10,6 +10,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: var(--primary-dark);
     position: fixed;
+    margin-top: 2rem;
     top: 0;
     z-index: 1000;
 }
@@ -173,7 +174,8 @@
 }
 
 /* Responsive Anpassungen */
-@media (max-width: 768px) {
+@media (max-width: 768px),
+(max-height: 479px) {
 
     /* Burger-Icon anzeigen */
     .burgerMenu {
@@ -229,6 +231,22 @@
         /* Block-Element */
         padding: 0;
 
+
+    }
+
+    .abuslogo img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        top: 1rem;
+        gap: 2rem;
+        position: relative;
+        width: 75%;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
 
     }
 

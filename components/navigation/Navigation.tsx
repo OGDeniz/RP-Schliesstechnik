@@ -53,14 +53,15 @@ export default function Navigation() {
             </li>
           </ul>
         </div>
+        <div className={styles.abuslogo}>
+          <Image
+            src="/RP_Logos/abus-logo.png"
+            alt="Abus Logo"
+            width={151}
+            height={65}
 
-        <Image
-          src="/RP_Logos/abus-logo.png"
-          alt="Abus Logo"
-          width={151}
-          height={65}
-          className={styles.abusLogo}
-        />
+          />
+        </div>
 
 
         {/* "Jetzt anrufen"-Button – immer sichtbar */}

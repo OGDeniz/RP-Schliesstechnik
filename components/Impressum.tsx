@@ -17,7 +17,7 @@ const Impressum = ({ contactInfo }) => {
                 <p>
                     Kontakt: <br />
                     Name: Robin Prijs<br />
-                    Adresse: Schwimmbadstr. 18, 76646 Bruchsal<br />
+                    Adresse: Schwimmbadstr. 19, 76646 Bruchsal<br />
                     Telefon: +49 176 236 875 42<br />
                     E-Mail: <a href="mailto:info@schluesselrp.de">info@schluesselrp.com</a><br />
                 </p>
@@ -48,7 +48,7 @@ const Impressum = ({ contactInfo }) => {
                 <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <p>
                     Name: Robin Prijs<br />
-                    Adresse: Schwimmbadstr. 18, 76646 Bruchsal<br />
+                    Adresse: Schwimmbadstr. 19, 76646 Bruchsal<br />
                     Telefon: +49 176 236 875 42<br />
                     E-Mail: <a href="mailto:info@schluesselrp.de">info@schluesselrp.com</a><br />
                 </p>
@@ -86,7 +86,7 @@ const Impressum = ({ contactInfo }) => {
 export async function getServerSideProps() {
     const contactInfo = {
         name: "Robin Prijs",
-        address: "Schwimmbadstr. 18, 76646 Bruchsal",
+        address: "Schwimmbadstr. 19, 76646 Bruchsal",
         phone: "+49 176 236 875 42",
         email: "info@schluesselrp.de",
         website: "https://www.schluesselrp.de" + "http://www.schluesselrp.com",

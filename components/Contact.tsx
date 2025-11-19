@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head'; // Import für SEO
 import homestyles from '../styles/home.module.css';
 import Image from 'next/image';
 
@@ -36,31 +37,38 @@ const ContactUs = () => {
     };
 
     return (
-        <div className={homestyles.container}>
-
-            <div className={homestyles.contactForm}>
-                {/* Linke Seite: Formular */}
-                <form onSubmit={handleSubmit} style={{ color: 'white', backgroundColor: '#002f5c', padding: '5rem', borderRadius: '8px', width: '100%', maxWidth: '600px', margin: '0 auto' }}>
-                    <h2>Kontaktieren Sie uns</h2>
-                    <div style={{ marginBottom: '1rem' }}>
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" required style={{ width: '100%', padding: '0.5rem', marginTop: '0.5rem' }} />
-                    </div>
-                    <div style={{ marginBottom: '1rem' }}>
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" required style={{ width: '100%', padding: '0.5rem', marginTop: '0.5rem' }} />
-                    </div>
-                    <div style={{ marginBottom: '1rem' }}>
-                        <label htmlFor="message">Message:</label>
-                        <textarea id="message" name="message" required style={{ width: '100%', height: '300px', padding: '0.5rem', marginTop: '0.5rem' }} />
-                    </div>
-                    <button type="submit" style={{ padding: '0.8rem 1.5rem', backgroundColor: '#333', color: '#FFF', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
-                        Senden
-                    </button>
-                    {status && <p style={{ marginTop: '1rem', color: status.includes('erfolgreich') ? 'green' : 'red' }}>{status}</p>}
-                </form>
+        <>
+            <Head>
+                <title>Kontaktformular - Schreiben Sie uns eine Nachricht</title>
+                <meta name="description" content="Füllen Sie unser Kontaktformular aus, um uns eine Nachricht zu senden. Wir freuen uns auf Ihre Anfrage!" />
+                <meta name="keywords" content="Kontaktformular, Nachricht senden, Anfrage, Kontakt aufnehmen" />
+                <meta name="author" content="Ihr Unternehmen" />
+            </Head>
+            <div className={homestyles.container}>
+                <div className={homestyles.contactForm}>
+                    {/* Linke Seite: Formular */}
+                    <form onSubmit={handleSubmit} style={{ color: 'white', backgroundColor: '#002f5c', padding: '5rem', borderRadius: '8px', width: '100%', maxWidth: '600px', margin: '0 auto' }}>
+                        <h2>Kontaktieren Sie uns</h2>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <label htmlFor="name">Name:</label>
+                            <input type="text" id="name" name="name" required style={{ width: '100%', padding: '0.5rem', marginTop: '0.5rem' }} />
+                        </div>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" id="email" name="email" required style={{ width: '100%', padding: '0.5rem', marginTop: '0.5rem' }} />
+                        </div>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <label htmlFor="message">Message:</label>
+                            <textarea id="message" name="message" required style={{ width: '100%', height: '300px', padding: '0.5rem', marginTop: '0.5rem' }} />
+                        </div>
+                        <button type="submit" style={{ padding: '0.8rem 1.5rem', backgroundColor: '#333', color: '#FFF', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+                            Senden
+                        </button>
+                        {status && <p style={{ marginTop: '1rem', color: status.includes('erfolgreich') ? 'green' : 'red' }}>{status}</p>}
+                    </form>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
