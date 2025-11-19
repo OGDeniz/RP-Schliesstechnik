@@ -16,7 +16,7 @@ export default function Navigation() {
     <nav className={styles.navigation}>
       <div className={styles.navContainer}>
         {/* Burger-Icon – im Desktop ausgeblendet */}
-        <div className={styles.burgerMenu} onClick={toggleMenu}>
+        <div className={`${styles.burgerMenu} ${menuOpen ? styles.burgerMenuOpen : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
@@ -81,18 +81,28 @@ export default function Navigation() {
       {/* Mobile Menü (Dropdown) – wird eingeblendet, wenn Burger-Icon geklickt wurde */}
       {menuOpen && (
         <div className={styles.menuMobile}>
+          {/* Close Button */}
+          <button
+            className={styles.closeButton}
+            onClick={toggleMenu}
+            aria-label="Menü schließen"
+          >
+            <span className={styles.closeIcon}></span>
+            <span className={styles.closeIcon}></span>
+          </button>
+
           <ul className={styles.menu}>
             <li>
-              <Link href="/">Startseite</Link>
+              <Link href="/" onClick={toggleMenu}>Startseite</Link>
             </li>
             <li>
-              <Link href="/produkte">Leistungen</Link>
+              <Link href="/produkte" onClick={toggleMenu}>Leistungen</Link>
             </li>
             <li>
-              <Link href="/contact">Kontakt</Link>
+              <Link href="/contact" onClick={toggleMenu}>Kontakt</Link>
             </li>
             <li>
-              <Link href="/impressum">Impressum</Link>
+              <Link href="/impressum" onClick={toggleMenu}>Impressum</Link>
             </li>
           </ul>
         </div>
