@@ -3,6 +3,8 @@ import Navigation from "../components/navigation/Navigation";
 import Fusszeile from "../components/navigation/Fusszeile";
 import Head from "next/head";
 import React from "react";
+import ClaimBar from "../components/ClaimBar";
+
 
 import { ReactNode } from "react";
 
@@ -18,6 +20,7 @@ export default function Layout({ children }: LayoutProps) {
                 <meta name="description" content="Liefermax" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <ClaimBar />
             <Navigation />
             {children}
             <Fusszeile />

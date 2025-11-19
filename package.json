@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-sitemap",
+    "sitemap": "next-sitemap",
     "lint": "next lint",
     "export": "next export"
   },
@@ -34,6 +36,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.12.0",
     "next": "^15.2.4",
+    "next-sitemap": "^4.2.3",
     "next.js": "latest",
     "nodemailer": "^6.9.4",
     "postcss": "^8.4.21",

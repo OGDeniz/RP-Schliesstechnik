@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://schluesselrp.de
+
+# Sitemaps
+Sitemap: https://schluesselrp.de/sitemap.xml

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"; // Import von useEffect hinzugefügt
 import { slidesData } from "../../components/data/slidesData";
+import styles from "../../styles/home.module.css"; // Importieren der CSS-Module
+import textstyles from "../../styles/textSlider.module.css"; // Importieren der CSS-Module
 
 const TextSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,7 +25,7 @@ const TextSlider = () => {
 
   return (
     <div className="text-slider-container">
-      <div className="text-slider controls">
+      <div className={textstyles.slider}>
         {slidesData.map((slide, index) => (
           <div
             key={slide.id}

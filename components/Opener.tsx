@@ -4,7 +4,6 @@ export default function Opener() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-
                 <h2>
                     24-STUNDEN-SCHLÜSSEL- UND SICHERHEITSDIENSTE IN DEINER NÄHE
                     <br />
@@ -12,17 +11,19 @@ export default function Opener() {
                 </h2>
 
                 <p>
-                    <strong> RP Schließtechnik </strong> wurde im Frühling 2024 gegründet – mit dem Ziel, moderne, zuverlässige und schnelle Lösungen im Bereich Schlüssel- und Sicherheitstechnik anzubieten. Als junges, engagiertes Unternehmen sind wir stolz darauf, sowohl Privat- als auch Geschäftskunden in der Region ein umfassendes Leistungsspektrum zu bieten.
+                    <strong>RP Schließtechnik</strong> ist Ihr Fachbetrieb für Sicherheitstechnik mit langjähriger Erfahrung bei Türöffnungen. Wir bieten persönlichen Service rund um Sicherheit und legen großen Wert auf hohe Kundenzufriedenheit.
                 </p>
 
                 <p>
-                    📍 Wir sind für Sie im gesamten Landkreis Karlsruhe im Einsatz – von Bruchsal über Ettlingen bis hin zu Bretten, Stutensee, Waghäusel und vielen weiteren Orten in der Umgebung. Verlassen Sie sich auf unseren zuverlässigen Service – direkt vor Ihrer Haustür!
+                    📍 Unser 24h Schlüsseldienst – schnell & zuverlässig – ist im gesamten Landkreis Karlsruhe im Einsatz. Ob Schlüsseldienst in Bruchsal, Ettlingen, Bretten, Stutensee oder Waghäusel: Wir bieten Sicherheit für Privathaushalte, gewerbliche Sicherheitslösungen und Mietobjekte.
                 </p>
+
                 <p>
-                    24-Stunden-Notdienst – auch an Wochenenden und Feiertagen. Wenn Sie uns brauchen, sind wir für Sie da!
+                    Unsere Leistungen umfassen Alarmanlagen für Wohnhäuser, Einbruchschutz für Gewerbeflächen und Sicherheitskonzepte für Vermieter. Unser Schlüsselnotdienst ist jederzeit für Sie da – auch für Schlosswechsel, Schließanlagen und Türöffnungen in Bruchsal, Ettlingen, Bretten und Umgebung.
                 </p>
+
                 <p>
-                    Unser Anspruch ist es, Ihnen professionelle, effiziente und faire Leistungen zu bieten – rund um Schloss, Schlüssel, Türöffnung, Einbruchschutz und moderne Sicherheitssysteme. Ob Wohnhaus, Gewerbefläche oder Mietobjekt: Jedes Projekt wird bei uns mit höchster Sorgfalt und Aufmerksamkeit behandelt – für 100 % Kundenzufriedenheit.
+                    Vertrauen Sie auf unsere Expertise bei Einbruchschutz nachrüsten, Smart-Home-Sicherheitssystemen, Zutrittskontrolle und Sicherheitsberatung vor Ort. Ob Sicherheitstechnik für Haus & Gewerbe oder Türöffnung im Landkreis Karlsruhe – wir sind Ihr zuverlässiger Partner.
                 </p>
             </div>
         </div>
