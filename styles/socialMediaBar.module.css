@@ -17,7 +17,7 @@
 
 @media (max-width: 768px) {
     .socialMediaBar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 }
