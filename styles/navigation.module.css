@@ -138,17 +138,6 @@
   width: 80%;
 }
 
-/* === ABUS LOGO === */
-.abuslogo {
-  display: flex;
-  align-items: center;
-  transition: opacity var(--transition-fast);
-}
-
-.abuslogo:hover {
-  opacity: 0.8;
-}
-
 /* === CALL BUTTON === */
 .rightNav {
   display: flex;
@@ -367,11 +356,6 @@
   .menu {
     gap: var(--spacing-4);
   }
-
-  .abuslogo img {
-    width: 120px;
-    height: auto;
-  }
 }
 
 @media (max-width: 768px) {
@@ -381,10 +365,6 @@
   }
 
   .desktopMenu {
-    display: none;
-  }
-
-  .abuslogo {
     display: none;
   }
 
