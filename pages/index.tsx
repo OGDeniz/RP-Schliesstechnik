@@ -12,11 +12,9 @@ import cardStyles from "../styles/cards.module.css";
 import IconLinks from "../components/IconLinks";
 import Opener from "../components/Opener";
 import Head from "next/head";
-import TextSlider from "../components/ui/TextSlider";
-import textStyles from "../styles/textSlider.module.css";
+import Accordion from "../components/ui/Accordion";
 import ElfsightWidget from "../components/ElfsightWidget";
 import Hero from "../components/Hero";
-import Accordion from "../components/ui/Accordion";
 
 
 export default function Home() {
@@ -155,10 +153,6 @@ export default function Home() {
             Wir möchten, dass Sie sich jederzeit sicher fühlen – in Ihrem Zuhause, Ihrem Unternehmen oder unterwegs. Daher investieren wir kontinuierlich in neue Technologien und setzen auf nachhaltige, zukunftsorientierte Konzepte.
           </p>
         </Accordion>
-      </div>
-
-      <div className={textStyles.textSliderContainer} >
-        <TextSlider />
       </div>
 
       <div className={homeStyles.three} >
