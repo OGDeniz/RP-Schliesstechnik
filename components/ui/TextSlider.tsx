@@ -24,22 +24,38 @@ const TextSlider = () => {
   };
 
   return (
-    <div className="text-slider-container">
-      <div className={textstyles.slider}>
+    <div className={textstyles.textSliderContainer}>
+      <div className={textstyles.textSlider}>
         {slidesData.map((slide, index) => (
           <div
             key={slide.id}
-            className={`slide ${index === currentSlide ? "active" : ""}`}
+            className={`${textstyles.slide} ${index === currentSlide ? textstyles.active : ""}`}
           >
             {index === currentSlide && (
               <>
-                <h2>{slide.title}</h2>
-                <p>{slide.description}</p>
+                <h2 className={textstyles.slideTitle}>{slide.title}</h2>
+                <p className={textstyles.slideDescription}>{slide.description}</p>
               </>
             )}
           </div>
         ))}
       </div>
+
+      <button
+        className={`${textstyles.sliderBtn} ${textstyles.prev}`}
+        onClick={handlePrev}
+        aria-label="Vorheriger Slide"
+      >
+        ‹
+      </button>
+
+      <button
+        className={`${textstyles.sliderBtn} ${textstyles.next}`}
+        onClick={handleNext}
+        aria-label="Nächster Slide"
+      >
+        ›
+      </button>
     </div>
   );
 };
