@@ -1,89 +1,159 @@
+/* ===========================
+   Footer Styles - Professional Locksmith Theme
+   =========================== */
+
 .fusszeileContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--dark);
-    color: var(--light);
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 20px 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-charcoal) 100%);
+    color: var(--neutral-white);
+    padding: 3rem 2rem;
+    margin: 0;
+    font-weight: 500;
+    text-align: left;
+    transition: all var(--transition-base);
+    border-top: 3px solid var(--accent-red);
 }
 
 .navLink {
-    color: var(--dark);
     text-decoration: none;
-    padding: 10px;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-base);
+    transition: all var(--transition-fast);
+    display: block;
 }
 
 .navLink p {
     margin: 0;
-    font-size: 1rem;
-    font-weight: normal;
-    color: var(--light);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--neutral-white);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
 }
 
+.navLink:hover {
+    background-color: rgba(249, 115, 22, 0.1);
+    padding-left: 1.5rem;
+}
+
+/* Links Section */
 .links {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .links a {
-    color: var(--secondary);
+    color: var(--neutral-light);
     text-decoration: none;
-    margin: 0;
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+    display: inline-block;
+    position: relative;
 }
 
+.links a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-red);
+    transition: width var(--transition-fast);
+}
+
+.links a:hover {
+    color: var(--accent-red);
+}
+
+.links a:hover::before {
+    width: 100%;
+}
+
+/* Content Zone */
 .contentzone {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--light);
-    border-radius: 5px;
-    margin-top: 20px;
-    background-color: var(--dark);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    margin-top: 0;
+    gap: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 1024px) {
     .fusszeileContainer {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        padding: 2.5rem 2rem;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fusszeileContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
     }
 
     .navLink {
-        margin-bottom: 10px;
+        padding: 0.5rem 0.75rem;
     }
 
     .navLink p {
-        font-size: 0.9rem;
-    }
-
-    .navLink:hover {
-        background-color: var(--secondary);
-        color: var(--light);
-        border-radius: 5px;
-    }
-
-    .contentzone {
-        font-size: 0.9rem;
-        padding: 10px;
+        font-size: var(--font-size-xs);
     }
 
     .links {
-        align-items: center;
+        gap: 0.75rem;
     }
 
     .links a {
-        margin: 5px 0;
+        font-size: var(--font-size-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .fusszeileContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1rem;
+        gap: 1.25rem;
+        border-top: 2px solid var(--accent-red);
     }
 
+    .navLink {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+    }
 
+    .navLink p {
+        font-size: var(--font-size-xs);
+    }
+
+    .navLink:hover {
+        padding-left: 1rem;
+    }
+
+    .links {
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .links a {
+        font-size: var(--font-size-xs);
+    }
 }

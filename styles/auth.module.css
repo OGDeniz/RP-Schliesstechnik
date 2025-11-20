@@ -1,4 +1,4 @@
-/* Shared Auth Styles für Login & Register */
+/* Shared Auth Styles für Login & Register - Professional Locksmith Theme */
 
 .authContainer {
   display: flex;
@@ -6,19 +6,21 @@
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-charcoal) 100%);
 }
 
 .authCard {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-white);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-white-medium);
+  border-radius: var(--radius-lg);
   padding: 3rem;
   width: 100%;
   max-width: 450px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-xl);
+  transition: all var(--transition-base);
+  border-top: 3px solid var(--accent-red);
 }
 
 .authCard:hover {
@@ -27,11 +29,11 @@
 }
 
 .authCard h1 {
-  font-size: 2rem;
+  font-size: var(--font-size-2xl);
   margin-bottom: 2rem;
   text-align: center;
-  color: var(--light);
-  font-weight: 700;
+  color: var(--neutral-white);
+  font-weight: var(--font-weight-extrabold);
   position: relative;
 }
 
@@ -40,9 +42,9 @@
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--danger));
+  background: linear-gradient(90deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
   margin: 1rem auto 0;
-  border-radius: 2px;
+  border-radius: var(--radius-full);
 }
 
 .form {
@@ -57,38 +59,38 @@
 
 .inputGroup label {
   display: block;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  transition: color 0.3s ease;
+  color: var(--neutral-white);
+  transition: color var(--transition-fast);
 }
 
 .inputGroup input {
   width: 100%;
-  padding: 1rem;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  font-size: 1rem;
+  padding: var(--spacing-4);
+  border: 2px solid var(--glass-white-medium);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
   font-family: var(--font-family-primary);
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--light);
-  transition: all 0.3s ease;
+  background-color: var(--glass-white);
+  color: var(--neutral-white);
+  transition: all var(--transition-fast);
 }
 
 .inputGroup input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--neutral-medium);
 }
 
 .inputGroup input:focus {
   outline: none;
-  border-color: var(--primary);
-  background-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 0 0 4px rgba(110, 193, 228, 0.15);
+  border-color: var(--accent-red);
+  background-color: var(--glass-white-medium);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
 }
 
 .inputGroup input:focus + label {
-  color: var(--primary);
+  color: var(--accent-red);
 }
 
 /* Floating Label Effect */
@@ -118,16 +120,16 @@
 }
 
 .submitButton {
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--danger) 0%, #c70000 100%);
-  color: var(--light);
+  padding: var(--spacing-4) var(--spacing-8);
+  background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+  color: var(--neutral-white);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius-base);
   cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-glow-red);
   position: relative;
   overflow: hidden;
   margin-top: 1rem;
@@ -153,7 +155,7 @@
 
 .submitButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.45);
 }
 
 .submitButton:active {
@@ -161,36 +163,36 @@
 }
 
 .submitButton:disabled {
-  background: linear-gradient(135deg, #666 0%, #444 100%);
+  background: linear-gradient(135deg, var(--neutral-dark) 0%, var(--neutral-medium) 100%);
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .message {
   margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: var(--spacing-4);
+  border-radius: var(--radius-base);
   text-align: center;
-  font-weight: 500;
-  animation: slideIn 0.3s ease;
+  font-weight: var(--font-weight-semibold);
+  animation: slideIn var(--transition-base);
 }
 
 .message.success {
-  background-color: rgba(97, 206, 112, 0.2);
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--accent-success);
+  border: 1px solid var(--accent-success);
 }
 
 .message.error {
-  background-color: rgba(255, 0, 0, 0.2);
-  color: var(--danger);
-  border: 1px solid var(--danger);
+  background-color: rgba(249, 115, 22, 0.15);
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red);
 }
 
 .message.info {
-  background-color: rgba(110, 193, 228, 0.2);
-  color: var(--primary);
-  border: 1px solid var(--primary);
+  background-color: rgba(27, 58, 107, 0.15);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
 }
 
 @keyframes slideIn {
@@ -225,22 +227,22 @@
 }
 
 .link {
-  color: var(--primary);
+  color: var(--accent-red);
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
 }
 
 .link:hover {
-  color: var(--light);
+  color: var(--accent-red-light);
   text-decoration: underline;
 }
 
 .footer {
   margin-top: 2rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+  color: var(--neutral-light);
+  font-size: var(--font-size-sm);
 }
 
 /* Row Layout für Name-Felder */
@@ -257,11 +259,16 @@
   }
 
   .authCard h1 {
-    font-size: 1.75rem;
+    font-size: var(--font-size-xl);
   }
 
   .nameRow {
     grid-template-columns: 1fr;
+  }
+
+  .submitButton {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -272,10 +279,11 @@
 
   .authCard {
     padding: 1.5rem;
+    border-top: 2px solid var(--accent-red);
   }
 
   .authCard h1 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-lg);
     margin-bottom: 1.5rem;
   }
 
@@ -284,12 +292,12 @@
   }
 
   .inputGroup input {
-    padding: 0.875rem;
+    padding: var(--spacing-3);
   }
 
   .submitButton {
-    padding: 0.875rem 1.5rem;
-    font-size: 1rem;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
   }
 }
 

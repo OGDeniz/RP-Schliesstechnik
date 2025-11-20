@@ -1,11 +1,16 @@
+/* ===========================
+   About Us Page Styles
+   =========================== */
+
 .aboutus {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #333;
+  font-family: var(--font-family-primary);
+  color: var(--primary-dark);
   line-height: 1.8;
-  padding: 25px;
+  padding: 2rem;
 }
 
-.about-us .hero {
+/* Hero Section */
+.hero {
   background-color: var(--primary-light);
   border: 1px solid var(--primary-dark);
   border-radius: 10px;
@@ -13,98 +18,134 @@
   margin-bottom: 2.5rem;
 }
 
-.about-us .hero h1 {
-  font-size: 3em;
-  margin-bottom: 15px;
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: var(--primary-dark);
 }
 
-.about-us .hero p {
-  font-size: 1.3em;
+.hero p {
+  font-size: 1.3rem;
+  margin: 0;
 }
 
-.about-us section {
-  margin-bottom: 25px;
+/* Sections */
+section {
+  margin-bottom: 2rem;
 }
 
-.about-us h2 {
-  font-size: 2.2em;
-  margin-bottom: 15px;
+h2 {
+  font-size: 2.2rem;
+  margin: 0 0 1rem 0;
+  color: var(--primary-dark);
 }
 
-.about-us p,
-.about-us ul {
-  font-size: 1.2em;
+p,
+ul {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
-.about-us ul {
+ul {
   list-style-type: circle;
-  padding-left: 25px;
+  padding-left: 1.5rem;
+  margin: 0;
 }
 
-.about-us ul li {
-  margin-bottom: 15px;
+ul li {
+  margin-bottom: 1rem;
 }
 
-.about-us .contact-us {
-  background-color: #f0f0f0;
-  padding: 25px;
+/* Contact Us Section */
+.contactUs {
+  background-color: var(--light);
+  padding: 2rem;
   text-align: center;
+  border-radius: 8px;
 }
 
-.about-us .ourVision {
-  background-color: #f0f0f0;
-  color: blue;
-  padding: 25px;
+/* Vision Section */
+.ourVision {
+  background-color: var(--light);
+  padding: 2rem;
   text-align: center;
+  border-radius: 8px;
 }
 
-.about-us .ourVision h2 {
-  font-size: 2.2em;
-  margin-bottom: 15px;
-  color: #0056b3;
+.ourVision h2 {
+  color: var(--primary);
 }
 
-.about-us .contact-us strong {
-  color: #0056b3;
+.ourVision strong,
+.contactUs strong {
+  color: var(--primary);
   cursor: pointer;
 }
 
-/* Original styles */
+/* ===========================
+   Responsive Design
+   =========================== */
 
-/* Responsive styles added */
 @media (max-width: 768px) {
-
-  /* Adjust layout for tablets and small devices */
-  .container {
-    padding: 10px;
-    flex-direction: column;
+  .aboutus {
+    padding: 1rem;
   }
 
-  .card {
-    width: 100%;
-    margin-bottom: 20px;
+  .hero {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .button {
-    width: 100%;
-    text-align: center;
+  .hero h1 {
+    font-size: 2rem;
   }
 
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  ul {
+    font-size: 1rem;
+  }
+
+  .contactUs,
+  .ourVision {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-
-  /* Adjust layout for phones */
-  .container {
-    padding: 5px;
+  .aboutus {
+    padding: 1rem;
   }
 
-  .text {
-    font-size: 14px;
+  .hero {
+    padding: 1rem;
   }
 
-  .image {
-    width: 100%;
-    height: auto;
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p,
+  ul {
+    font-size: 0.95rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
   }
 }

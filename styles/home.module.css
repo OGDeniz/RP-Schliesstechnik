@@ -1,231 +1,457 @@
-/* home.module.css */
+/* ===========================
+   Home Page - Professional Locksmith Layout
+   Based on allprolocks.com style
+   =========================== */
 
+/* MAIN CONTAINER */
 .container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: fit-content;
-    margin: 200px auto;
     align-items: center;
-    padding-bottom: 3rem;
-    color: var(--primary-dark);
-    background-color: var(--light);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0;
+    background-color: var(--neutral-white);
+}
 
+/* ===========================
+   HERO SECTION
+   =========================== */
+
+.heroSection {
+    width: 100%;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(27, 58, 107, 0.9) 0%, rgba(36, 60, 90, 0.9) 100%);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heroSection h1 {
+    color: var(--neutral-white);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: var(--font-weight-extrabold);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.heroSection p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    margin: 0 0 2rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===========================
+   TEXT SLIDE SECTION
+   =========================== */
+
+.textslide {
+    width: 100%;
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: var(--neutral-off-white);
+    margin-bottom: 3rem;
 }
 
 .textslide h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-    text-shadow: 3px 3px rgba(134, 117, 118, 0.479);
+    font-size: 3rem;
+    color: var(--primary-dark);
     text-align: center;
+    margin: 0 0 1.5rem 0;
+    font-weight: var(--font-weight-extrabold);
 }
 
 .textslide p {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--light);
-    background-color: black;
-    text-align: center;
-    text-shadow: 1px 1px rgba(134, 117, 118, 0.479);
-}
-
-
-.three {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    width: 80%;
-    padding: 1rem;
-    border-radius: 8px;
-
-    background-color: var(--primary-dark);
-
-    background-image: url("../public/bilder/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.three h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
     color: var(--primary-dark);
-    text-shadow: 1px 1px rgba(134, 117, 118, 0.479);
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: var(--primary-dark);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2rem;
-    text-decoration-style: dotted;
-    text-decoration-skip-ink: auto;
-    text-decoration-line: underline;
-}
-
-.three p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--light);
-    text-align: start;
+    background-color: transparent;
     margin: 0;
     padding: 0;
-    width: 75%;
+    line-height: 1.6;
 }
 
-.three ul {
+/* ===========================
+   SERVICE SECTION (THREE COLUMNS)
+   =========================== */
+
+.servicesWrapper {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--neutral-white);
+}
+
+.servicesHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.servicesHeader h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin: 0 0 1rem 0;
+    font-weight: var(--font-weight-bold);
+}
+
+.servicesHeader p {
+    font-size: 1.1rem;
+    color: var(--neutral-dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.serviceCard {
+    background: var(--neutral-white);
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.serviceCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-red);
+}
+
+.serviceCard h3 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin: 0 0 1rem 0;
+    font-weight: var(--font-weight-bold);
+}
+
+.serviceCard p {
+    font-size: 1rem;
+    color: var(--neutral-dark);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+}
+
+.serviceList {
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 
-.description {
-    text-align: start;
-    font-size: 1.2rem;
-    margin: 0;
-    list-style: -moz-element("•");
-    list-style: -webkit-element("•");
-    list-style: element("•");
-    list-style-position: inside;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: var(--light);
-    text-shadow: 1px 1px rgba(134, 117, 118, 0.479);
+.serviceList li {
+    font-size: 0.95rem;
+    color: var(--neutral-dark);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
 }
+
+.serviceList li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+/* ===========================
+   MAIN CONTENT SECTION (FOUR)
+   =========================== */
 
 .four {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    width: 80%;
-    padding: 1rem;
-    border-radius: 8px;
-    background-image: url("../public/bilder/bg.jpg");
-    background-color: var(--primary-dark);
-    color: var(--light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 3rem 2rem;
+    margin: 0 auto 3rem;
 }
 
-
-.leftSection,
-.rightSection {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Inhalte gleichmäßig verteilen */
+.four h2 {
+    grid-column: 1 / -1;
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin: 0 0 2rem 0;
+    text-align: center;
 }
 
 .leftSection {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
 .rightSection {
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
+.featureBlock {
+    background: var(--neutral-off-white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-red);
+}
 
+.featureBlock h3 {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin: 0 0 1rem 0;
+}
+
+.featureBlock p {
+    color: var(--neutral-dark);
+    line-height: 1.6;
+}
+
+/* ===========================
+   CONTACT FORM SECTION
+   =========================== */
+
+.contactForm {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-charcoal) 100%);
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+}
+
+.contactFormContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contactForm h2 {
+    color: var(--neutral-white);
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    color: var(--neutral-white);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitBtn {
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+}
+
+/* ===========================
+   SLIDER
+   =========================== */
 
 .slider {
     margin: 3rem auto;
     border-radius: 0.5rem;
     max-width: 900px;
+    width: 100%;
 }
-
 
 .mainSlider {
-    .mainSlider {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        /* Füllt die gesamte Höhe der Spalte */
-        aspect-ratio: auto;
-        /* Verhindert Verzerrungen */
-        border-radius: 8px;
-        overflow: hidden;
-        animation: fadeIn 1s ease-in-out;
-
-        padding: 0;
-        unicode-bidi: isolate;
-    }
-
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
+/* ===========================
+   COMPANY INFO
+   =========================== */
+
 .companyInfo {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: var(--neutral-off-white);
+    border-radius: 8px;
 }
 
 .companyInfo ul {
     list-style: none;
-    margin-top: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .companyInfo li {
-    margin: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.companyInfo li:before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    color: var(--success);
-}
-
-
-/* Contact form styles */
-.contactForm {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    color: var(--neutral-dark);
 }
 
-/* Responsive styles added */
+.companyInfo li::before {
+    content: "✓";
+    color: var(--accent-red);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 1024px) {
+    .four {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    .hero {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .two {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .three {
-        display: flex;
-        flex-direction: column;
-    }
-
     .container {
         padding: 1rem;
-        flex-direction: column;
+    }
+
+    .heroSection {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .heroSection h1 {
+        font-size: 2rem;
+    }
+
+    .textslide {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .textslide h1 {
+        font-size: 2rem;
+    }
+
+    .servicesWrapper {
+        padding: 2rem 1rem;
+    }
+
+    .servicesHeader h2 {
+        font-size: 2rem;
+    }
+
+    .serviceGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .four {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
     }
 
     .contactForm {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+        padding: 2rem 1rem;
     }
-
 }
 
 @media (max-width: 480px) {
-    .hero {
-        font-size: 16px;
+    .heroSection h1 {
+        font-size: 1.5rem;
+    }
+
+    .heroSection p {
+        font-size: 1rem;
+    }
+
+    .textslide h1 {
+        font-size: 1.5rem;
+    }
+
+    .textslide p {
+        font-size: 1rem;
+    }
+
+    .servicesHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    .serviceCard {
+        padding: 1.5rem 1rem;
+    }
+
+    .four {
+        padding: 1.5rem 1rem;
+    }
+
+    .submitBtn {
+        max-width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
