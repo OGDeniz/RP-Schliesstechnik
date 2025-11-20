@@ -26,6 +26,17 @@
     overflow: hidden;
 }
 
+/* Carousel Item Image Container */
+:global(.carousel-item) {
+    aspect-ratio: 16/9;
+}
+
+:global(.carousel-item img) {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 /* ===========================
    Responsive Design
    =========================== */
