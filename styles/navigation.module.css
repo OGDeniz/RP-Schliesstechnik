@@ -12,7 +12,7 @@
   transition: all var(--transition-base);
 }
 
-/* Glasmorphism Background */
+/* Glasmorphism Background - Navy Blue */
 .navigation::before {
   content: '';
   position: absolute;
@@ -20,10 +20,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--glass-dark);
+  background: rgba(27, 58, 107, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-white);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.3);
   z-index: -1;
 }
 
