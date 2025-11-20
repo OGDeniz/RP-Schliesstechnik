@@ -53,52 +53,6 @@
     margin: 0;
 }
 
-/* Slider Navigation Buttons */
-.sliderBtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: var(--accent-red);
-    color: var(--neutral-white);
-    border: none;
-    padding: 0.75rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
-}
-
-.sliderBtn.prev {
-    left: 1rem;
-}
-
-.sliderBtn.next {
-    right: 1rem;
-}
-
-.sliderBtn:hover {
-    background: #b91c1c;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.4);
-}
-
-.sliderBtn:active {
-    transform: translateY(-50%) scale(0.95);
-}
-
-.sliderBtn:focus {
-    outline: 2px solid var(--neutral-white);
-    outline-offset: 2px;
-}
-
 /* ===========================
    Responsive Design
    =========================== */
@@ -121,21 +75,6 @@
     .slideDescription {
         font-size: 0.95rem;
     }
-
-    .sliderBtn {
-        padding: 0.5rem;
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-
-    .sliderBtn.prev {
-        left: 0.5rem;
-    }
-
-    .sliderBtn.next {
-        right: 0.5rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -154,20 +93,5 @@
 
     .slideDescription {
         font-size: 0.9rem;
-    }
-
-    .sliderBtn {
-        padding: 0.5rem;
-        width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
-    }
-
-    .sliderBtn.prev {
-        left: 0.25rem;
-    }
-
-    .sliderBtn.next {
-        right: 0.25rem;
     }
 }

@@ -15,14 +15,6 @@ const TextSlider = () => {
     return () => clearInterval(interval); // Cleanup-Funktion
   }, []);
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slidesData.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev === slidesData.length - 1 ? 0 : prev + 1));
-  };
-
   return (
     <div className={textstyles.textSliderContainer}>
       <div className={textstyles.textSlider}>
@@ -40,22 +32,6 @@ const TextSlider = () => {
           </div>
         ))}
       </div>
-
-      <button
-        className={`${textstyles.sliderBtn} ${textstyles.prev}`}
-        onClick={handlePrev}
-        aria-label="Vorheriger Slide"
-      >
-        ‹
-      </button>
-
-      <button
-        className={`${textstyles.sliderBtn} ${textstyles.next}`}
-        onClick={handleNext}
-        aria-label="Nächster Slide"
-      >
-        ›
-      </button>
     </div>
   );
 };
