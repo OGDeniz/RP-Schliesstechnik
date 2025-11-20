@@ -1,0 +1,118 @@
+/* ===========================
+   Sticky Call Button Styles
+   =========================== */
+
+.stickyCallButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--accent-red);
+    border: none;
+    border-radius: 50%;
+    display: none;
+    /* Standardmäßig versteckt */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.stickyCallButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
+    background: #b91c1c;
+    /* Dunkleres Rot beim Hover */
+}
+
+.stickyCallButton:active {
+    transform: scale(0.95);
+}
+
+.phoneIcon {
+    color: var(--neutral-white);
+    font-size: 1.5rem;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    }
+}
+
+/* ===========================
+   Mobile Only - Responsive Design
+   =========================== */
+
+/* Tablet und kleiner */
+@media (max-width: 1024px) {
+    .stickyCallButton {
+        display: flex;
+        /* Zeige Button auf Tablets und Smartphones */
+        bottom: 25px;
+        right: 25px;
+    }
+}
+
+/* Mobile Geräte */
+@media (max-width: 768px) {
+    .stickyCallButton {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .phoneIcon {
+        font-size: 1.4rem;
+    }
+}
+
+/* Sehr kleine Bildschirme */
+@media (max-width: 480px) {
+    .stickyCallButton {
+        width: 52px;
+        height: 52px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .phoneIcon {
+        font-size: 1.3rem;
+    }
+}
+
+/* Accessibility */
+.stickyCallButton:focus {
+    outline: 2px solid var(--neutral-white);
+    outline-offset: 2px;
+}
+
+/* Reduzierte Bewegung für Barrierefreiheit */
+@media (prefers-reduced-motion: reduce) {
+    .stickyCallButton {
+        animation: none;
+        transition: none;
+    }
+
+    .stickyCallButton:hover {
+        transform: none;
+    }
+
+    .stickyCallButton:active {
+        transform: none;
+    }
+}

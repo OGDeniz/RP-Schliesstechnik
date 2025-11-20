@@ -4,7 +4,7 @@ import Fusszeile from "../components/navigation/Fusszeile";
 import Head from "next/head";
 import React from "react";
 import ClaimBar from "../components/ClaimBar";
-
+import StickyCallButton from "../components/ui/StickyCallButton";
 
 import { ReactNode } from "react";
 
@@ -24,6 +24,7 @@ export default function Layout({ children }: LayoutProps) {
             <Navigation />
             {children}
             <Fusszeile />
+            <StickyCallButton />
         </div>
     );
 }
