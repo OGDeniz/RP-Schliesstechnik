@@ -1,103 +1,116 @@
+/* ===========================
+   Opener / Section Header Styles
+   =========================== */
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
-    box-sizing: border-box;
     width: 100%;
-    /* Adjusted for smaller screens */
     max-width: 1320px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    margin: 3rem auto;
+    padding: var(--spacing-8);
+    background-color: var(--neutral-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
     position: relative;
     z-index: 10;
+    border-top: 3px solid var(--accent-red);
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .header {
-    font-size: 2rem;
-    color: #6d6c6c;
-    margin-bottom: 1rem;
     width: 100%;
-    height: auto;
-    /* Full width for better alignment */
     text-align: center;
-    /* Center-align text */
-    padding: 1rem;
-
+    padding: var(--spacing-4);
 }
 
 .header h2 {
     font-size: clamp(1.8rem, 4vw, 3rem);
-    /* Dynamische Schriftgröße */
     color: var(--primary-dark);
-    margin: 1rem 0;
-    /* Reduzierter Abstand */
-    text-decoration: underline;
-    text-decoration-thickness: 0.15rem;
-    /* Dünnere Unterstreichung */
-    text-decoration-color: var(--primary);
-    text-underline-offset: 0.2rem;
-    /* Kleinere Unterstreichungsabstände */
-    text-align: center;
-    font-weight: 700;
+    margin: 0;
+    font-weight: var(--font-weight-extrabold);
     word-break: break-word;
-    /* Lange Wörter umbrechen */
-    line-height: 1.2;
-    /* Verbesserte Lesbarkeit */
-    max-width: 90%;
-    /* Begrenzte Breite für bessere Darstellung */
-    margin-left: auto;
-    margin-right: auto;
-    overflow-wrap: break-word;
-    /* Zusätzliche Sicherheit für Wortumbrüche */
+    line-height: 1.3;
+    max-width: 100%;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-red);
+    text-decoration-thickness: 0.15rem;
+    text-underline-offset: 0.5rem;
+}
+
+.header h2:hover,
+.header h2:focus {
+    color: var(--accent-red);
+    text-decoration-thickness: 0.2rem;
+}
+
+.header p {
+    color: var(--primary-charcoal);
+    background-color: transparent;
+    padding: var(--spacing-2) 0;
+    margin: var(--spacing-3) 0 0 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        margin: 2rem auto;
+        padding: var(--spacing-6);
+    }
 }
 
 @media (max-width: 768px) {
     .container {
-        margin: 3rem auto;
-        padding: 1.5rem;
-
-        height: auto;
-        /* Adjust height for smaller screens */
+        margin: 1.5rem auto;
+        padding: var(--spacing-6);
     }
 
     .header {
-        font-size: 1.8rem;
+        padding: var(--spacing-4) var(--spacing-3);
     }
 
     .header h2 {
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
-        /* Kleinere Schriftgröße für Tablets */
-        margin: 1rem 0;
-        /* Weniger Abstand */
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    }
+
+    .header p {
+        font-size: var(--font-size-sm);
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        margin: 2rem auto;
-        padding: 1rem;
+        margin: 1rem auto;
+        padding: var(--spacing-4);
+        border-radius: var(--radius-md);
+        border-top: 2px solid var(--accent-red);
     }
 
     .header {
-        font-size: 1.5rem;
+        padding: var(--spacing-3) var(--spacing-2);
     }
 
     .header h2 {
-        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-        /* Noch kleinere Schriftgröße für Smartphones */
-        margin: 0.8rem 0;
-        /* Noch weniger Abstand */
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+        text-decoration-thickness: 0.1rem;
+        text-underline-offset: 0.3rem;
     }
-}
 
-.header h2:hover,
-.header h2:active,
-.header h2:focus {
-    text-decoration: none;
-    /* Consistent hover, active, and focus styles */
-    color: var(--primary-dark-hover);
-    /* Optional: Add hover color for better UX */
+    .header p {
+        font-size: var(--font-size-xs);
+        margin-top: var(--spacing-2);
+    }
 }

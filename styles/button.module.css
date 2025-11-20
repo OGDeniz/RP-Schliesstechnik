@@ -49,43 +49,44 @@
 
 /* Button Variants */
 
-/* Primary Button (Danger/Red) */
+/* Primary Button (Orange - Professional CTA) */
 .buttonPrimary {
-    background: linear-gradient(135deg, var(--danger) 0%, #c70000 100%);
-    color: var(--light);
-    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.35);
+    font-weight: 700;
 }
 
 .buttonPrimary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.45);
 }
 
-/* Secondary Button (Blue) */
+/* Secondary Button (Navy) */
 .buttonSecondary {
-    background: linear-gradient(135deg, var(--primary) 0%, #4a9dc7 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-charcoal) 100%);
     color: var(--light);
-    box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3);
+    box-shadow: 0 4px 15px rgba(27, 58, 107, 0.3);
 }
 
 .buttonSecondary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(110, 193, 228, 0.4);
+    box-shadow: 0 6px 20px rgba(27, 58, 107, 0.4);
 }
 
 /* Outlined Button */
 .buttonOutline {
     background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--accent-red);
+    color: var(--accent-red);
     box-shadow: none;
 }
 
 .buttonOutline:hover {
-    background: var(--primary);
+    background: var(--accent-red);
     color: var(--light);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
 }
 
 /* Ghost Button */

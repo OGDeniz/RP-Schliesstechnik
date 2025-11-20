@@ -1,23 +1,60 @@
-/* styles/socialMediaBar.module.css */
+/* ===========================
+   Social Media Bar Styles
+   =========================== */
+
 .socialMediaBar {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-    box-shadow: var(--box-shadow-light);
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--light);
+    border-radius: 8px;
 }
 
 .socialMediaBar a {
-    transition: transform 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: var(--primary);
+    font-size: 1.5rem;
 }
 
 .socialMediaBar a:hover {
-    transform: scale(1.1);
+    transform: scale(1.15) translateY(-4px);
+    color: var(--secondary);
 }
+
+.socialMediaBar a:active {
+    transform: scale(1.1) translateY(0);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
 
 @media (max-width: 768px) {
     .socialMediaBar {
-        flex-direction: row;
-        align-items: center;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .socialMediaBar a {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .socialMediaBar {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .socialMediaBar a {
+        font-size: 1.1rem;
     }
 }

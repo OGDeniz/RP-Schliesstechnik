@@ -1,10 +1,14 @@
-/* styles/checkout.module.css */
+/* ===========================
+   Checkout Page Styles
+   =========================== */
+
 .checkoutContainer {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
+/* Order Summary */
 .orderSummary {
     background-color: var(--light);
     border: 1px solid var(--secondary);
@@ -13,6 +17,7 @@
     margin-bottom: 2rem;
 }
 
+/* Checkout Form */
 .checkoutForm {
     background-color: var(--light);
     border: 1px solid var(--secondary);
@@ -20,102 +25,138 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .formRow {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.5rem;
 }
 
 .formGroup {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .formGroup label {
     font-weight: 500;
     margin-bottom: 0.5rem;
+    color: var(--primary-dark);
 }
 
-
-.submitButton {
-    margin: 0 auto;
-    padding: 1rem;
-    background-color: var(--secondary-dark);
-    border: none;
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    color: white;
-    font-size: 1.1rem;
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-.submitButton:hover {
-    background-color: var(--secondary);
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(74, 157, 199, 0.1);
 }
 
-.total {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 2px solid var(--secondary);
-    text-align: right;
-}
-
-/* @media (max-width: 768px) {
-    .formRow {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-.paypalSection {
+/* Payment Sections */
+.paypalSection,
+.bankSection {
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
 .bankSection {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--secondary);
+    border-top: 2px solid var(--secondary);
 }
 
+/* Submit Button */
 .submitButton {
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
     background-color: var(--secondary-dark);
     border: none;
+    border-radius: 4px;
     color: white;
     font-size: 1.1rem;
-    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .submitButton:hover {
     background-color: var(--secondary);
+    transform: translateY(-2px);
 }
-Original styles */
 
-/* Responsive styles added */
+.submitButton:active {
+    transform: translateY(0);
+}
+
+/* Total */
+.total {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--secondary);
+    text-align: right;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
 @media (max-width: 768px) {
-
-    /* Adjust layout for tablets and small devices */
-    .checkout-container {
-        padding: 10px;
-        flex-direction: column;
+    .checkoutContainer {
+        padding: 0 0.5rem;
     }
 
-    .summary {
-        width: 100%;
+    .checkoutForm {
+        padding: 1.5rem;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .submitButton {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-
-    /* Adjust layout for phones */
-    .checkout-container {
-        padding: 5px;
+    .checkoutContainer {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
     }
 
-    .summary {
-        font-size: 14px;
+    .orderSummary,
+    .checkoutForm {
+        padding: 1rem;
+    }
+
+    .formGroup label {
+        font-size: 0.95rem;
+    }
+
+    .submitButton {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .total {
+        font-size: 1.1rem;
     }
 }
