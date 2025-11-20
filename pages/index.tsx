@@ -162,7 +162,7 @@ export default function Home() {
       </div>
 
       <div className={homeStyles.three} >
-        <Accordion title="Warum RP Schließtechnik?" defaultOpen={true}>
+        <Accordion title="Warum RP Schließtechnik?" defaultOpen={false}>
           <ul>
             <li>
               <strong>Erfahrung und Expertise:</strong> Langjährige Branchenerfahrung und ein Team von Profis.
