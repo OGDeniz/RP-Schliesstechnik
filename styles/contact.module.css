@@ -1,0 +1,191 @@
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.form {
+  color: var(--light);
+  background: linear-gradient(135deg, #002f5c 0%, #004080 100%);
+  padding: 3rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--light);
+  font-weight: 700;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--light);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.875rem;
+  margin-top: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-family-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(110, 193, 228, 0.2);
+}
+
+.formGroup textarea {
+  height: 200px;
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--danger) 0%, #c70000 100%);
+  color: var(--light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.submitButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.statusMessage {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.statusMessage.success {
+  background-color: rgba(97, 206, 112, 0.2);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.statusMessage.error {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form {
+    padding: 2rem;
+  }
+
+  .form h2 {
+    font-size: 1.5rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    padding: 0.75rem;
+  }
+
+  .submitButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactForm {
+    padding: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .form h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+}

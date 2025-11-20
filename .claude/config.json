@@ -1,0 +1,65 @@
+{
+  "project": {
+    "name": "RP Schliesstechnik",
+    "type": "nextjs",
+    "language": "typescript",
+    "framework": "react"
+  },
+  "preferences": {
+    "language": "de",
+    "commitMessageLanguage": "de"
+  },
+  "codeStyle": {
+    "indentation": "2spaces",
+    "quotes": "double",
+    "semicolons": true,
+    "trailingComma": "es5"
+  },
+  "testing": {
+    "framework": "jest",
+    "runBeforeCommit": false
+  },
+  "git": {
+    "defaultBranch": "main",
+    "developmentBranch": "dev",
+    "autoCommit": false,
+    "commitMessageFormat": "conventional"
+  },
+  "build": {
+    "command": "npm run build",
+    "runBeforeMerge": true
+  },
+  "context": {
+    "includePatterns": [
+      "components/**/*.{tsx,ts,jsx,js}",
+      "pages/**/*.{tsx,ts,jsx,js}",
+      "styles/**/*.{css,scss,module.css}",
+      "lib/**/*.{ts,js}",
+      "utils/**/*.{ts,js}",
+      "types/**/*.ts",
+      "public/**/*"
+    ],
+    "excludePatterns": [
+      "node_modules/**",
+      ".next/**",
+      "dist/**",
+      "build/**",
+      "*.log",
+      ".env*"
+    ]
+  },
+  "ai": {
+    "codeReviewEnabled": true,
+    "suggestOptimizations": true,
+    "securityChecks": true,
+    "accessibilityChecks": true,
+    "seoOptimizations": true
+  },
+  "nextjs": {
+    "version": "13+",
+    "appDirectory": false,
+    "pageDirectory": true,
+    "typescript": true,
+    "cssModules": true
+  }
+}
