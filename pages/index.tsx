@@ -14,6 +14,7 @@ import Opener from "../components/Opener";
 import Head from "next/head";
 import TextSlider from "../components/ui/TextSlider";
 import textStyles from "../styles/textSlider.module.css";
+import ElfsightWidget from "../components/ElfsightWidget";
 
 
 
@@ -109,6 +110,7 @@ export default function Home() {
           <Slider images={sliderImages} className={homeStyles.slider} />
           <Opener />
         </div>
+        <ElfsightWidget />
       </div>
 
       <div className={homeStyles.sliderContainer}>

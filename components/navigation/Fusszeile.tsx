@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/fusszeile.module.css";
+import SocialMediaBar from "../ui/SocialMediaBar";
 
 
 
@@ -23,6 +24,7 @@ export default function Fusszeile() {
           <h4>
             🔓 RP Schlüsseldienst | 📞 +49 176 236 875 42 | ⌚ Mo-So: 0:00-24:00
           </h4>
+          <SocialMediaBar />
         </div>
         <div className={styles.links}>
           <Link href="/" className={styles.navLink}>
