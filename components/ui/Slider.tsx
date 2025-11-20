@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
 import { Carousel } from "react-bootstrap";
-import styles from "../../styles/global.module.css";
+import sliderStyles from "../../styles/slider.module.css";
 
 
 const Slider = ({ images, className }) => {
@@ -12,8 +12,8 @@ const Slider = ({ images, className }) => {
     }
 
     return (
-        <div className={`${styles.container}`}>
-            <Carousel className={`${className || ''} rounded shadow`}>
+        <div className={sliderStyles.sliderContainer}>
+            <Carousel className={`${sliderStyles.carousel} ${className || ''}`}>
                 {images.map((image, index) => (
                     <Carousel.Item key={index}>
                         <div className="position-relative" style={{ aspectRatio: '16/9' }}>
