@@ -17,13 +17,13 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary);
+    color: var(--primary-dark);
     font-size: 5rem;
     transition: color 0.3s ease-in-out;
 }
 
 .iconLinks:hover {
-    color: var(--secondary);
+    color: var(--accent-red);
 }
 
 .iconLinksItem {
@@ -31,9 +31,9 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--light);
+    color: var(--primary-dark);
     font-size: 5rem;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--primary-dark);
     border-radius: 50%;
     padding: 1rem;
     box-sizing: border-box;
@@ -41,17 +41,18 @@
 }
 
 .iconLinksItem:hover {
-    color: var(--secondary);
-    border-color: var(--light);
+    color: var(--accent-red);
+    border-color: var(--accent-red);
     transform: translateY(-4px);
 }
 
 /* Icon Label */
 .iconLinks p {
     font-size: 1rem;
-    color: var(--light);
+    color: var(--primary-dark);
     margin: 0;
     text-align: center;
+    font-weight: var(--font-weight-medium);
 }
 
 /* ===========================
@@ -62,39 +63,53 @@
     .containerIconLinks {
         flex-direction: column;
         gap: 1.5rem;
+        align-items: center;
+        width: 100%;
     }
 
     .iconLinks {
         font-size: 4rem;
         gap: 0.5rem;
+        width: 100%;
+        align-items: center;
     }
 
     .iconLinksItem {
         font-size: 4rem;
         padding: 0.75rem;
+        margin: 0 auto;
     }
 
     .iconLinks p {
         font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .containerIconLinks {
         gap: 1rem;
+        align-items: center;
+        width: 100%;
     }
 
     .iconLinks {
         font-size: 3rem;
         gap: 0.25rem;
+        width: 100%;
+        align-items: center;
     }
 
     .iconLinksItem {
         font-size: 3rem;
         padding: 0.5rem;
+        margin: 0 auto;
     }
 
     .iconLinks p {
         font-size: 0.75rem;
+        width: 100%;
+        text-align: center;
     }
 }

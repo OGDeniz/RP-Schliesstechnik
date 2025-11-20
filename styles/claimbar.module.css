@@ -4,7 +4,8 @@
 
 .claimbar {
   position: fixed;
-  top: 90px; /* Under Navigation */
+  top: 90px;
+  /* Under Navigation */
   left: 0;
   width: 100%;
   height: 3rem;
@@ -50,6 +51,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -66,19 +68,22 @@
 
 @media (max-width: 768px) {
   .claimbar {
-    top: 80px; /* Adjusted for smaller nav on tablet */
+    top: 80px;
+    /* Adjusted for smaller nav on tablet */
     height: 2.5rem;
   }
 
   .text {
     font-size: var(--font-size-sm);
-    animation-duration: 20s; /* Faster on mobile */
+    animation-duration: 20s;
+    /* Faster on mobile */
   }
 }
 
 @media (max-width: 480px) {
   .claimbar {
-    top: 70px; /* Adjusted for smaller nav on mobile */
+    top: 70px;
+    /* Adjusted for smaller nav on mobile */
     height: 2.25rem;
   }
 
