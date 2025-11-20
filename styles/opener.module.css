@@ -61,6 +61,16 @@
 }
 
 /* ===========================
+   Accordion Wrapper Styles
+   =========================== */
+
+.accordionWrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+/* ===========================
    Responsive Design
    =========================== */
 
