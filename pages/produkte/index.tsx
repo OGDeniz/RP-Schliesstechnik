@@ -9,7 +9,7 @@ export default function Produkte() {
             <h1 className={styles.container}>Unsere Produkte und Dienstleistungen</h1>
 
             <div style={{ marginBottom: '2rem' }}>
-                <Accordion title="Unsere Sicherheitslösungen" defaultOpen={true}>
+                <Accordion title="Unsere Sicherheitslösungen" defaultOpen={false}>
                     <p>
                         Entdecken Sie unsere hochwertigen Lösungen im Bereich Sicherheitstechnik: Schließanlagen, Schlosswechsel, Smart-Home-Sicherheitssysteme und Zutrittssysteme. Wir bieten Sicherheitskonzepte für Privathaushalte, Gewerbeflächen und Mietobjekte.
                     </p>
