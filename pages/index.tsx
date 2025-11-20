@@ -15,7 +15,8 @@ import Head from "next/head";
 import TextSlider from "../components/ui/TextSlider";
 import textStyles from "../styles/textSlider.module.css";
 import ElfsightWidget from "../components/ElfsightWidget";
-
+import Hero from "../components/Hero";
+import Accordion from "../components/ui/Accordion";
 
 
 export default function Home() {
@@ -106,9 +107,10 @@ export default function Home() {
 
       </Head>
       <div className={homeStyles.header}>
+        <Hero />
         <div className={homeStyles.textslide}>
-          <Slider images={sliderImages} className={homeStyles.slider} />
           <Opener />
+          <Slider images={sliderImages} className={homeStyles.slider} />
         </div>
         <ElfsightWidget />
       </div>
@@ -148,48 +150,50 @@ export default function Home() {
       </div>
 
       <div className={homeStyles.three} >
-
-        <h2>Unsere Vision</h2>
-        <p className={homeStyles.description}>
-          Wir möchten, dass Sie sich jederzeit sicher fühlen – in Ihrem Zuhause, Ihrem Unternehmen oder unterwegs. Daher investieren wir kontinuierlich in neue Technologien und setzen auf nachhaltige, zukunftsorientierte Konzepte.
-        </p>
+        <Accordion title="Unsere Vision" defaultOpen={false}>
+          <p>
+            Wir möchten, dass Sie sich jederzeit sicher fühlen – in Ihrem Zuhause, Ihrem Unternehmen oder unterwegs. Daher investieren wir kontinuierlich in neue Technologien und setzen auf nachhaltige, zukunftsorientierte Konzepte.
+          </p>
+        </Accordion>
       </div>
 
       <div className={textStyles.textSliderContainer} >
         <TextSlider />
       </div>
+
       <div className={homeStyles.three} >
-        <h2>Warum RP Schließtechnik?</h2>
-        <ul className={homeStyles.description}>
-          <li>
-            <strong>Erfahrung und Expertise:</strong> Langjährige Branchenerfahrung und ein Team von Profis.
-          </li>
-          <li>
-            <strong>Individuelle Lösungen:</strong> Wir hören zu, analysieren und entwickeln maßgeschneiderte Schließsysteme.
-          </li>
-          <li>
-            <strong>Zuverlässigkeit:</strong> Pünktlichkeit und Qualität sind für uns selbstverständlich.
-          </li>
-        </ul>
+        <Accordion title="Warum RP Schließtechnik?" defaultOpen={true}>
+          <ul>
+            <li>
+              <strong>Erfahrung und Expertise:</strong> Langjährige Branchenerfahrung und ein Team von Profis.
+            </li>
+            <li>
+              <strong>Individuelle Lösungen:</strong> Wir hören zu, analysieren und entwickeln maßgeschneiderte Schließsysteme.
+            </li>
+            <li>
+              <strong>Zuverlässigkeit:</strong> Pünktlichkeit und Qualität sind für uns selbstverständlich.
+            </li>
+          </ul>
+        </Accordion>
       </div >
 
       <div className={homeStyles.three} >
-
-        <h2>Unsere Leistungen</h2>
-        <ul className={homeStyles.description}>
-          <li>
-            <strong>Schließanlagen:</strong> Planung, Installation und Wartung von mechanischen und digitalen Schließsystemen.
-          </li>
-          <li>
-            <strong>Sicherheitsberatung:</strong> Analyse und Optimierung bestehender Sicherheitskonzepte.
-          </li>
-          <li>
-            <strong>Notdienst:</strong> 24/7-Service für Türöffnungen, Schlüsselverlust und Einbruchschäden.
-          </li>
+        <Accordion title="Unsere Leistungen" defaultOpen={false}>
+          <ul>
+            <li>
+              <strong>Schließanlagen:</strong> Planung, Installation und Wartung von mechanischen und digitalen Schließsystemen.
+            </li>
+            <li>
+              <strong>Sicherheitsberatung:</strong> Analyse und Optimierung bestehender Sicherheitskonzepte.
+            </li>
+            <li>
+              <strong>Notdienst:</strong> 24/7-Service für Türöffnungen, Schlüsselverlust und Einbruchschäden.
+            </li>
+          </ul>
           <Link href="/produkte" className={styles.button}>
             Mehr erfahren
           </Link>
-        </ul>
+        </Accordion>
       </div>
 
 

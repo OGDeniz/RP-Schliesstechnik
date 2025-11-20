@@ -16,6 +16,8 @@
 .container {
     width: 100%;
     padding: 2rem;
+    padding-top: 10rem;
+    /* Mehr Platz für Navigation und ClaimBar */
 }
 
 .container p {
@@ -57,6 +59,8 @@
 
     .container {
         padding: 1.5rem;
+        padding-top: 8rem;
+        /* Angepasst für kleinere Navigation */
     }
 }
 
@@ -67,6 +71,8 @@
 
     .container {
         padding: 1rem;
+        padding-top: 6rem;
+        /* Weniger Platz in mobiler Ansicht */
     }
 
     .container p {
@@ -87,6 +93,8 @@
 
     .container {
         padding: 0.75rem;
+        padding-top: 5rem;
+        /* Minimal für sehr kleine Bildschirme */
     }
 
     .container p {

@@ -88,6 +88,14 @@
     gap: 1rem;
 }
 
+/* Mobile content zone centering */
+@media (max-width: 768px) {
+    .contentzone {
+        align-items: center;
+        text-align: center;
+    }
+}
+
 /* ===========================
    Responsive Design
    =========================== */
@@ -95,7 +103,8 @@
 @media (max-width: 1024px) {
     .fusszeileContainer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         padding: 2.5rem 2rem;
         gap: 2rem;
     }
@@ -104,13 +113,25 @@
 @media (max-width: 768px) {
     .fusszeileContainer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         padding: 2rem 1.5rem;
         gap: 1.5rem;
     }
 
+    .contentzone {
+        align-items: center;
+        text-align: center;
+    }
+
+    .links {
+        align-items: center;
+        width: 100%;
+    }
+
     .navLink {
         padding: 0.5rem 0.75rem;
+        text-align: center;
     }
 
     .navLink p {
@@ -129,15 +150,28 @@
 @media (max-width: 480px) {
     .fusszeileContainer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         padding: 1.5rem 1rem;
         gap: 1.25rem;
         border-top: 2px solid var(--accent-red);
     }
 
+    .contentzone {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .links {
+        align-items: center;
+        width: 100%;
+    }
+
     .navLink {
         width: 100%;
         padding: 0.5rem 0.75rem;
+        text-align: center;
     }
 
     .navLink p {
@@ -145,7 +179,7 @@
     }
 
     .navLink:hover {
-        padding-left: 1rem;
+        padding-left: 0.75rem;
     }
 
     .links {

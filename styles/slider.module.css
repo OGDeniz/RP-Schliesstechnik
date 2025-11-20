@@ -5,7 +5,9 @@
 .sliderWrapper {
     display: flex;
     justify-content: center;
+    max-width: 1536px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .sliderContainer {
@@ -13,25 +15,23 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1320px;
     padding: 0 var(--spacing-6);
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .carousel {
-    width: 100% !important;
+    width: 100%;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
 }
 
-/* Carousel Item Image Container */
-:global(.carousel-item) {
-    aspect-ratio: 16/9;
+.carousel :global(.carousel-item) {
+    aspect-ratio: 16 / 9;
 }
 
-:global(.carousel-item img) {
+.carousel :global(.carousel-item img) {
     object-fit: cover !important;
     width: 100% !important;
     height: 100% !important;
