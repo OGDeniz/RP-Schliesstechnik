@@ -2,18 +2,25 @@
    Image Slider Styles
    =========================== */
 
+.sliderWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .sliderContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1320px;
-    margin: 0 auto;
     padding: 0 var(--spacing-6);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .carousel {
-    width: 100%;
+    width: 100% !important;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
