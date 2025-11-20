@@ -1,32 +1,119 @@
+/* ===================================
+   CLAIMBAR - Modern Ticker Design
+   =================================== */
+
 .claimbar {
-    width: 100%;
-    background-color: #FFD500;
-    color: #171717;
-    font-weight: bold;
-    overflow: hidden;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 2000;
-    font-size: 1rem;
-    padding-left: 1rem;
+  position: fixed;
+  top: 80px; /* Under Navigation (nav height ~80px) */
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  z-index: var(--z-sticky);
+  overflow: hidden;
+
+  /* Modern Red Gradient Background */
+  background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+
+  /* Subtle Shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Flex Layout */
+  display: flex;
+  align-items: center;
+
+  /* Border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Ticker Text */
 .text {
-    white-space: nowrap;
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 20s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+
+  /* Typography */
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--neutral-white);
+  letter-spacing: var(--letter-spacing-wide);
+
+  /* Animation */
+  animation: scroll-left 25s linear infinite;
+
+  /* Text Shadow for Better Readability */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Smooth Scrolling Animation */
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
-    100% {
-        transform: translateX(-100%);
-    }
+/* Pause Animation on Hover */
+.claimbar:hover .text {
+  animation-play-state: paused;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  .claimbar {
+    top: 70px; /* Adjusted for smaller nav on mobile */
+    height: 2.5rem;
+  }
+
+  .text {
+    font-size: var(--font-size-sm);
+    animation-duration: 20s; /* Faster on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .claimbar {
+    top: 60px; /* Even smaller nav on tiny screens */
+    height: 2.25rem;
+  }
+
+  .text {
+    font-size: var(--font-size-xs);
+    animation-duration: 18s;
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .text {
+    animation: none;
+    padding-left: var(--spacing-4);
+    transform: none;
+  }
+
+  /* Static text for reduced motion users */
+  .claimbar {
+    justify-content: center;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .claimbar {
+    border-bottom: 2px solid var(--neutral-white);
+  }
+
+  .text {
+    text-shadow: none;
+    font-weight: var(--font-weight-bold);
+  }
 }
