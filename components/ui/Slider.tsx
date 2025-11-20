@@ -17,19 +17,17 @@ const Slider = ({ images, className }) => {
                 <Carousel className={`${sliderStyles.carousel} ${className || ''}`}>
                     {images.map((image, index) => (
                         <Carousel.Item key={index}>
-                            <div className="position-relative" style={{ aspectRatio: '16/9' }}>
-                                <Image
-                                    src={image.url}
-                                    alt={image.alt}
-                                    fill
-                                    priority={index === 0}
-                                    quality={75}
-                                    loading={index === 0 ? "eager" : "lazy"}
-                                    style={{ objectFit: 'inherit' }}
-                                    className="rounded-top"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
-                            </div>
+                            <Image
+                                src={image.url}
+                                alt={image.alt}
+                                fill
+                                priority={index === 0}
+                                quality={75}
+                                loading={index === 0 ? "eager" : "lazy"}
+                                style={{ objectFit: 'cover' }}
+                                className="rounded-top"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1320px"
+                            />
                         </Carousel.Item>
                     ))}
                 </Carousel>
