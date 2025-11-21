@@ -5,7 +5,19 @@ import Image from "next/image";
 import styles from "../../../styles/cards.module.css";
 
 export default function Produktliste() {
-    const handleAnrufen = () => {
+    const handleAnrufen = async () => {
+        try {
+            await fetch('/api/button-tracking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ buttonType: 'productCall' }),
+            });
+        } catch (error) {
+            console.error('Tracking-Fehler:', error);
+        }
+
         window.location.href = "tel:+4917623687542";
     };
 

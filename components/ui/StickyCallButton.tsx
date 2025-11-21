@@ -3,7 +3,21 @@ import styles from '../../styles/stickyCallButton.module.css';
 import { FaPhone } from 'react-icons/fa';
 
 const StickyCallButton: React.FC = () => {
-    const handleCall = () => {
+    const handleCall = async () => {
+        try {
+            // Tracking-Call zur API
+            await fetch('/api/button-tracking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ buttonType: 'stickyCall' }),
+            });
+        } catch (error) {
+            console.error('Tracking-Fehler:', error);
+        }
+
+        // Telefon-Call wie gewohnt
         window.location.href = 'tel:+4917623687542';
     };
 
