@@ -12,6 +12,22 @@ export default function Navigation() {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const handleNavigationCall = async () => {
+    try {
+      await fetch('/api/button-tracking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ buttonType: 'navigationCall' }),
+      });
+    } catch (error) {
+      console.error('Tracking-Fehler:', error);
+    }
+
+    window.location.href = "tel:+4917623687542";
+  };
+
   return (
     <nav className={styles.navigation}>
       <div className={styles.navContainer}>
@@ -58,9 +74,7 @@ export default function Navigation() {
         {/* "Jetzt anrufen"-Button – immer sichtbar */}
         <div className={styles.rightNav}>
           <button
-            onClick={() =>
-              (window.location.href = "tel:+4917623687542")
-            }
+            onClick={handleNavigationCall}
             className={styles.callButton}
           >
             <svg className={styles.phoneIcon} viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="2" width="20" height="20">

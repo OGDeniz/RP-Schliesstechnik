@@ -1,4 +1,18 @@
 {
-  "count": 1716,
-  "lastVisit": "2025-11-20T19:53:46.476Z"
+  "count": 1717,
+  "lastVisit": "2025-11-21T10:29:28.580Z",
+  "buttonClicks": {
+    "stickyCall": {
+      "count": 0,
+      "lastClick": null
+    },
+    "navigationCall": {
+      "count": 0,
+      "lastClick": null
+    },
+    "productCall": {
+      "count": 0,
+      "lastClick": null
+    }
+  }
 }
