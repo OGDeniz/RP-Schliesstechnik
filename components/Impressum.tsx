@@ -90,7 +90,7 @@ export async function getServerSideProps() {
         phone: "+49 176 236 875 42",
         email: "info@schluesselrp.de",
         website: "https://www.schluesselrp.de" + "http://www.schluesselrp.com",
-        ustId: "USt-IdNr. wird nachgereicht",
+        ustId: "USt-IdNr.: DE143080672",
         odrLink: "https://ec.europa.eu/consumers/odr"
     };
 

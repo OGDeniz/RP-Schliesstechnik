@@ -1,10 +1,10 @@
 {
-  "count": 1724,
-  "lastVisit": "2025-11-21T10:55:39.982Z",
+  "count": 1755,
+  "lastVisit": "2025-11-23T15:42:19.484Z",
   "buttonClicks": {
     "stickyCall": {
-      "count": 0,
-      "lastClick": null
+      "count": 1,
+      "lastClick": "2025-11-21T14:37:12.632Z"
     },
     "navigationCall": {
       "count": 0,
