@@ -73,10 +73,10 @@ export default function Home() {
 
     <div className={homeStyles.container}>
       <Head>
-        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schließtechnik</title>
-        <meta name="description" content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung, Einbruchschutz & Sicherheitstechnik. Ihr Experte – RP Schließtechnik!" />
+        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schliesstechnik</title>
+        <meta name="description" content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung, Einbruchschutz & Sicherheitstechnik. Ihr Experte – RP Schliesstechnik!" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
+        <meta property="og:title" content="RP Schliesstechnik – 24h Schlüsseldienst Bruchsal" />
         <meta property="og:description" content="Schnelle & günstige Türöffnungen, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung." />
         <meta property="og:image" content="/bilder/opengraph-preview.jpg" />
         <meta property="og:url" content="https://schluesselrp.de" />
@@ -88,7 +88,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "RP Schließtechnik",
+            "name": "RP Schliesstechnik",
             "image": "https://schluesselrp.de/bilder/logo.png",
             "url": "https://schluesselrp.de",
             "telephone": "+49 176 236 875 42",
@@ -119,9 +119,9 @@ export default function Home() {
       {/* 
       <div className={homeStyles.three} >
       
-      <h2>Über uns – RP Schließtechnik</h2>
+      <h2>Über uns – RP Schliesstechnik</h2>
       <p className={homeStyles.description}>
-      RP Schließtechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
+      RP Schliesstechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
       
       Unser Anspruch: höchste Qualität, individuelle Beratung und maximale Sicherheit.
       </p>
@@ -156,7 +156,7 @@ export default function Home() {
       </div>
 
       <div className={homeStyles.three} >
-        <Accordion title="Warum RP Schließtechnik?" defaultOpen={false}>
+        <Accordion title="Warum RP Schliesstechnik?" defaultOpen={false}>
           <ul>
             <li>
               <strong>Erfahrung und Expertise:</strong> Langjährige Branchenerfahrung und ein Team von Profis.
@@ -197,7 +197,7 @@ export default function Home() {
         <IconLinks />
 
         <p className={homeStyles.description}>
-          Wir bieten Ihnen eine breite Palette an Dienstleistungen rund um Schließtechnik und Sicherheitstechnik.
+          Wir bieten Ihnen eine breite Palette an Dienstleistungen rund um Schliesstechnik und Sicherheitstechnik.
 
 
           Egal, ob Sie einen Schlüssel verloren haben oder Ihre Sicherheitstechnik auf den neuesten Stand bringen möchten – wir sind für Sie da!

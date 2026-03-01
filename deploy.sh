@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# RP Schließtechnik - Netcup SSH Deployment Script
+# RP Schliesstechnik - Netcup SSH Deployment Script
 # Vor der Ausführung die Variablen unten anpassen!
 
 # === KONFIGURATION - HIER ANPASSEN ===

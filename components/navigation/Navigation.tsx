@@ -43,7 +43,7 @@ export default function Navigation() {
           <Link href="/">
             <Image
               src="/RP_Logos/RP_Logo_whiteShadow.png"
-              alt="RP-Schließtechnik"
+              alt="RP-Schliesstechnik"
               width={125}
               height={50}
             />
@@ -53,7 +53,7 @@ export default function Navigation() {
 
         {/* Desktop Menü: wird nur im Desktop sichtbar */}
         <div className={styles.desktopMenu}>
-          <h1>RP Schließtechnik</h1>
+          <h1>RP Schliesstechnik</h1>
           <p>Weil jedes Schloss die richtige Lösung verdient.</p>
           <ul className={styles.menu}>
             <li>
@@ -67,6 +67,9 @@ export default function Navigation() {
             </li>
             <li>
               <Link href="/impressum">Impressum</Link>
+            </li>
+            <li>
+              <Link href="/datenschutz">Datenschutz</Link>
             </li>
           </ul>
         </div>
@@ -115,6 +118,9 @@ export default function Navigation() {
             </li>
             <li>
               <Link href="/impressum" onClick={toggleMenu}>Impressum</Link>
+            </li>
+            <li>
+              <Link href="/datenschutz" onClick={toggleMenu}>Datenschutz</Link>
             </li>
           </ul>
         </div>
