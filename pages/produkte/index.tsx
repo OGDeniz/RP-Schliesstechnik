@@ -5,7 +5,7 @@ import Accordion from "../../components/ui/Accordion";
 
 export default function Produkte() {
     return (
-        <div className="container my-5">
+        <div className="container my-5" >
             <h1 className={styles.container}>Unsere Produkte und Dienstleistungen</h1>
 
             <div style={{ marginBottom: '2rem' }}>

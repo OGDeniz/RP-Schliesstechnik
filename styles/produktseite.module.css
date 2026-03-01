@@ -24,6 +24,8 @@
     line-height: 1.8;
     font-size: 1.1rem;
     color: var(--primary-dark);
+    width: 100vw;
+    height: auto;
 }
 
 /* Back Button */
