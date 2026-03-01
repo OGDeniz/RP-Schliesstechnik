@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import homestyles from '../styles/home.module.css';
 import styles from '../styles/contact.module.css';
+import GoogleMaps from './GoogleMaps';
 
 const ContactUs = () => {
     const [status, setStatus] = useState('');
@@ -87,6 +88,9 @@ const ContactUs = () => {
                             </p>
                         )}
                     </form>
+                </div>
+                <div className={styles.mapWrapper}>
+                    <GoogleMaps />
                 </div>
             </div>
         </>
