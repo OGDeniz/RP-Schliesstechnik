@@ -17,6 +17,7 @@ import textStyles from "../styles/textSlider.module.css";
 import ElfsightWidget from "../components/ElfsightWidget";
 import Hero from "../components/Hero";
 import Accordion from "../components/ui/Accordion";
+import GoogleMaps from "../components/GoogleMaps";
 
 
 export default function Home() {
@@ -210,6 +211,11 @@ export default function Home() {
         </p>
 
 
+      </div>
+
+      <div className={homeStyles.three}>
+        <h2>Schlüsseldienst Bruchsal – So finden Sie uns</h2>
+        <GoogleMaps />
       </div>
     </div >
   );
