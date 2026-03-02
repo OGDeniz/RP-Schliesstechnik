@@ -7,8 +7,6 @@ import styles from '../styles/auth.module.css';
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
-    const [address, setAddress] = useState('');
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('info');
     const [isLoading, setIsLoading] = useState(false);
@@ -22,8 +20,6 @@ export default function Login() {
             const response = await axios.post('/api/login', {
                 username,
                 password,
-                name,
-                address,
             });
 
             setMessageType('success');
@@ -67,32 +63,6 @@ export default function Login() {
                                 placeholder="Ihr Passwort"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                required
-                                disabled={isLoading}
-                            />
-                        </div>
-
-                        <div className={styles.inputGroup}>
-                            <label htmlFor="name">Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                placeholder="Ihr vollständiger Name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                required
-                                disabled={isLoading}
-                            />
-                        </div>
-
-                        <div className={styles.inputGroup}>
-                            <label htmlFor="address">Adresse</label>
-                            <input
-                                type="text"
-                                id="address"
-                                placeholder="Ihre Adresse"
-                                value={address}
-                                onChange={(e) => setAddress(e.target.value)}
                                 required
                                 disabled={isLoading}
                             />
