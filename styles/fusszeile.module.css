@@ -40,6 +40,14 @@
     padding-left: 1.5rem;
 }
 
+.cookieButton {
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
 /* Links Section */
 .links {
     display: flex;

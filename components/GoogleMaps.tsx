@@ -1,4 +1,60 @@
+import { useEffect, useState } from "react";
+import {
+  CONSENT_UPDATED_EVENT,
+  hasOptionalConsent,
+  setStoredConsent,
+} from "../lib/cookieConsent";
+
 export default function GoogleMaps() {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    setEnabled(hasOptionalConsent());
+
+    const handleConsentUpdate = () => setEnabled(hasOptionalConsent());
+    window.addEventListener(CONSENT_UPDATED_EVENT, handleConsentUpdate);
+
+    return () => {
+      window.removeEventListener(CONSENT_UPDATED_EVENT, handleConsentUpdate);
+    };
+  }, []);
+
+  if (!enabled) {
+    return (
+      <div
+        className="w-full overflow-hidden rounded-lg shadow-md"
+        style={{
+          padding: "1rem",
+          background: "rgba(27, 58, 107, 0.92)",
+          color: "#fff",
+        }}
+      >
+        <p style={{ marginBottom: "0.75rem" }}>
+          Google Maps wird erst nach Ihrer Zustimmung zu optionalen Cookies
+          geladen.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            setStoredConsent("all");
+            setEnabled(true);
+          }}
+          style={{
+            border: "none",
+            borderRadius: "10px",
+            background: "#f97316",
+            color: "#fff",
+            fontWeight: 700,
+            padding: "0.55rem 0.9rem",
+            cursor: "pointer",
+          }}
+        >
+          Google Maps laden
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full overflow-hidden rounded-lg shadow-md">
       <iframe

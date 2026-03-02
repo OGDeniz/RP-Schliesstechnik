@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../../styles/fusszeile.module.css";
 import SocialMediaBar from "../ui/SocialMediaBar";
+import { openCookieSettings } from "../../lib/cookieConsent";
 
 
 
@@ -44,6 +45,13 @@ export default function Fusszeile() {
           <Link href="/impressum" className={styles.navLink}>
             <p className="nav-link">Impressum</p>
           </Link>
+          <button
+            type="button"
+            className={`${styles.navLink} ${styles.cookieButton}`}
+            onClick={openCookieSettings}
+          >
+            <p className="nav-link">Cookie-Einstellungen</p>
+          </button>
         </div>
       </div>
     </div>

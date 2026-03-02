@@ -234,9 +234,36 @@ const Datenschutz = () => {
 
                     <section>
                         <h2>6. Plugins und Tools</h2>
-                        <h3>Google Fonts (lokales Hosting)</h3>
+                        <h3>Cookie-Einwilligung und Einwilligungsverwaltung</h3>
                         <p>
-                            Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.
+                            Unsere Website nutzt ein Einwilligungsbanner, um Ihre Auswahl zu optionalen Cookies und externen Inhalten zu speichern. Die Auswahl wird im lokalen Speicher Ihres Browsers (Local Storage) hinterlegt und kann jederzeit über den Link &bdquo;Cookie-Einstellungen&ldquo; im Footer geändert werden.
+                        </p>
+                        <p>
+                            Rechtsgrundlage für das Speichern bzw. Auslesen optionaler Informationen auf Ihrem Endgerät ist Ihre Einwilligung gemäß § 25 Abs. 1 TTDSG. Die anschließende Verarbeitung personenbezogener Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+                        </p>
+
+                        <h3>Google Maps</h3>
+                        <p>
+                            Auf einzelnen Seiten binden wir Kartenmaterial von Google Maps ein. Beim Laden der Karte können personenbezogene Daten (z.B. Ihre IP-Adresse und technische Nutzungsdaten) an Google übermittelt werden.
+                        </p>
+                        <p>
+                            Google Maps wird erst nach Ihrer ausdrücklichen Einwilligung geladen. Rechtsgrundlagen sind § 25 Abs. 1 TTDSG sowie Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.
+                        </p>
+
+                        <h3>Elfsight-Widget</h3>
+                        <p>
+                            Wir verwenden auf der Website ein Widget des Anbieters Elfsight, das externe Inhalte und Bewertungen darstellt. Beim Laden des Widgets können personenbezogene Daten (z.B. IP-Adresse, Browserinformationen und Nutzungsdaten) an Elfsight bzw. verbundene Dienste übertragen werden.
+                        </p>
+                        <p>
+                            Das Widget wird erst nach Ihrer Einwilligung geladen. Rechtsgrundlagen sind § 25 Abs. 1 TTDSG sowie Art. 6 Abs. 1 lit. a DSGVO.
+                        </p>
+
+                        <h3>Google Fonts (Einbindung über Google-Server)</h3>
+                        <p>
+                            Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Google Fonts. Beim Aufruf der Seite kann Ihr Browser eine Verbindung zu Servern von Google herstellen. Dabei können insbesondere Ihre IP-Adresse und Browserdaten verarbeitet werden.
+                        </p>
+                        <p>
+                            Rechtsgrundlage für die Einbindung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer konsistenten Darstellung unseres Online-Angebots).
                         </p>
                     </section>
 
