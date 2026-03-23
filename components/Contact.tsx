@@ -213,6 +213,9 @@ const ContactUs = () => {
                                 Bei dringenden Fällen ist der schnellste Weg immer der direkte Anruf.
                                 So können wir Ihr Anliegen sofort einschätzen.
                             </p>
+                            <a href="tel:+4917623687542" className={styles.ctaButton}>
+                                <FaPhone /> Jetzt anrufen
+                            </a>
                         </div>
                     </aside>
                 </section>
