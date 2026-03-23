@@ -1,0 +1,48 @@
+name: Deploy rp-schliesstechnik
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  deploy-staging:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Staging
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd /root/rp-schliesstechnik-staging
+            git fetch origin
+            git pull --ff-only origin dev
+            npm ci --omit=dev
+            npm run build
+            pm2 restart rp-schliesstechnik-staging || pm2 start /root/rp-schliesstechnik/ecosystem.config.js --only rp-schliesstechnik-staging
+            pm2 save
+
+  deploy-production:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Production
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd /root/rp-schliesstechnik
+            git fetch origin
+            git pull --ff-only origin main
+            npm ci --omit=dev
+            npm run build
+            pm2 restart rp-schliesstechnik || pm2 start ecosystem.config.js --only rp-schliesstechnik
+            pm2 save
