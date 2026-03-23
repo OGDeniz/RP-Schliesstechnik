@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import homestyles from '../styles/home.module.css';
 import styles from '../styles/contact.module.css';
 import GoogleMaps from './GoogleMaps';
@@ -57,27 +58,39 @@ const ContactUs = () => {
 
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.eyebrow}>24h erreichbar • Raum Bruchsal</span>
-                    <h1>Kontakt & Soforthilfe</h1>
-                    <p>
-                        Sie benötigen schnelle Hilfe bei einer Türöffnung, einem Schlosswechsel
-                        oder Fragen zur Sicherheitstechnik? Wir sind für Sie da – schnell,
-                        zuverlässig und transparent.
-                    </p>
+                    <div className={styles.heroText}>
+                        <span className={styles.eyebrow}>24h erreichbar • Raum Bruchsal</span>
+                        <h1>Kontakt & Soforthilfe</h1>
+                        <p>
+                            Sie benötigen schnelle Hilfe bei einer Türöffnung, einem Schlosswechsel
+                            oder Fragen zur Sicherheitstechnik? Wir sind für Sie da – schnell,
+                            zuverlässig und transparent.
+                        </p>
 
-                    <div className={styles.heroActions}>
-                        <a href="tel:+4917623687542" className={styles.primaryButton}>
-                            Jetzt anrufen
-                        </a>
-                        <a href="mailto:info@schluesselrp.de" className={styles.secondaryButton}>
-                            E-Mail senden
-                        </a>
+                        <div className={styles.heroActions}>
+                            <a href="tel:+4917623687542" className={styles.primaryButton}>
+                                Jetzt anrufen
+                            </a>
+                            <a href="mailto:info@schluesselrp.de" className={styles.secondaryButton}>
+                                E-Mail senden
+                            </a>
+                        </div>
+
+                        <div className={styles.trustRow}>
+                            <span><FaClock />24/7 erreichbar</span>
+                            <span><FaMapLocationDot />Region Bruchsal</span>
+                            <span><FaHandshake />Transparente Kommunikation</span>
+                        </div>
                     </div>
 
-                    <div className={styles.trustRow}>
-                        <span><FaClock />24/7 erreichbar</span>
-                        <span><FaMapLocationDot />Region Bruchsal</span>
-                        <span><FaHandshake />Transparente Kommunikation</span>
+                    <div className={styles.heroImage}>
+                        <Image
+                            src="/bilder/contact.png"
+                            alt="Kontakt RP Schließtechnik"
+                            width={480}
+                            height={480}
+                            priority
+                        />
                     </div>
                 </div>
             </section>
