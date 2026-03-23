@@ -14,7 +14,7 @@
     "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "bundler",
-    "types": ["node", "react", "react-dom"],
+    "types": ["react", "react-dom"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
