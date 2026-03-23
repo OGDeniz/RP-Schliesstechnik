@@ -5,7 +5,7 @@ import styles from '../styles/contact.module.css';
 import GoogleMaps from './GoogleMaps';
 
 const ContactUs = () => {
-    const [status, setStatus] = useState('');
+    const [status, setStatus] = useState<'success' | 'error' | ''>('');
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -13,7 +13,9 @@ const ContactUs = () => {
 
         const formData = {
             name: (form.elements.namedItem('name') as HTMLInputElement).value,
+            phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
             email: (form.elements.namedItem('email') as HTMLInputElement).value,
+            subject: (form.elements.namedItem('subject') as HTMLInputElement).value,
             message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
         };
 
@@ -39,59 +41,191 @@ const ContactUs = () => {
     return (
         <>
             <Head>
-                <title>Kontaktformular - Schreiben Sie uns eine Nachricht</title>
-                <meta name="description" content="Füllen Sie unser Kontaktformular aus, um uns eine Nachricht zu senden. Wir freuen uns auf Ihre Anfrage!" />
-                <meta name="keywords" content="Kontaktformular, Nachricht senden, Anfrage, Kontakt aufnehmen" />
-                <meta name="author" content="RP Schliesstechnik" />
+                <title>Kontakt | RP Schließtechnik</title>
+                <meta
+                    name="description"
+                    content="Kontaktieren Sie RP Schließtechnik für Türöffnung, Schlosswechsel, Einbruchschutz und Schlüsseldienst im Raum Bruchsal."
+                />
+                <meta
+                    name="keywords"
+                    content="Schlüsseldienst Bruchsal, Kontakt, Türöffnung, Schlosswechsel, Einbruchschutz, RP Schließtechnik"
+                />
+                <meta name="author" content="RP Schließtechnik" />
             </Head>
-            <div className={homestyles.container}>
-                <div className={styles.contactForm}>
-                    <form onSubmit={handleSubmit} className={styles.form}>
-                        <h2>Kontaktieren Sie uns</h2>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="name">Name:</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                                placeholder="Ihr vollständiger Name"
-                            />
+
+            <section className={styles.hero}>
+                <div className={styles.heroContent}>
+                    <span className={styles.eyebrow}>24h erreichbar • Raum Bruchsal</span>
+                    <h1>Kontakt & Soforthilfe</h1>
+                    <p>
+                        Sie benötigen schnelle Hilfe bei einer Türöffnung, einem Schlosswechsel
+                        oder Fragen zur Sicherheitstechnik? Wir sind für Sie da – schnell,
+                        zuverlässig und transparent.
+                    </p>
+
+                    <div className={styles.heroActions}>
+                        <a href="tel:+4917623687542" className={styles.primaryButton}>
+                            Jetzt anrufen
+                        </a>
+                        <a href="mailto:info@schluesselrp.de" className={styles.secondaryButton}>
+                            E-Mail senden
+                        </a>
+                    </div>
+
+                    <div className={styles.trustRow}>
+                        <span>24/7 erreichbar</span>
+                        <span>Region Bruchsal</span>
+                        <span>Transparente Kommunikation</span>
+                    </div>
+                </div>
+            </section>
+
+            <div className={`${homestyles.container} ${styles.contactPage}`}>
+                <section className={styles.infoGrid}>
+                    <article className={styles.infoCard}>
+                        <h3>Telefon</h3>
+                        <p>Für Notfälle und Soforthilfe empfehlen wir die direkte telefonische Kontaktaufnahme.</p>
+                        <a href="tel:+4917623687542">+49 176 23687542</a>
+                    </article>
+
+                    <article className={styles.infoCard}>
+                        <h3>E-Mail</h3>
+                        <p>Für allgemeine Anfragen, Rückfragen oder Beratung rund um Schließtechnik.</p>
+                        <a href="mailto:info@schluesselrp.de">info@schluesselrp.de</a>
+                    </article>
+
+                    <article className={styles.infoCard}>
+                        <h3>Einsatzgebiet</h3>
+                        <p>
+                            Bruchsal, Forst, Karlsdorf-Neuthard, Hambrücken, Ubstadt-Weiher,
+                            Bad Schönborn, Kronau, Waghäusel und Umgebung.
+                        </p>
+                    </article>
+                </section>
+
+                <section className={styles.contentGrid}>
+                    <div className={styles.contactForm}>
+                        <form onSubmit={handleSubmit} className={styles.form}>
+                            <div className={styles.formHeader}>
+                                <span className={styles.formTag}>Nachricht senden</span>
+                                <h2>Kontaktieren Sie uns</h2>
+                                <p>
+                                    Bei Notfällen bitte direkt anrufen. Für alle anderen Anliegen
+                                    können Sie uns bequem über das Formular schreiben.
+                                </p>
+                            </div>
+
+                            <div className={styles.formRow}>
+                                <div className={styles.formGroup}>
+                                    <label htmlFor="name">Name</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        placeholder="Ihr vollständiger Name"
+                                    />
+                                </div>
+
+                                <div className={styles.formGroup}>
+                                    <label htmlFor="phone">Telefon</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        required
+                                        placeholder="Ihre Telefonnummer"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className={styles.formRow}>
+                                <div className={styles.formGroup}>
+                                    <label htmlFor="email">E-Mail</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        placeholder="ihre.email@beispiel.de"
+                                    />
+                                </div>
+
+                                <div className={styles.formGroup}>
+                                    <label htmlFor="subject">Betreff</label>
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        required
+                                        placeholder="Worum geht es?"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <label htmlFor="message">Nachricht</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                    placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                                />
+                            </div>
+
+                            <button type="submit" className={styles.submitButton}>
+                                Nachricht senden
+                            </button>
+
+                            {status && (
+                                <p
+                                    className={`${styles.statusMessage} ${status === 'success' ? styles.success : styles.error
+                                        }`}
+                                >
+                                    {status === 'success'
+                                        ? '✓ Nachricht erfolgreich gesendet!'
+                                        : '✗ Fehler beim Senden der Nachricht.'}
+                                </p>
+                            )}
+                        </form>
+                    </div>
+
+                    <aside className={styles.sidePanel}>
+                        <div className={styles.serviceBox}>
+                            <h3>Wobei wir helfen</h3>
+                            <ul>
+                                <li>Türöffnungen</li>
+                                <li>Schlosswechsel</li>
+                                <li>Autoöffnungen</li>
+                                <li>Einbruchschutz</li>
+                                <li>Schließtechnik & Beratung</li>
+                            </ul>
                         </div>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="email">E-Mail:</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="ihre.email@beispiel.de"
-                            />
-                        </div>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="message">Nachricht:</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                required
-                                placeholder="Ihre Nachricht an uns..."
-                            />
-                        </div>
-                        <button type="submit" className={styles.submitButton}>
-                            Nachricht senden
-                        </button>
-                        {status && (
-                            <p className={`${styles.statusMessage} ${status === 'success' ? styles.success : styles.error}`}>
-                                {status === 'success'
-                                    ? '✓ Nachricht erfolgreich gesendet!'
-                                    : '✗ Fehler beim Senden der Nachricht.'}
+
+                        <div className={styles.serviceBox}>
+                            <h3>Hinweis</h3>
+                            <p>
+                                Bei dringenden Fällen ist der schnellste Weg immer der direkte Anruf.
+                                So können wir Ihr Anliegen sofort einschätzen.
                             </p>
-                        )}
-                    </form>
-                </div>
-                <div className={styles.mapWrapper}>
-                    <GoogleMaps />
-                </div>
+                        </div>
+                    </aside>
+                </section>
+
+                <section className={styles.mapSection}>
+                    <div className={styles.mapHeader}>
+                        <span className={styles.formTag}>Standort & Region</span>
+                        <h2>Für Sie im Raum Bruchsal im Einsatz</h2>
+                        <p>
+                            Wir sind in Bruchsal und Umgebung für Sie erreichbar und unterstützen
+                            Sie schnell bei Notdienst- und Sicherheitsanfragen.
+                        </p>
+                    </div>
+
+                    <div className={styles.mapWrapper}>
+                        <GoogleMaps />
+                    </div>
+                </section>
             </div>
         </>
     );
