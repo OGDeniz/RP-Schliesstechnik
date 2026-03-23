@@ -554,6 +554,10 @@
 }
 
 .statLabel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
     font-size: clamp(0.85rem, 1.5vw, 1rem);
     font-weight: var(--font-weight-medium);
     color: rgba(255, 255, 255, 0.75);

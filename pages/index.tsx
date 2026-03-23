@@ -6,7 +6,7 @@ import ElfsightWidget from "../components/ElfsightWidget";
 import GoogleMaps from "../components/GoogleMaps";
 import Accordion from "../components/ui/Accordion";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
-import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield } from "react-icons/fa6";
+import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield, FaWrench, FaLocationDot, FaTag } from "react-icons/fa6";
 
 export default function Home() {
   useEffect(() => {
@@ -65,19 +65,19 @@ export default function Home() {
             <span className={homeStyles.statNumber}>
               <AnimatedCounter to={500} suffix="+" />
             </span>
-            <span className={homeStyles.statLabel}>Einsätze</span>
+            <span className={homeStyles.statLabel}><FaWrench />Einsätze</span>
           </div>
           <div className={homeStyles.statItem}>
             <span className={homeStyles.statNumber}>
               <AnimatedCounter to={20} toRange={30} suffix=" Min" />
             </span>
-            <span className={homeStyles.statLabel}>vor Ort</span>
+            <span className={homeStyles.statLabel}><FaLocationDot />vor Ort</span>
           </div>
           <div className={homeStyles.statItem}>
             <span className={homeStyles.statNumber}>
               <AnimatedCounter to={100} suffix="%" />
             </span>
-            <span className={homeStyles.statLabel}>Transparente Preise</span>
+            <span className={homeStyles.statLabel}><FaTag />Transparente Preise</span>
           </div>
         </div>
       </section>
