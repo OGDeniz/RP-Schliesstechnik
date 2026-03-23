@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import ElfsightWidget from "../components/ElfsightWidget";
 import GoogleMaps from "../components/GoogleMaps";
 import Accordion from "../components/ui/Accordion";
+import AnimatedCounter from "../components/ui/AnimatedCounter";
 import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield } from "react-icons/fa6";
 
 export default function Home() {
@@ -61,15 +62,21 @@ export default function Home() {
       <section className={homeStyles.trustStats}>
         <div className={homeStyles.trustStatsInner}>
           <div className={homeStyles.statItem}>
-            <span className={homeStyles.statNumber}>1200+</span>
+            <span className={homeStyles.statNumber}>
+              <AnimatedCounter to={1200} suffix="+" />
+            </span>
             <span className={homeStyles.statLabel}>Einsätze</span>
           </div>
           <div className={homeStyles.statItem}>
-            <span className={homeStyles.statNumber}>Ø 20 Min</span>
+            <span className={homeStyles.statNumber}>
+              <AnimatedCounter to={20} prefix="Ø " suffix=" Min" />
+            </span>
             <span className={homeStyles.statLabel}>vor Ort</span>
           </div>
           <div className={homeStyles.statItem}>
-            <span className={homeStyles.statNumber}>100%</span>
+            <span className={homeStyles.statNumber}>
+              <AnimatedCounter to={100} suffix="%" />
+            </span>
             <span className={homeStyles.statLabel}>Transparente Preise</span>
           </div>
         </div>
