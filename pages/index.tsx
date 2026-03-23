@@ -135,13 +135,25 @@ export default function Home() {
         <div className={homeStyles.regionChips}>
           {[
             "Bruchsal",
-            "Ettlingen",
-            "Bretten",
-            "Stutensee",
+            "Forst (Baden)",
+            "Karlsdorf-Neuthard",
+            "Hambrücken",
+            "Ubstadt-Weiher",
+            "Bad Schönborn",
+            "Kronau",
+            "Graben-Neudorf",
             "Waghäusel",
-            "Karlsruhe",
             "Kraichtal",
+            "Gondelsheim",
+            "Bretten",
+            "Walzbachtal",
+            "Weingarten (Baden)",
+            "Stutensee",
+            "Östringen",
+            "Oberhausen-Rheinhausen",
             "Philippsburg",
+            "Dettenheim",
+            "Linkenheim-Hochstetten",
           ].map((city) => (
             <span key={city} className={homeStyles.regionBadge}>
               {city}
@@ -211,9 +223,11 @@ export default function Home() {
           </Accordion>
           <Accordion title="In welchen Regionen seid ihr tätig?" defaultOpen={false}>
             <p>
-              Unser Einsatzgebiet umfasst <strong>Bruchsal, Ettlingen, Bretten, Stutensee, Waghäusel,
-              Karlsruhe, Kraichtal, Philippsburg</strong> und den gesamten Landkreis Karlsruhe.
-              Nicht sicher? Einfach kurz anrufen!
+              Unser Einsatzgebiet umfasst <strong>Bruchsal, Forst, Karlsdorf-Neuthard, Hambrücken,
+              Ubstadt-Weiher, Bad Schönborn, Kronau, Graben-Neudorf, Waghäusel, Kraichtal,
+              Gondelsheim, Bretten, Walzbachtal, Weingarten, Stutensee, Östringen,
+              Oberhausen-Rheinhausen, Philippsburg, Dettenheim, Linkenheim-Hochstetten</strong> und
+              den gesamten Landkreis Karlsruhe. Nicht sicher? Einfach kurz anrufen!
             </p>
           </Accordion>
         </div>
