@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import styles from "../../styles/cards.module.css";
+import styles from "../../styles/produktseite.module.css";
 
 const Produktseite = () => {
     const router = useRouter();
