@@ -3,6 +3,8 @@ import Head from 'next/head';
 import homestyles from '../styles/home.module.css';
 import styles from '../styles/contact.module.css';
 import GoogleMaps from './GoogleMaps';
+import { FaPhone, FaEnvelope, FaClock, FaHandshake } from 'react-icons/fa';
+import { FaMapLocationDot } from 'react-icons/fa6';
 
 const ContactUs = () => {
     const [status, setStatus] = useState<'success' | 'error' | ''>('');
@@ -73,9 +75,9 @@ const ContactUs = () => {
                     </div>
 
                     <div className={styles.trustRow}>
-                        <span>24/7 erreichbar</span>
-                        <span>Region Bruchsal</span>
-                        <span>Transparente Kommunikation</span>
+                        <span><FaClock />24/7 erreichbar</span>
+                        <span><FaMapLocationDot />Region Bruchsal</span>
+                        <span><FaHandshake />Transparente Kommunikation</span>
                     </div>
                 </div>
             </section>
@@ -83,18 +85,21 @@ const ContactUs = () => {
             <div className={`${homestyles.container} ${styles.contactPage}`}>
                 <section className={styles.infoGrid}>
                     <article className={styles.infoCard}>
+                        <div className={styles.infoCardIcon}><FaPhone /></div>
                         <h3>Telefon</h3>
                         <p>Für Notfälle und Soforthilfe empfehlen wir die direkte telefonische Kontaktaufnahme.</p>
                         <a href="tel:+4917623687542">+49 176 23687542</a>
                     </article>
 
                     <article className={styles.infoCard}>
+                        <div className={styles.infoCardIcon}><FaEnvelope /></div>
                         <h3>E-Mail</h3>
                         <p>Für allgemeine Anfragen, Rückfragen oder Beratung rund um Schließtechnik.</p>
                         <a href="mailto:info@schluesselrp.de">info@schluesselrp.de</a>
                     </article>
 
                     <article className={styles.infoCard}>
+                        <div className={styles.infoCardIcon}><FaMapLocationDot /></div>
                         <h3>Einsatzgebiet</h3>
                         <p>
                             Bruchsal, Forst, Karlsdorf-Neuthard, Hambrücken, Ubstadt-Weiher,
