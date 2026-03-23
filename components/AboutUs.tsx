@@ -8,14 +8,14 @@ const AboutUs = () => {
     <>
       <Head>
         <title>Über uns - RP Schliesstechnik</title>
-        <meta name="description" content="Erfahren Sie mehr über RP Schliesstechnik - Ihr zuverlässiger Partner für professionelle Schliesstechnik und Sicherheitslösungen." />
+        <meta name="description" content="Erfahren Sie mehr über RP Schliesstechnik - Ihr zuverlässiger Partner für professionelle Schließtechnik und Sicherheitslösungen." />
         <meta name="keywords" content="Über uns, RP Schliesstechnik, Unternehmen, Team, Sicherheit" />
       </Head>
       <div className={homeStyles.container}>
         <div className={`${styles.aboutus} about-us`}>
           <div className="hero">
             <h1>Über RP Schliesstechnik</h1>
-            <p>Ihr zuverlässiger Partner für professionelle Schliesstechnik und Sicherheitslösungen</p>
+            <p>Ihr zuverlässiger Partner für professionelle Schließtechnik und Sicherheitslösungen</p>
           </div>
 
           <section>
@@ -27,7 +27,7 @@ const AboutUs = () => {
             </p>
             <p>
               Unser Team besteht aus qualifizierten Fachleuten, die mit modernster Technik
-              arbeiten und stets auf dem neuesten Stand der Entwicklungen in der Schliesstechnik sind.
+              arbeiten und stets auf dem neuesten Stand der Entwicklungen in der Schließtechnik sind.
             </p>
           </section>
 

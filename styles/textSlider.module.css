@@ -1,0 +1,145 @@
+/* ===========================
+   Text Slider Component Styles
+   =========================== */
+
+.textSliderContainer {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.textSlider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide p {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Slider Navigation Buttons */
+.sliderBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.sliderBtn.prev {
+    left: 1rem;
+}
+
+.sliderBtn.next {
+    right: 1rem;
+}
+
+.sliderBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sliderBtn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 768px) {
+    .textSliderContainer {
+        max-width: 100%;
+        margin: 1.5rem auto;
+        border-radius: 6px;
+    }
+
+    .slide {
+        padding: 1.5rem;
+    }
+
+    .slide p {
+        font-size: 0.95rem;
+    }
+
+    .sliderBtn {
+        padding: 0.5rem 0.75rem;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .sliderBtn.prev {
+        left: 0.5rem;
+    }
+
+    .sliderBtn.next {
+        right: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .textSliderContainer {
+        margin: 1rem auto;
+        border-radius: 6px;
+    }
+
+    .slide {
+        padding: 1rem;
+    }
+
+    .slide p {
+        font-size: 0.9rem;
+    }
+
+    .sliderBtn {
+        padding: 0.5rem;
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .sliderBtn.prev {
+        left: 0.25rem;
+    }
+
+    .sliderBtn.next {
+        right: 0.25rem;
+    }
+}

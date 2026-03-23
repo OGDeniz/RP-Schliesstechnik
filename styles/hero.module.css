@@ -51,6 +51,33 @@
     line-height: 1.6;
 }
 
+/* CTA Button */
+.ctaButton {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+    color: var(--neutral-white);
+    font-family: var(--font-family-primary);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    border-radius: var(--radius-base);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5);
+    color: var(--neutral-white);
+}
+
+.ctaButton:active {
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .heroContainer {

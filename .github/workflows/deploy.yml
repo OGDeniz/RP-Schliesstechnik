@@ -21,7 +21,7 @@ jobs:
             set -e
             cd /root/rp-schliesstechnik-staging
             git fetch origin
-            git pull --ff-only origin dev
+            git reset --hard origin/dev
             npm ci --omit=dev
             npm run build
             pm2 restart rp-schliesstechnik-staging || pm2 start /root/rp-schliesstechnik/ecosystem.config.js --only rp-schliesstechnik-staging

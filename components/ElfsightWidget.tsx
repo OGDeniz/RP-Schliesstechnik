@@ -1,29 +1,7 @@
-import { useEffect, useState } from "react";
-import {
-    CONSENT_UPDATED_EVENT,
-    hasOptionalConsent,
-    setStoredConsent
-} from "../lib/cookieConsent";
+import { useEffect } from "react";
 
 const ElfsightWidget = () => {
-    const [enabled, setEnabled] = useState(false);
-
     useEffect(() => {
-        setEnabled(hasOptionalConsent());
-
-        const handleConsentUpdate = () => setEnabled(hasOptionalConsent());
-        window.addEventListener(CONSENT_UPDATED_EVENT, handleConsentUpdate);
-
-        return () => {
-            window.removeEventListener(CONSENT_UPDATED_EVENT, handleConsentUpdate);
-        };
-    }, []);
-
-    useEffect(() => {
-        if (!enabled) {
-            return;
-        }
-
         const scriptId = "elfsight-platform-script";
 
         // Script nur einmal laden
@@ -34,35 +12,7 @@ const ElfsightWidget = () => {
             script.id = scriptId;
             document.body.appendChild(script);
         }
-    }, [enabled]);
-
-    if (!enabled) {
-        return (
-            <div style={{ padding: "1rem", borderRadius: "12px", background: "rgba(255,255,255,0.08)", color: "#fff" }}>
-                <p style={{ marginBottom: "0.75rem" }}>
-                    Bewertungen und externe Widgets werden erst nach Ihrer Zustimmung zu optionalen Cookies geladen.
-                </p>
-                <button
-                    type="button"
-                    onClick={() => {
-                        setStoredConsent("all");
-                        setEnabled(true);
-                    }}
-                    style={{
-                        border: "none",
-                        borderRadius: "10px",
-                        background: "#f97316",
-                        color: "#fff",
-                        fontWeight: 700,
-                        padding: "0.55rem 0.9rem",
-                        cursor: "pointer",
-                    }}
-                >
-                    Externe Inhalte aktivieren
-                </button>
-            </div>
-        );
-    }
+    }, []);
 
     return (
         <div

@@ -263,7 +263,7 @@ a:hover {
 }
 
 
-@media screen and(max-width: 900px) {
+@media screen and (max-width: 900px) {
   h3 {
     font-size: .5rem;
   }

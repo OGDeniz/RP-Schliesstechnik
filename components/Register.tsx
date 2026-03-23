@@ -29,8 +29,8 @@ export default function Register() {
             const response = await axios.post('/api/register', {
                 username,
                 password,
-                name: `${firstName} ${lastName}`.trim(),
-                address: '',
+                first_name: firstName,
+                last_name: lastName,
             });
 
             setMessageType('success');

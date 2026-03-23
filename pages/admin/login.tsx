@@ -3,38 +3,21 @@ import { useRouter } from 'next/router';
 
 export default function AdminLogin() {
     const [password, setPassword] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
 
-        try {
-            console.log('Attempting login with password:', password);
+        const res = await fetch('/api/admin/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password }),
+        });
 
-            const res = await fetch('/api/admin/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ password }),
-            });
-
-            console.log('Response status:', res.status);
-            console.log('Response ok:', res.ok);
-
-            if (res.ok) {
-                console.log('Login successful, redirecting...');
-                router.push('/admin/dashboard');
-            } else {
-                const errorData = await res.json().catch(() => ({ error: 'Unknown error' }));
-                console.log('Login failed:', errorData);
-                alert('Falsches Passwort oder Server-Fehler');
-            }
-        } catch (error) {
-            console.error('Login error:', error);
-            alert('Verbindungsfehler. Bitte versuchen Sie es erneut.');
-        } finally {
-            setIsLoading(false);
+        if (res.ok) {
+            router.push('/admin/dashboard');
+        } else {
+            alert('Falsches Passwort');
         }
     };
 
@@ -64,14 +47,14 @@ export default function AdminLogin() {
                     onChange={(e) => setPassword(e.target.value)}
                     style={{ padding: '0.5rem' }}
                 />
-                <button type="submit" disabled={isLoading} style={{
+                <button type="submit" style={{
                     padding: '0.5rem',
-                    backgroundColor: isLoading ? '#666' : '#333',
+                    backgroundColor: '#333',
                     color: '#fff',
                     border: 'none',
                     borderRadius: '4px',
-                    cursor: isLoading ? 'not-allowed' : 'pointer'
-                }}>{isLoading ? 'Wird eingeloggt...' : 'Einloggen'}</button>
+                    cursor: 'pointer'
+                }}>Einloggen</button>
             </form>
         </div>
     );

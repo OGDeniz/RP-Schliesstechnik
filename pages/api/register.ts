@@ -1,4 +1,4 @@
-﻿import { query } from '../../lib/mysql';
+﻿import { query } from './db';
 import { hash } from 'bcryptjs';
 
 
@@ -7,11 +7,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const { username, password, name, address, first_name, last_name } = req.body;
-  const normalizedName = name || [first_name, last_name].filter(Boolean).join(' ').trim();
-  const normalizedAddress = address ?? '';
+  const { username, password, name, address } = req.body;
 
-  if (!username || !password || !normalizedName) {
+  if (!username || !password || !name || !address) {
     return res.status(400).json({ message: 'Alle Felder müssen ausgefüllt werden.' });
   }
 
@@ -26,7 +24,7 @@ export default async function handler(req, res) {
 
     await query(
       'INSERT INTO users (username, password, name, address) VALUES (?, ?, ?, ?)',
-      [username, hashedPassword, normalizedName, normalizedAddress]
+      [username, hashedPassword, name, address]
     );
 
     return res.status(201).json({ message: 'Benutzer erfolgreich registriert.' });

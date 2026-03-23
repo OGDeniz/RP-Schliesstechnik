@@ -12,9 +12,11 @@ import cardStyles from "../styles/cards.module.css";
 import IconLinks from "../components/IconLinks";
 import Opener from "../components/Opener";
 import Head from "next/head";
-import Accordion from "../components/ui/Accordion";
+import TextSlider from "../components/ui/TextSlider";
+import textStyles from "../styles/textSlider.module.css";
 import ElfsightWidget from "../components/ElfsightWidget";
 import Hero from "../components/Hero";
+import Accordion from "../components/ui/Accordion";
 import GoogleMaps from "../components/GoogleMaps";
 
 
@@ -74,10 +76,10 @@ export default function Home() {
 
     <div className={homeStyles.container}>
       <Head>
-        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schliesstechnik</title>
-        <meta name="description" content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung, Einbruchschutz & Sicherheitstechnik. Ihr Experte – RP Schliesstechnik!" />
+        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schließtechnik</title>
+        <meta name="description" content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung, Einbruchschutz & Sicherheitstechnik. Ihr Experte – RP Schließtechnik!" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="RP Schliesstechnik – 24h Schlüsseldienst Bruchsal" />
+        <meta property="og:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
         <meta property="og:description" content="Schnelle & günstige Türöffnungen, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung." />
         <meta property="og:image" content="/bilder/opengraph-preview.jpg" />
         <meta property="og:url" content="https://schluesselrp.de" />
@@ -89,7 +91,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "RP Schliesstechnik",
+            "name": "RP Schließtechnik",
             "image": "https://schluesselrp.de/bilder/logo.png",
             "url": "https://schluesselrp.de",
             "telephone": "+49 176 236 875 42",
@@ -114,15 +116,12 @@ export default function Home() {
         <ElfsightWidget />
       </div>
 
-      <div className={homeStyles.sliderContainer}>
-        <Slider images={sliderImages} className={undefined} />
-      </div>
-      {/* 
+      {/*
       <div className={homeStyles.three} >
       
-      <h2>Über uns – RP Schliesstechnik</h2>
+      <h2>Über uns – RP Schließtechnik</h2>
       <p className={homeStyles.description}>
-      RP Schliesstechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
+      RP Schließtechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
       
       Unser Anspruch: höchste Qualität, individuelle Beratung und maximale Sicherheit.
       </p>
@@ -156,8 +155,12 @@ export default function Home() {
         </Accordion>
       </div>
 
+      <div className={textStyles.textSliderContainer} >
+        <TextSlider />
+      </div>
+
       <div className={homeStyles.three} >
-        <Accordion title="Warum RP Schliesstechnik?" defaultOpen={false}>
+        <Accordion title="Warum RP Schließtechnik?" defaultOpen={false}>
           <ul>
             <li>
               <strong>Erfahrung und Expertise:</strong> Langjährige Branchenerfahrung und ein Team von Profis.
@@ -198,7 +201,7 @@ export default function Home() {
         <IconLinks />
 
         <p className={homeStyles.description}>
-          Wir bieten Ihnen eine breite Palette an Dienstleistungen rund um Schliesstechnik und Sicherheitstechnik.
+          Wir bieten Ihnen eine breite Palette an Dienstleistungen rund um Schließtechnik und Sicherheitstechnik.
 
 
           Egal, ob Sie einen Schlüssel verloren haben oder Ihre Sicherheitstechnik auf den neuesten Stand bringen möchten – wir sind für Sie da!

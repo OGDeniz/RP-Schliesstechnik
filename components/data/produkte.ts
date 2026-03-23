@@ -2,11 +2,11 @@ const jsonDb = {
   produkte: [
     {
       produktId: 1,
-      name: "Türöffnung",
+      name: "Tueröffnung",
       kategorie: "Dienstleistung",
       produktbeschreibung:
         "Wir öffnen Ihre Tür, wenn Sie sich ausgesperrt haben. Unsere Türöffnungsdienste sind schnell, zuverlässig und professionell. Wir montieren feuerhemmende Wohnungstüren und Türbeschläge für einzelne Wohnungen oder ganze Wohngebäude. Unser bestens geschultes und erfahrenes Personal sorgt dafür, dass Ihre Wohnungstüren ordnungsgemäß installiert werden und alle aktuellen Brandschutz- und Sicherheitsstandards erfüllen. Hochsicherheits- und Türschlösser, Türspione, Türschließer etc. können je nach Bedarf geliefert und eingebaut werden. Vertrauen Sie auf unseren Türnotdienst für maximale Sicherheit und Komfort.",
-      preis: "ab 70",
+      preis: 50,
       url: "tuer",
       bild: "/produktbilder/tueroeffnung.jpg",
     },
@@ -16,7 +16,7 @@ const jsonDb = {
       kategorie: "Dienstleistung",
       produktbeschreibung:
         "Wir öffnen Ihr Auto, wenn Sie sich ausgesperrt haben. Unsere erfahrenen Mitarbeiter sind schnell vor Ort und öffnen Ihr Auto ohne Beschädigungen. Unser Autoöffnungsservice ist ideal für alle Fahrzeugtypen und garantiert eine beschädigungsfreie Öffnung. Vertrauen Sie auf unseren professionellen Autoschlüsseldienst, um schnell wieder Zugang zu Ihrem Fahrzeug zu erhalten.",
-      preis: "ab 100",
+      preis: 70,
       url: "auto",
       bild: "/produktbilder/autooeffnung.jpg",
     },

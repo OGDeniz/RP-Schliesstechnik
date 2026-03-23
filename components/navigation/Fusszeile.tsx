@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "../../styles/fusszeile.module.css";
 import SocialMediaBar from "../ui/SocialMediaBar";
-import { openCookieSettings } from "../../lib/cookieConsent";
+import { FaPhone, FaClock } from "react-icons/fa";
+import { MdOutlineLock } from "react-icons/md";
 
 
 
@@ -22,17 +23,16 @@ export default function Fusszeile() {
               24 Stunden Notdienst | 365 Tage im Jahr
             </p>
           </div>
-          <h4>
-            🔓 RP Schlüsseldienst | 📞 +49 176 236 875 42 | ⌚ Mo-So: 0:00-24:00
-          </h4>
+          <div className={styles.contactInfo}>
+            <span><MdOutlineLock aria-hidden="true" /> RP Schlüsseldienst</span>
+            <span><FaPhone aria-hidden="true" /> +49 176 236 875 42</span>
+            <span><FaClock aria-hidden="true" /> Mo-So: 0:00-24:00</span>
+          </div>
           <SocialMediaBar />
         </div>
         <div className={styles.links}>
           <Link href="/" className={styles.navLink}>
             <p className="nav-link">Startseite</p>
-          </Link>
-          <Link href="/" className={styles.navLink}>
-            <p className="nav-link">Über uns</p>
           </Link>
           <Link href="/produkte" className={styles.navLink}>
 
@@ -45,13 +45,6 @@ export default function Fusszeile() {
           <Link href="/impressum" className={styles.navLink}>
             <p className="nav-link">Impressum</p>
           </Link>
-          <button
-            type="button"
-            className={`${styles.navLink} ${styles.cookieButton}`}
-            onClick={openCookieSettings}
-          >
-            <p className="nav-link">Cookie-Einstellungen</p>
-          </button>
         </div>
       </div>
     </div>

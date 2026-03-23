@@ -5,7 +5,6 @@ import Head from "next/head";
 import React from "react";
 import ClaimBar from "../components/ClaimBar";
 import StickyCallButton from "../components/ui/StickyCallButton";
-import CookieBanner from "../components/ui/CookieBanner";
 
 import { ReactNode } from "react";
 
@@ -26,7 +25,6 @@ export default function Layout({ children }: LayoutProps) {
             {children}
             <Fusszeile />
             <StickyCallButton />
-            <CookieBanner />
         </div>
     );
 }

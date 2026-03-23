@@ -12,7 +12,7 @@ export default function SocialMediaBar() {
             <a href="https://de.linkedin.com/in/rp-schliesstechnik-bruchsal-38b0b9367" target="_blank" rel="noopener noreferrer">
                 <Image src="/icons/linkedin.svg" alt="LinkedIn" width={50} height={50} />
             </a>
-            <a href="https://www.instagram.com/rp.schliesstechnik.bruchsal?igsh=MWljdDZ6dXB2dTJmeA%3D%3D" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/schlusseldienst_bruchsal/" target="_blank" rel="noopener noreferrer">
                 <Image src="/icons/instagram.svg" alt="Instagram" width={50} height={50} />
             </a>
             <a href="https://wa.me/4917623687542?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Schließanlagen" target="_blank" rel="noopener noreferrer">

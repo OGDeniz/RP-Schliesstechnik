@@ -78,7 +78,7 @@
   gap: var(--spacing-4);
 }
 
-.desktopMenu h1 {
+.desktopTitle {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-extrabold);
   color: var(--neutral-white);
@@ -220,6 +220,8 @@
   padding: var(--spacing-2);
   z-index: 11;
   transition: all var(--transition-base);
+  background: none;
+  border: none;
 }
 
 .burgerMenu span {
@@ -370,7 +372,7 @@
    =================================== */
 
 @media (max-width: 1024px) {
-  .desktopMenu h1 {
+  .desktopTitle {
     font-size: var(--font-size-xl);
     padding: var(--spacing-2) var(--spacing-4);
   }
