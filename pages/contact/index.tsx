@@ -16,14 +16,12 @@ const ContactUs = () => {
                 <meta name="author" content="Ihr Unternehmen" />
             </Head>
             <div className={styles.container}>
-                <div className={styles.two}>
-                    <h1 className='text-center mb-4 text-white'>Kontakt</h1>
-                    <p className='text-center col-md-8 mx-auto text-white'>
+                <div className={styles.pageContent}>
+                    <h1 className="text-center">Kontakt</h1>
+                    <p className="text-center">
                         Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Möchten Sie einen Termin vereinbaren oder ein individuelles Angebot erhalten? Kontaktieren Sie uns – wir sind gerne für Sie da!
                     </p>
-                    <Contact
-                        // @ts-ignore
-                        title="Kontaktieren Sie uns" subtitle="Wir freuen uns auf Ihre Nachricht!" className="container mt-4" />
+                    <Contact />
                 </div>
             </div>
         </>

@@ -32,11 +32,17 @@ export default function Navigation() {
     <nav className={styles.navigation}>
       <div className={styles.navContainer}>
         {/* Burger-Icon – im Desktop ausgeblendet */}
-        <div className={`${styles.burgerMenu} ${menuOpen ? styles.burgerMenuOpen : ''}`} onClick={toggleMenu}>
+        <button
+          type="button"
+          className={`${styles.burgerMenu} ${menuOpen ? styles.burgerMenuOpen : ''}`}
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
+          aria-expanded={menuOpen}
+        >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
 
         {/* Logo – immer sichtbar */}
         <div className={styles.logo}>
@@ -53,7 +59,7 @@ export default function Navigation() {
 
         {/* Desktop Menü: wird nur im Desktop sichtbar */}
         <div className={styles.desktopMenu}>
-          <h1>RP Schließtechnik</h1>
+          <p className={styles.desktopTitle}>RP Schließtechnik</p>
           <p>Weil jedes Schloss die richtige Lösung verdient.</p>
           <ul className={styles.menu}>
             <li>

@@ -116,10 +116,7 @@ export default function Home() {
         <ElfsightWidget />
       </div>
 
-      <div className={homeStyles.sliderContainer}>
-        <Slider images={sliderImages} className={undefined} />
-      </div>
-      {/* 
+      {/*
       <div className={homeStyles.three} >
       
       <h2>Über uns – RP Schließtechnik</h2>

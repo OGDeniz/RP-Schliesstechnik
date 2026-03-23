@@ -1,4 +1,5 @@
 import styles from '../styles/opener.module.css';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Opener() {
     return (
@@ -15,7 +16,7 @@ export default function Opener() {
                 </p>
 
                 <p>
-                    📍 Unser 24h Schlüsseldienst – schnell & zuverlässig – ist im gesamten Landkreis Karlsruhe im Einsatz. Ob Schlüsseldienst in Bruchsal, Ettlingen, Bretten, Stutensee oder Waghäusel: Wir bieten Sicherheit für Privathaushalte, gewerbliche Sicherheitslösungen und Mietobjekte.
+                    <FaMapMarkerAlt aria-hidden="true" className={styles.inlineIcon} /> Unser 24h Schlüsseldienst – schnell & zuverlässig – ist im gesamten Landkreis Karlsruhe im Einsatz. Ob Schlüsseldienst in Bruchsal, Ettlingen, Bretten, Stutensee oder Waghäusel: Wir bieten Sicherheit für Privathaushalte, gewerbliche Sicherheitslösungen und Mietobjekte.
                 </p>
 
                 <p>
