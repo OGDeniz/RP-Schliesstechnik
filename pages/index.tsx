@@ -1,219 +1,239 @@
-
-import { useMemo, useEffect } from "react";
+import { useEffect } from "react";
 import homeStyles from "../styles/home.module.css";
-import styles from "../styles/navigation.module.css";
-import openerStyles from "../styles/opener.module.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "../components/ui/Slider";
-import Link from "next/link";
-import Image from "next/image";
-import cardStyles from "../styles/cards.module.css";
-import IconLinks from "../components/IconLinks";
-import Opener from "../components/Opener";
 import Head from "next/head";
-import TextSlider from "../components/ui/TextSlider";
-import textStyles from "../styles/textSlider.module.css";
-import ElfsightWidget from "../components/ElfsightWidget";
 import Hero from "../components/Hero";
-import Accordion from "../components/ui/Accordion";
+import ElfsightWidget from "../components/ElfsightWidget";
 import GoogleMaps from "../components/GoogleMaps";
-
+import Accordion from "../components/ui/Accordion";
+import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield } from "react-icons/fa6";
 
 export default function Home() {
-  const sliderImages = useMemo(() => [
-    {
-      url: "/bilder/img1.jpg",
-      alt: "Schlüsseldienst Bild 1",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-    {
-      url: "/bilder/img2.png",
-      alt: "Schlüsseldienst Bild 2",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-    {
-      url: "/bilder/img3.png",
-      alt: "Schlüsseldienst Bild 3",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-    {
-      url: "/bilder/img4.png",
-      alt: "Schlüsseldienst Bild 4",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-    {
-      url: "/bilder/img5.png",
-      alt: "Schlüsseldienst Bild 5",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-
-    {
-      url: "/bilder/24std.png",
-      alt: "Schlüsseldienst Bild 6",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-    {
-      url: "/bilder/türöffnung.webp",
-      alt: "Schlüsseldienst Bild 7",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-    {
-      url: "/bilder/abus1.webp",
-      alt: "Schlüsseldienst abus",
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-    },
-  ], []);
-
   useEffect(() => {
     fetch("/api/views", { method: "POST" });
   }, []);
 
-
   return (
-
-
-
     <div className={homeStyles.container}>
       <Head>
         <title>Schlüsseldienst Bruchsal & Umgebung | RP Schließtechnik</title>
-        <meta name="description" content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung, Einbruchschutz & Sicherheitstechnik. Ihr Experte – RP Schließtechnik!" />
+        <meta
+          name="description"
+          content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung ab 79€, Einbruchschutz & Sicherheitstechnik. RP Schließtechnik – sofort vor Ort."
+        />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
-        <meta property="og:description" content="Schnelle & günstige Türöffnungen, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung." />
+        <meta
+          property="og:description"
+          content="Schnelle & günstige Türöffnungen ab 79€, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung."
+        />
         <meta property="og:image" content="/bilder/opengraph-preview.jpg" />
         <meta property="og:url" content="https://schluesselrp.de" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://schluesselrp.de/" />
 
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "RP Schließtechnik",
-            "image": "https://schluesselrp.de/bilder/logo.png",
-            "url": "https://schluesselrp.de",
-            "telephone": "+49 176 236 875 42",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Schwimmbadstraße 18",
-              "addressLocality": "Bruchsal",
-              "postalCode": "76646",
-              "addressCountry": "DE"
-            },
-            "openingHours": "Mo-So 00:00-24:00"
-          })
-        }} />
-
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "RP Schließtechnik",
+              image: "https://schluesselrp.de/bilder/logo.png",
+              url: "https://schluesselrp.de",
+              telephone: "+49 176 236 875 42",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Schwimmbadstraße 18",
+                addressLocality: "Bruchsal",
+                postalCode: "76646",
+                addressCountry: "DE",
+              },
+              openingHours: "Mo-So 00:00-24:00",
+            }),
+          }}
+        />
       </Head>
-      <div className={homeStyles.header}>
-        <Hero />
-        <div className={homeStyles.textslide}>
-          <Opener />
-          <Slider images={sliderImages} className={homeStyles.slider} />
+
+      {/* ① HERO */}
+      <Hero />
+
+      {/* ② TRUST STATS */}
+      <section className={homeStyles.trustStats}>
+        <div className={homeStyles.trustStatsInner}>
+          <div className={homeStyles.statItem}>
+            <span className={homeStyles.statNumber}>1200+</span>
+            <span className={homeStyles.statLabel}>Einsätze</span>
+          </div>
+          <div className={homeStyles.statItem}>
+            <span className={homeStyles.statNumber}>Ø 20 Min</span>
+            <span className={homeStyles.statLabel}>vor Ort</span>
+          </div>
+          <div className={homeStyles.statItem}>
+            <span className={homeStyles.statNumber}>100%</span>
+            <span className={homeStyles.statLabel}>Transparente Preise</span>
+          </div>
         </div>
-        <ElfsightWidget />
-      </div>
+      </section>
 
-      {/*
-      <div className={homeStyles.three} >
-      
-      <h2>Über uns – RP Schließtechnik</h2>
-      <p className={homeStyles.description}>
-      RP Schließtechnik ist Ihr zuverlässiger Partner für mechanische und digitale Schließsysteme. Mit langjähriger Erfahrung bieten wir maßgeschneiderte Sicherheitslösungen für Privatkunden, Unternehmen und öffentliche Einrichtungen.
-      
-      Unser Anspruch: höchste Qualität, individuelle Beratung und maximale Sicherheit.
-      </p>
-      {/*
-      Define the 'produkt' object with the required properties.
-      }
-      
-      </div> */}
+      {/* ③ LEISTUNGEN */}
+      <section className={homeStyles.leistungenSection}>
+        <div className={homeStyles.sectionHeader}>
+          <h2>Unsere Leistungen</h2>
+          <p>Schnell, zuverlässig & transparent – was auch immer Sie brauchen</p>
+        </div>
+        <div className={homeStyles.leistungenGrid}>
+          <div className={homeStyles.leistungCard}>
+            <div className={homeStyles.leistungIcon}>
+              <FaDoorOpen />
+            </div>
+            <h3>Türöffnung</h3>
+            <p>Schlüssel weg oder Tür zugefallen? Wir öffnen schnell & ohne Schaden – ab 79€.</p>
+            <a href="tel:+4917623687542" className={homeStyles.leistungCta}>
+              Jetzt anrufen →
+            </a>
+          </div>
+          <div className={homeStyles.leistungCard}>
+            <div className={homeStyles.leistungIcon}>
+              <FaKey />
+            </div>
+            <h3>Schlosswechsel</h3>
+            <p>Schloss defekt oder nach Einbruch? Wir tauschen Ihr Schloss sofort & sicher.</p>
+            <a href="tel:+4917623687542" className={homeStyles.leistungCta}>
+              Jetzt anrufen →
+            </a>
+          </div>
+          <div className={homeStyles.leistungCard}>
+            <div className={homeStyles.leistungIcon}>
+              <FaShield />
+            </div>
+            <h3>Einbruchschutz</h3>
+            <p>Sicherheitszylinder, Mehrfachverriegelung & Beratung – für Ihr ruhiges Gewissen.</p>
+            <a href="tel:+4917623687542" className={homeStyles.leistungCta}>
+              Mehr erfahren →
+            </a>
+          </div>
+          <div className={homeStyles.leistungCard}>
+            <div className={homeStyles.leistungIcon}>
+              <FaCar />
+            </div>
+            <h3>Autoöffnung</h3>
+            <p>Schlüssel im Auto eingeschlossen? Wir öffnen Ihr Fahrzeug professionell & schadensfrei.</p>
+            <a href="tel:+4917623687542" className={homeStyles.leistungCta}>
+              Jetzt anrufen →
+            </a>
+          </div>
+        </div>
+      </section>
 
+      {/* REVIEWS – Elfsight Widget */}
+      <ElfsightWidget />
 
-      <div className={homeStyles.three} >
-        <h2>Unser Anspruch</h2>
-        <ul className={homeStyles.description}>
-          <li>
-            <strong>Hochwertige Produkte:</strong> Von klassischen Zylinderschlössern bis hin zu modernen elektronischen Schließsystemen.
-          </li>
-          <li>
-            <strong>Zuverlässiger Service:</strong> Beratung, Installation und Wartung – alles aus einer Hand.
-          </li>
-          <li>
-            <strong>Kundenzufriedenheit:</strong> Persönlicher Support und passgenaue Lösungen stehen bei uns an erster Stelle.
-          </li>
-        </ul>
-      </div>
+      {/* ④ EINSATZGEBIET */}
+      <section className={homeStyles.einsatzgebiet}>
+        <h2>Unser Einsatzgebiet</h2>
+        <p>Wir sind für Sie da in der Region Bruchsal & Umgebung</p>
+        <div className={homeStyles.regionChips}>
+          {[
+            "Bruchsal",
+            "Ettlingen",
+            "Bretten",
+            "Stutensee",
+            "Waghäusel",
+            "Karlsruhe",
+            "Kraichtal",
+            "Philippsburg",
+          ].map((city) => (
+            <span key={city} className={homeStyles.regionBadge}>
+              {city}
+            </span>
+          ))}
+        </div>
+      </section>
 
-      <div className={homeStyles.three} >
-        <Accordion title="Unsere Vision" defaultOpen={false}>
-          <p>
-            Wir möchten, dass Sie sich jederzeit sicher fühlen – in Ihrem Zuhause, Ihrem Unternehmen oder unterwegs. Daher investieren wir kontinuierlich in neue Technologien und setzen auf nachhaltige, zukunftsorientierte Konzepte.
-          </p>
-        </Accordion>
-      </div>
+      {/* ⑤ EINBRUCHSCHUTZ UPSELL */}
+      <section className={homeStyles.upsellSection}>
+        <div className={homeStyles.sectionHeader}>
+          <h2>Nicht nur öffnen – wir sichern Ihr Zuhause</h2>
+          <p>Vorsorge ist besser als Schaden. Wir beraten Sie kostenlos.</p>
+        </div>
+        <div className={homeStyles.upsellGrid}>
+          <div className={homeStyles.upsellCard}>
+            <span className={homeStyles.upsellIcon}>
+              <FaGear />
+            </span>
+            <h3>Sicherheitszylinder</h3>
+            <p>Hochwertige Zylinder mit Bohr- & Ziehschutz – zertifizierte Qualität.</p>
+          </div>
+          <div className={homeStyles.upsellCard}>
+            <span className={homeStyles.upsellIcon}>
+              <FaLock />
+            </span>
+            <h3>Schließanlagen</h3>
+            <p>Individuelle Systeme für Privat & Gewerbe – ein Schlüssel für alles.</p>
+          </div>
+          <div className={homeStyles.upsellCard}>
+            <span className={homeStyles.upsellIcon}>
+              <FaUserShield />
+            </span>
+            <h3>Sicherheitsberatung</h3>
+            <p>Kostenlose Analyse Ihrer Schwachstellen – unverbindlich & kompetent.</p>
+          </div>
+        </div>
+        <a href="tel:+4917623687542" className={homeStyles.upsellCta}>
+          📞 Jetzt beraten lassen
+        </a>
+      </section>
 
-      <div className={textStyles.textSliderContainer} >
-        <TextSlider />
-      </div>
+      {/* ⑥ FAQ */}
+      <section className={homeStyles.faqSection}>
+        <div className={homeStyles.sectionHeader}>
+          <h2>Häufige Fragen</h2>
+        </div>
+        <div className={homeStyles.faqInner}>
+          <Accordion title="Was kostet eine Türöffnung?" defaultOpen={false}>
+            <p>
+              Eine einfache Türöffnung beginnt bei <strong>79€</strong> – transparent, ohne versteckte Kosten.
+              Der genaue Preis hängt vom Schlosstyp und der Tageszeit ab. Wir nennen Ihnen den Preis immer vor dem Einsatz.
+            </p>
+          </Accordion>
+          <Accordion title="Wie schnell seid ihr vor Ort?" defaultOpen={false}>
+            <p>
+              Im Durchschnitt sind wir in <strong>Ø 20 Minuten</strong> bei Ihnen – in Bruchsal und der gesamten
+              Umgebung. Wir sind 24/7 im Einsatz, auch an Wochenenden und Feiertagen.
+            </p>
+          </Accordion>
+          <Accordion title="Seid ihr wirklich 24 Stunden erreichbar?" defaultOpen={false}>
+            <p>
+              Ja – <strong>24/7, 365 Tage im Jahr</strong>. Egal ob 3 Uhr nachts oder an Heiligabend:
+              Sie erreichen uns jederzeit unter{" "}
+              <a href="tel:+4917623687542">+49 176 236 875 42</a>.
+            </p>
+          </Accordion>
+          <Accordion title="In welchen Regionen seid ihr tätig?" defaultOpen={false}>
+            <p>
+              Unser Einsatzgebiet umfasst <strong>Bruchsal, Ettlingen, Bretten, Stutensee, Waghäusel,
+              Karlsruhe, Kraichtal, Philippsburg</strong> und den gesamten Landkreis Karlsruhe.
+              Nicht sicher? Einfach kurz anrufen!
+            </p>
+          </Accordion>
+        </div>
+      </section>
 
-      <div className={homeStyles.three} >
-        <Accordion title="Warum RP Schließtechnik?" defaultOpen={false}>
-          <ul>
-            <li>
-              <strong>Erfahrung und Expertise:</strong> Langjährige Branchenerfahrung und ein Team von Profis.
-            </li>
-            <li>
-              <strong>Individuelle Lösungen:</strong> Wir hören zu, analysieren und entwickeln maßgeschneiderte Schließsysteme.
-            </li>
-            <li>
-              <strong>Zuverlässigkeit:</strong> Pünktlichkeit und Qualität sind für uns selbstverständlich.
-            </li>
-          </ul>
-        </Accordion>
-      </div >
+      {/* ⑦ FINAL CTA */}
+      <section className={homeStyles.finalCta}>
+        <h2>Jetzt Hilfe anfordern –<br />wir sind sofort erreichbar</h2>
+        <p>Kein Warteschleife, kein Callcenter – direkt zum Profi.</p>
+        <a href="tel:+4917623687542" className={homeStyles.finalCtaButton}>
+          📞 Jetzt anrufen
+        </a>
+        <span className={homeStyles.finalCtaPhone}>+49 176 236 875 42 · 24/7 Notdienst</span>
+      </section>
 
-      <div className={homeStyles.three} >
-        <Accordion title="Unsere Leistungen" defaultOpen={false}>
-          <ul>
-            <li>
-              <strong>Schließanlagen:</strong> Planung, Installation und Wartung von mechanischen und digitalen Schließsystemen.
-            </li>
-            <li>
-              <strong>Sicherheitsberatung:</strong> Analyse und Optimierung bestehender Sicherheitskonzepte.
-            </li>
-            <li>
-              <strong>Notdienst:</strong> 24/7-Service für Türöffnungen, Schlüsselverlust und Einbruchschäden.
-            </li>
-          </ul>
-          <Link href="/produkte" className={styles.button}>
-            Mehr erfahren
-          </Link>
-        </Accordion>
-      </div>
-
-
-      <div className={homeStyles.three} >
-        <h2>RP Services</h2>
-
-        <IconLinks />
-
-        <p className={homeStyles.description}>
-          Wir bieten Ihnen eine breite Palette an Dienstleistungen rund um Schließtechnik und Sicherheitstechnik.
-
-
-          Egal, ob Sie einen Schlüssel verloren haben oder Ihre Sicherheitstechnik auf den neuesten Stand bringen möchten – wir sind für Sie da!
-        </p>
-
-
-      </div>
-
-      <div className={homeStyles.three}>
-        <h2>Schlüsseldienst Bruchsal – So finden Sie uns</h2>
+      {/* MAPS */}
+      <section className={homeStyles.mapsSection}>
+        <h2>So finden Sie uns – Schlüsseldienst Bruchsal</h2>
         <GoogleMaps />
-      </div>
-    </div >
+      </section>
+    </div>
   );
 }

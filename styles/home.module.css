@@ -502,3 +502,477 @@
         opacity: 1;
     }
 }
+
+/* ===========================
+   TRUST STATS SECTION
+   =========================== */
+
+.trustStats {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--primary-charcoal) 100%);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.trustStatsInner {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 900px;
+    gap: 0;
+}
+
+.statItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    position: relative;
+}
+
+.statItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.statNumber {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--accent-red);
+    line-height: 1;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.statLabel {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-weight: var(--font-weight-medium);
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+/* ===========================
+   LEISTUNGEN SECTION
+   =========================== */
+
+.leistungenSection {
+    width: 100%;
+    padding: 5rem 2rem;
+    background-color: var(--neutral-off-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sectionHeader {
+    text-align: center;
+}
+
+.sectionHeader h2 {
+    color: var(--primary-black);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: 0.75rem;
+}
+
+.sectionHeader p {
+    color: var(--neutral-dark);
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+}
+
+.leistungenGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.leistungCard {
+    background: var(--neutral-white);
+    border: 1px solid var(--neutral-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.leistungCard:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-red);
+}
+
+.leistungIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.12) 0%, rgba(249, 115, 22, 0.06) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-red);
+    font-size: 1.5rem;
+}
+
+.leistungCard h3 {
+    color: var(--primary-black);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.leistungCard p {
+    color: var(--neutral-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.leistungCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--accent-red);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid var(--accent-red);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+    margin-top: auto;
+}
+
+.leistungCta:hover {
+    background: var(--accent-red);
+    color: var(--neutral-white);
+}
+
+/* ===========================
+   EINSATZGEBIET SECTION
+   =========================== */
+
+.einsatzgebiet {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--neutral-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.einsatzgebiet h2 {
+    color: var(--primary-black);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+}
+
+.einsatzgebiet p {
+    color: var(--neutral-dark);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.regionChips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.regionBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, rgba(27, 58, 107, 0.08) 0%, rgba(27, 58, 107, 0.04) 100%);
+    border: 1.5px solid rgba(27, 58, 107, 0.2);
+    border-radius: var(--radius-full);
+    color: var(--primary-black);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-fast);
+}
+
+.regionBadge:hover {
+    background: var(--primary-black);
+    color: var(--neutral-white);
+    border-color: var(--primary-black);
+}
+
+.regionBadge::before {
+    content: "📍";
+    font-size: 0.85rem;
+}
+
+/* ===========================
+   EINBRUCHSCHUTZ UPSELL SECTION
+   =========================== */
+
+.upsellSection {
+    width: 100%;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--primary-charcoal) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.upsellSection .sectionHeader h2 {
+    color: var(--neutral-white);
+}
+
+.upsellSection .sectionHeader p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.upsellGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.upsellCard {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.upsellCard:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-red);
+    transform: translateY(-4px);
+}
+
+.upsellIcon {
+    font-size: 2rem;
+    color: var(--accent-red);
+}
+
+.upsellCard h3 {
+    color: var(--neutral-white);
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.upsellCard p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.upsellCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+    color: var(--neutral-white);
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    border-radius: var(--radius-base);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.35);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.upsellCta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5);
+    color: var(--neutral-white);
+}
+
+/* ===========================
+   FAQ SECTION
+   =========================== */
+
+.faqSection {
+    width: 100%;
+    padding: 5rem 2rem;
+    background-color: var(--neutral-off-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.faqSection .sectionHeader h2 {
+    color: var(--primary-black);
+}
+
+.faqInner {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* ===========================
+   FINAL CTA SECTION
+   =========================== */
+
+.finalCta {
+    width: 100%;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.finalCta h2 {
+    color: var(--neutral-white);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: var(--font-weight-extrabold);
+    max-width: 700px;
+}
+
+.finalCta p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.finalCtaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.2rem 3rem;
+    background: var(--neutral-white);
+    color: var(--accent-red-dark);
+    font-family: var(--font-family-primary);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: var(--font-weight-extrabold);
+    text-decoration: none;
+    border-radius: var(--radius-base);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    letter-spacing: var(--letter-spacing-wide);
+    margin-top: 0.5rem;
+}
+
+.finalCtaButton:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    color: var(--accent-red-dark);
+}
+
+.finalCtaPhone {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   MAPS WRAPPER
+   =========================== */
+
+.mapsSection {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--neutral-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mapsSection h2 {
+    color: var(--primary-black);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+}
+
+/* ===========================
+   RESPONSIVE – NEW SECTIONS
+   =========================== */
+
+@media (max-width: 1024px) {
+    .leistungenGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .trustStatsInner {
+        gap: 0;
+    }
+
+    .statNumber {
+        font-size: 1.75rem;
+    }
+
+    .leistungenGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .upsellGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .leistungenSection,
+    .faqSection {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .upsellSection,
+    .finalCta {
+        padding: 3.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trustStats {
+        padding: 2.5rem 1rem;
+    }
+
+    .leistungenGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .regionChips {
+        gap: 0.5rem;
+    }
+
+    .finalCtaButton {
+        padding: 1rem 2rem;
+        width: 100%;
+        justify-content: center;
+    }
+}

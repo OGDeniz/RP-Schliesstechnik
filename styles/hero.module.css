@@ -51,21 +51,33 @@
     line-height: 1.6;
 }
 
+/* CTA Button Group */
+.ctaGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
 /* CTA Button */
 .ctaButton {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 1rem 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 2.2rem;
     background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
     color: var(--neutral-white);
     font-family: var(--font-family-primary);
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
     font-weight: var(--font-weight-bold);
     text-decoration: none;
     border-radius: var(--radius-base);
     box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
     letter-spacing: var(--letter-spacing-wide);
+    white-space: nowrap;
 }
 
 .ctaButton:hover {
@@ -76,6 +88,61 @@
 
 .ctaButton:active {
     transform: translateY(0);
+}
+
+/* WhatsApp Button */
+.whatsappButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 2.2rem;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: var(--neutral-white);
+    font-family: var(--font-family-primary);
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    border-radius: var(--radius-base);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    letter-spacing: var(--letter-spacing-wide);
+    white-space: nowrap;
+}
+
+.whatsappButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    color: var(--neutral-white);
+}
+
+.whatsappButton:active {
+    transform: translateY(0);
+}
+
+/* Micro Trust Bar */
+.microTrust {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.microTrust span {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    font-weight: var(--font-weight-medium);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.microTrust span::before {
+    content: "✓";
+    color: #25D366;
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
 }
 
 /* Responsive Design */
