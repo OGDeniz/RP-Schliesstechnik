@@ -42,3 +42,5 @@ next-env.d.ts
 # Deployment-Archive
 *.tar.gz
 *.zip
+components/data/viewCount.json
+public/sitemap-0.xml
