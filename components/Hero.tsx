@@ -1,4 +1,5 @@
 import styles from '../styles/hero.module.css';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 export default function Hero() {
     return (
@@ -16,7 +17,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         className={styles.whatsappButton}
                     >
-                        💬 WhatsApp
+                        <FaWhatsapp /> WhatsApp
                     </a>
                 </div>
                 <div className={styles.microTrust}>
