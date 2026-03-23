@@ -45,6 +45,9 @@ export default function Fusszeile() {
           <Link href="/impressum" className={styles.navLink}>
             <p className="nav-link">Impressum</p>
           </Link>
+          <Link href="/datenschutz" className={styles.navLink}>
+            <p className="nav-link">Datenschutz</p>
+          </Link>
         </div>
       </div>
     </div>
