@@ -6,9 +6,10 @@ interface Props {
     prefix?: string;
     suffix?: string;
     duration?: number;
+    toRange?: number;
 }
 
-const AnimatedCounter = ({ to, prefix = '', suffix = '', duration = 1.8 }: Props) => {
+const AnimatedCounter = ({ to, prefix = '', suffix = '', duration = 1.8, toRange }: Props) => {
     const ref = useRef<HTMLSpanElement>(null);
     const inView = useInView(ref, { once: true, margin: '-80px' });
     const [started, setStarted] = useState(false);
@@ -24,10 +25,15 @@ const AnimatedCounter = ({ to, prefix = '', suffix = '', duration = 1.8 }: Props
             onUpdate(value) {
                 node.textContent = `${prefix}${Math.round(value)}${suffix}`;
             },
+            onComplete() {
+                if (toRange !== undefined) {
+                    node.textContent = `${prefix}${to} bis ${toRange}${suffix}`;
+                }
+            },
         });
 
         return () => controls.stop();
-    }, [inView, started, to, prefix, suffix, duration]);
+    }, [inView, started, to, prefix, suffix, duration, toRange]);
 
     return (
         <span ref={ref}>

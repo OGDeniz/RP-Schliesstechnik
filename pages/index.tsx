@@ -63,13 +63,13 @@ export default function Home() {
         <div className={homeStyles.trustStatsInner}>
           <div className={homeStyles.statItem}>
             <span className={homeStyles.statNumber}>
-              <AnimatedCounter to={1200} suffix="+" />
+              <AnimatedCounter to={500} suffix="+" />
             </span>
             <span className={homeStyles.statLabel}>Einsätze</span>
           </div>
           <div className={homeStyles.statItem}>
             <span className={homeStyles.statNumber}>
-              <AnimatedCounter to={20} prefix="Ø " suffix=" Min" />
+              <AnimatedCounter to={20} toRange={30} suffix=" Min" />
             </span>
             <span className={homeStyles.statLabel}>vor Ort</span>
           </div>
@@ -231,9 +231,9 @@ export default function Home() {
           <Accordion title="In welchen Regionen seid ihr tätig?" defaultOpen={false}>
             <p>
               Unser Einsatzgebiet umfasst <strong>Bruchsal, Forst, Karlsdorf-Neuthard, Hambrücken,
-              Ubstadt-Weiher, Bad Schönborn, Kronau, Graben-Neudorf, Waghäusel, Kraichtal,
-              Gondelsheim, Bretten, Walzbachtal, Weingarten, Stutensee, Östringen,
-              Oberhausen-Rheinhausen, Philippsburg, Dettenheim, Linkenheim-Hochstetten</strong> und
+                Ubstadt-Weiher, Bad Schönborn, Kronau, Graben-Neudorf, Waghäusel, Kraichtal,
+                Gondelsheim, Bretten, Walzbachtal, Weingarten, Stutensee, Östringen,
+                Oberhausen-Rheinhausen, Philippsburg, Dettenheim, Linkenheim-Hochstetten</strong> und
               den gesamten Landkreis Karlsruhe. Nicht sicher? Einfach kurz anrufen!
             </p>
           </Accordion>
