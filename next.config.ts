@@ -7,6 +7,10 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+
+    experimental: {
+        allowedDevOrigins: ['http://192.168.178.122'], // Erlaubt Cross-Origin-Anfragen von dieser IP
+    },
 };
 
 export default nextConfig;
