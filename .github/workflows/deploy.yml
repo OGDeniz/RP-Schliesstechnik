@@ -20,8 +20,15 @@ jobs:
           script: |
             set -e
             cd /root/rp-schliesstechnik-staging
+            [ -f components/data/viewCount.json ] && cp components/data/viewCount.json /tmp/viewCount-staging.bak
             git fetch origin
             git reset --hard origin/dev
+            mkdir -p components/data
+            if [ -f /tmp/viewCount-staging.bak ]; then
+              mv /tmp/viewCount-staging.bak components/data/viewCount.json
+            else
+              echo '{"count":0,"lastVisit":null,"buttonClicks":{"stickyCall":{"count":0,"lastClick":null},"navigationCall":{"count":0,"lastClick":null},"productCall":{"count":0,"lastClick":null}}}' > components/data/viewCount.json
+            fi
             npm ci --omit=dev
             npm run build
             pm2 restart rp-schliesstechnik-staging || pm2 start /root/rp-schliesstechnik/ecosystem.config.js --only rp-schliesstechnik-staging
@@ -40,8 +47,15 @@ jobs:
           script: |
             set -e
             cd /root/rp-schliesstechnik
+            [ -f components/data/viewCount.json ] && cp components/data/viewCount.json /tmp/viewCount-prod.bak
             git fetch origin
             git pull --ff-only origin main
+            mkdir -p components/data
+            if [ -f /tmp/viewCount-prod.bak ]; then
+              mv /tmp/viewCount-prod.bak components/data/viewCount.json
+            else
+              echo '{"count":0,"lastVisit":null,"buttonClicks":{"stickyCall":{"count":0,"lastClick":null},"navigationCall":{"count":0,"lastClick":null},"productCall":{"count":0,"lastClick":null}}}' > components/data/viewCount.json
+            fi
             npm ci --omit=dev
             npm run build
             pm2 restart rp-schliesstechnik || pm2 start ecosystem.config.js --only rp-schliesstechnik

@@ -9,10 +9,15 @@ import { AppProps } from "next/app";
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const isAdminRoute = router.pathname.startsWith('/admin');
 
   useEffect(() => {
     console.log("Aktuelle Route:", router.pathname);
   }, [router.pathname]);
+
+  if (isAdminRoute) {
+    return <Component {...pageProps} />;
+  }
 
   return (
     <Layout>

@@ -7,25 +7,21 @@ const filePath = path.join(process.cwd(), 'components', 'data', 'viewCount.json'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
         try {
-            const { buttonType } = req.body; // 'stickyCall', 'navigationCall', 'productCall'
+            const { buttonType } = req.body;
 
-            if (!buttonType || !['stickyCall', 'navigationCall', 'productCall'].includes(buttonType)) {
-                return res.status(400).json({ error: 'Ungültiger Button-Typ' });
+            if (!buttonType || typeof buttonType !== 'string' || buttonType.trim() === '') {
+                return res.status(400).json({ error: 'buttonType fehlt' });
             }
 
             const data = fs.readFileSync(filePath, 'utf-8');
             const json = JSON.parse(data);
 
-            // Initialisiere buttonClicks falls nicht vorhanden
-            if (!json.buttonClicks) {
-                json.buttonClicks = {
-                    stickyCall: { count: 0, lastClick: null },
-                    navigationCall: { count: 0, lastClick: null },
-                    productCall: { count: 0, lastClick: null }
-                };
+            if (!json.buttonClicks) json.buttonClicks = {};
+
+            if (!json.buttonClicks[buttonType]) {
+                json.buttonClicks[buttonType] = { count: 0, lastClick: null };
             }
 
-            // Erhöhe den Zähler und setze Timestamp
             json.buttonClicks[buttonType].count += 1;
             json.buttonClicks[buttonType].lastClick = new Date().toISOString();
 
@@ -39,37 +35,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (req.method === 'DELETE') {
         try {
-            const { buttonType } = req.body; // 'stickyCall', 'navigationCall', 'productCall', 'all'
+            const { buttonType } = req.body;
 
             const data = fs.readFileSync(filePath, 'utf-8');
             const json = JSON.parse(data);
 
-            // Initialisiere buttonClicks falls nicht vorhanden
-            if (!json.buttonClicks) {
-                json.buttonClicks = {
-                    stickyCall: { count: 0, lastClick: null },
-                    navigationCall: { count: 0, lastClick: null },
-                    productCall: { count: 0, lastClick: null }
-                };
-            }
+            if (!json.buttonClicks) json.buttonClicks = {};
 
             if (buttonType === 'all') {
-                // Reset alle Button-Statistiken
-                json.buttonClicks.stickyCall = { count: 0, lastClick: null };
-                json.buttonClicks.navigationCall = { count: 0, lastClick: null };
-                json.buttonClicks.productCall = { count: 0, lastClick: null };
-            } else if (['stickyCall', 'navigationCall', 'productCall'].includes(buttonType)) {
-                // Reset spezifischen Button
+                json.buttonClicks = {};
+            } else if (buttonType && json.buttonClicks[buttonType]) {
                 json.buttonClicks[buttonType] = { count: 0, lastClick: null };
             } else {
-                return res.status(400).json({ error: 'Ungültiger Button-Typ für Reset' });
+                return res.status(400).json({ error: 'Ungültiger buttonType' });
             }
 
             fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
             return res.status(200).json({ success: true, buttonClicks: json.buttonClicks });
         } catch (err) {
             console.error('Fehler beim Button-Reset:', err);
-            return res.status(500).json({ error: 'Interner Fehler beim Reset' });
+            return res.status(500).json({ error: 'Interner Fehler' });
         }
     }
 
@@ -77,13 +62,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         try {
             const data = fs.readFileSync(filePath, 'utf-8');
             const json = JSON.parse(data);
-            return res.status(200).json({
-                buttonClicks: json.buttonClicks || {
-                    stickyCall: { count: 0, lastClick: null },
-                    navigationCall: { count: 0, lastClick: null },
-                    productCall: { count: 0, lastClick: null }
-                }
-            });
+            return res.status(200).json({ buttonClicks: json.buttonClicks || {} });
         } catch (err) {
             console.error('Fehler beim Lesen der Button-Daten:', err);
             return res.status(500).json({ error: 'Interner Fehler' });
