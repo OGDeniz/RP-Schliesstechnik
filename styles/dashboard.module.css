@@ -89,6 +89,10 @@
     background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
 }
 
+.cardRed {
+    background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+}
+
 .cardLabel {
     margin: 0;
     font-size: 0.7rem;

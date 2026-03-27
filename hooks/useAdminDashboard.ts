@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import type { HealthStatus } from '../pages/api/health';
 
 export interface ButtonStat {
     count: number;
@@ -21,6 +22,7 @@ export function useAdminDashboard() {
     const [viewCount, setViewCount] = useState<number | null>(null);
     const [lastVisit, setLastVisit] = useState<string | null>(null);
     const [buttonClicks, setButtonClicks] = useState<Record<string, ButtonStat>>({});
+    const [health, setHealth] = useState<HealthStatus | null>(null);
 
     useEffect(() => {
         fetch('/api/views')
@@ -32,6 +34,11 @@ export function useAdminDashboard() {
             .then((r) => r.json())
             .then((d) => setButtonClicks(d.buttonClicks ?? {}))
             .catch(console.error);
+
+        fetch('/api/health')
+            .then((r) => r.json())
+            .then((d: HealthStatus) => setHealth(d))
+            .catch(() => setHealth({ db: 'error', fs: 'error', overall: 'error' }));
     }, []);
 
     const handleLogout = async () => {
@@ -64,6 +71,7 @@ export function useAdminDashboard() {
         buttonClicks,
         totalClicks,
         buttonEntries,
+        health,
         handleLogout,
         resetButtonStats,
     };

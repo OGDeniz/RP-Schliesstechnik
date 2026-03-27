@@ -18,6 +18,7 @@ export default function AdminDashboard() {
         lastVisit,
         totalClicks,
         buttonEntries,
+        health,
         handleLogout,
         resetButtonStats,
     } = useAdminDashboard();
@@ -67,13 +68,19 @@ export default function AdminDashboard() {
                             <p className={styles.cardSub}>{buttonEntries.length} Button-Typen erfasst</p>
                         </div>
 
-                        <div className={`${styles.card} ${styles.cardOrange}`}>
+                        <div className={`${styles.card} ${health?.overall === 'error' ? styles.cardRed : styles.cardOrange}`}>
                             <p className={styles.cardLabel}>Status</p>
                             <div className={styles.statusRow}>
                                 <span className={styles.statusDot} />
-                                <p className={styles.statusLabel}>Online</p>
+                                <p className={styles.statusLabel}>
+                                    {health === null ? 'Prüfe...' : health.overall === 'ok' ? 'Online' : 'Fehler'}
+                                </p>
                             </div>
-                            <p className={`${styles.cardSub} ${styles.cardSubLight}`}>Alle Systeme aktiv</p>
+                            <p className={`${styles.cardSub} ${styles.cardSubLight}`}>
+                                {health === null
+                                    ? '—'
+                                    : `DB: ${health.db === 'ok' ? '✓' : '✗'} · Dateisystem: ${health.fs === 'ok' ? '✓' : '✗'}`}
+                            </p>
                         </div>
                     </div>
 
