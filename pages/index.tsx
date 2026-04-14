@@ -7,6 +7,7 @@ import GoogleMaps from "../components/GoogleMaps";
 import Accordion from "../components/ui/Accordion";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield, FaWrench, FaLocationDot, FaTag } from "react-icons/fa6";
+import Partners from "../components/Partners";
 
 export default function Home() {
   useEffect(() => {
@@ -131,6 +132,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Partners />
 
       {/* REVIEWS – Elfsight Widget */}
       <ElfsightWidget />

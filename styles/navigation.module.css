@@ -93,9 +93,11 @@
 }
 
 .desktopMenu p {
-  font-size: var(--font-size-md);
+  font-family: 'Permanent Marker', cursive;
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
-  color: var(--neutral-white);
+  color: var(--accent-red);
+  text-shadow: 2char 2char rgba(0, 0, 0, 0.1);
   margin: 0;
 }
 

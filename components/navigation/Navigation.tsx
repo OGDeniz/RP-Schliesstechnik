@@ -59,7 +59,7 @@ export default function Navigation() {
 
         {/* Desktop Menü: wird nur im Desktop sichtbar */}
         <div className={styles.desktopMenu}>
-          <p className={styles.desktopTitle}>RP Schließtechnik</p>
+          {/* <p className={styles.desktopTitle}>RP Schließtechnik</p> */}
           <p>Weil jedes Schloss die richtige Lösung verdient.</p>
           <ul className={styles.menu}>
             <li>
