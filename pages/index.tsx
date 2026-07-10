@@ -8,6 +8,7 @@ import Accordion from "../components/ui/Accordion";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield, FaWrench, FaLocationDot, FaTag } from "react-icons/fa6";
 import Partners from "../components/Partners";
+import AdacBadge from "../components/AdacBadge";
 
 export default function Home() {
   useEffect(() => {
@@ -82,6 +83,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ADAC PARTNER BADGE */}
+      <AdacBadge />
 
       {/* ③ LEISTUNGEN */}
       <section className={homeStyles.leistungenSection}>

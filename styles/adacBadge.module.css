@@ -1,0 +1,218 @@
+/* ===================================
+   ADAC PARTNER BADGE SECTION
+   =================================== */
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0f1f3d 0%, #1b3a6b 60%, #0f1f3d 100%);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ambient yellow glow from ADAC brand color */
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(255, 204, 0, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Layout */
+.content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  z-index: 1;
+}
+
+/* Badge Image Frame */
+.badgeFrame {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 204, 0, 0.25),
+    0 8px 40px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(255, 204, 0, 0.1);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.badgeFrame:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow:
+    0 0 0 1.5px rgba(255, 204, 0, 0.55),
+    0 16px 56px rgba(0, 0, 0, 0.55),
+    0 0 80px rgba(255, 204, 0, 0.18);
+}
+
+/* Shimmer sweep */
+.shimmer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 65%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3.5s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  60%  { background-position: -200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.badgeImg {
+  display: block;
+  width: 420px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Text block */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffcc00;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(255, 204, 0, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 204, 0, 0.08);
+  width: fit-content;
+}
+
+.heading {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  background: #ffcc00;
+  color: #0f1f3d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-radius: 10px;
+  width: fit-content;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(255, 204, 0, 0.3);
+}
+
+.cta:hover {
+  background: #ffe033;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 204, 0, 0.45);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .badgeImg {
+    width: 320px;
+  }
+
+  .eyebrow,
+  .cta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sub {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .badgeImg {
+    width: 260px;
+  }
+
+  .glow {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrapper {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .shimmer,
+  .glow {
+    animation: none;
+  }
+}

@@ -48,12 +48,15 @@ export default function Navigation() {
         <div className={styles.logo}>
           <Link href="/">
             <Image
-              src="/RP_Logos/RP_Logo_whiteShadow.png"
+              src="/RP_Logos/RP_white.svg"
               alt="RP-Schließtechnik"
-              width={125}
-              height={50}
+              width={150}
+              height={150}
             />
-            <p>Schliesstechnik</p>
+            <div className={styles.logoText}>
+              <p>Schliesstechnik</p>
+              <p className={styles.logoClaim}>SICHERHEIT | VERTRAUEN | LÖSUNGEN</p>
+            </div>
           </Link>
         </div>
 
@@ -97,34 +100,36 @@ export default function Navigation() {
 
 
       {/* Mobile Menü (Dropdown) – wird eingeblendet, wenn Burger-Icon geklickt wurde */}
-      {menuOpen && (
-        <div className={styles.menuMobile}>
-          {/* Close Button */}
-          <button
-            className={styles.closeButton}
-            onClick={toggleMenu}
-            aria-label="Menü schließen"
-          >
-            <span className={styles.closeIcon}></span>
-            <span className={styles.closeIcon}></span>
-          </button>
+      {
+        menuOpen && (
+          <div className={styles.menuMobile}>
+            {/* Close Button */}
+            <button
+              className={styles.closeButton}
+              onClick={toggleMenu}
+              aria-label="Menü schließen"
+            >
+              <span className={styles.closeIcon}></span>
+              <span className={styles.closeIcon}></span>
+            </button>
 
-          <ul className={styles.menu}>
-            <li>
-              <Link href="/" onClick={toggleMenu}>Startseite</Link>
-            </li>
-            <li>
-              <Link href="/produkte" onClick={toggleMenu}>Leistungen</Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={toggleMenu}>Kontakt</Link>
-            </li>
-            <li>
-              <Link href="/impressum" onClick={toggleMenu}>Impressum</Link>
-            </li>
-          </ul>
-        </div>
-      )}
-    </nav>
+            <ul className={styles.menu}>
+              <li>
+                <Link href="/" onClick={toggleMenu}>Startseite</Link>
+              </li>
+              <li>
+                <Link href="/produkte" onClick={toggleMenu}>Leistungen</Link>
+              </li>
+              <li>
+                <Link href="/contact" onClick={toggleMenu}>Kontakt</Link>
+              </li>
+              <li>
+                <Link href="/impressum" onClick={toggleMenu}>Impressum</Link>
+              </li>
+            </ul>
+          </div>
+        )
+      }
+    </nav >
   );
 }

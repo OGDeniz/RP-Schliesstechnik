@@ -59,14 +59,38 @@
   opacity: 0.8;
 }
 
+.logo img {
+  height: 95px !important;
+  width: auto !important;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .logo p {
   color: var(--neutral-white);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-wide);
+  letter-spacing: 0.12em;
   margin: 0;
   font-style: normal;
+  line-height: 1.2;
+}
+
+.logoClaim {
+  font-size: 0.52rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.18em !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  white-space: nowrap;
+  margin-top: 4px !important;
+  line-height: 1 !important;
+  padding-top: 4px;
+  border-top: 1px solid rgba(249, 115, 22, 0.45);
 }
 
 /* === DESKTOP MENU === */
