@@ -33,13 +33,6 @@ const Partners: React.FC = () => {
       url: 'https://www.wilka.de',
     },
     {
-      name: 'ADAC',
-      logo: '/partner/adac.svg',
-      width: 180,
-      height: 80,
-      url: 'https://www.adac.de',
-    },
-    {
       name: 'StadtPortal Kraichgau',
       logo: '/partner/stadtp.webp',
       width: 180,
