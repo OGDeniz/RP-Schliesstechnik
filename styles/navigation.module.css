@@ -420,12 +420,26 @@
   }
 
   .navContainer {
-    padding: var(--spacing-4) var(--spacing-6);
-    gap: var(--spacing-6);
+    padding: var(--spacing-3) var(--spacing-4);
+    gap: var(--spacing-3);
+  }
+
+  .logo {
+    gap: var(--spacing-2);
+  }
+
+  .logo img {
+    height: 50px !important;
+    width: auto !important;
   }
 
   .logo p {
-    font-size: var(--font-size-sm);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+  }
+
+  .logoClaim {
+    display: none;
   }
 
   /* Show Mobile Menu when Open */
@@ -441,20 +455,24 @@
 
 @media (max-width: 480px) {
   .navContainer {
-    padding: var(--spacing-4) var(--spacing-5);
+    padding: var(--spacing-3) var(--spacing-4);
   }
 
   .logo {
-    gap: var(--spacing-3);
+    gap: var(--spacing-2);
   }
 
   .logo img {
-    width: 80px !important;
-    height: auto !important;
+    height: 42px !important;
+    width: auto !important;
   }
 
   .logo p {
-    font-size: var(--font-size-xs);
+    font-size: 0.72rem;
+  }
+
+  .logoClaim {
+    display: none;
   }
 
   .menuMobile {
