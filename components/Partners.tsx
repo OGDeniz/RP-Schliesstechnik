@@ -53,7 +53,7 @@ const Partners: React.FC = () => {
   return (
     <section className={styles.partnersSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Unsere Partner</h2>
+        <h2 className={styles.title}>Weitere Partner</h2>
         <p className={styles.subtitle}>
           Vertrauen Sie auf Qualität – wir arbeiten mit starken Marken und regionalen Partnern.
         </p>

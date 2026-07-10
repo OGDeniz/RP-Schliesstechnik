@@ -87,6 +87,8 @@ export default function Home() {
       {/* ADAC PARTNER BADGE */}
       <AdacBadge />
 
+      <Partners />
+
       {/* ③ LEISTUNGEN */}
       <section className={homeStyles.leistungenSection}>
         <div className={homeStyles.sectionHeader}>
@@ -136,8 +138,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Partners />
 
       {/* REVIEWS – Elfsight Widget */}
       <ElfsightWidget />
