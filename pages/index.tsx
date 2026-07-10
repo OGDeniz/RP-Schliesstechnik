@@ -8,7 +8,8 @@ import Accordion from "../components/ui/Accordion";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield, FaWrench, FaLocationDot, FaTag } from "react-icons/fa6";
 import Partners from "../components/Partners";
-import AdacBadge from "../components/AdacBadge";
+import dynamic from "next/dynamic";
+const AdacBadge = dynamic(() => import("../components/AdacBadge"), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
