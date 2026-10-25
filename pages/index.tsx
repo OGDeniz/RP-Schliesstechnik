@@ -19,13 +19,13 @@ export default function Home() {
   return (
     <div className={homeStyles.container}>
       <Head>
-        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schließtechnik</title>
+        <title>Schlüsseldienst Bruchsal & Umgebung | RP Schliesstechnik</title>
         <meta
           name="description"
-          content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung ab 79€, Einbruchschutz & Sicherheitstechnik. RP Schließtechnik – sofort vor Ort."
+          content="24h Schlüsselnotdienst Bruchsal, Ettlingen, Waghäusel & Umgebung. Schnelle Türöffnung ab 79€, Einbruchschutz & Sicherheitstechnik. RP Schliesstechnik – sofort vor Ort."
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
+        <meta property="og:title" content="RP Schliesstechnik – 24h Schlüsseldienst Bruchsal" />
         <meta
           property="og:description"
           content="Schnelle & günstige Türöffnungen ab 79€, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung."
@@ -35,7 +35,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
+        <meta name="twitter:title" content="RP Schliesstechnik – 24h Schlüsseldienst Bruchsal" />
         <meta name="twitter:description" content="Schnelle & günstige Türöffnungen ab 79€, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung." />
         <meta name="twitter:image" content="https://schluesselrp.de/bilder/brusl.jpg" />
         <link rel="canonical" href="https://schluesselrp.de/" />
@@ -47,7 +47,7 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": "Locksmith",
               "@id": "https://schluesselrp.de/#business",
-              name: "RP Schließtechnik",
+              name: "RP Schliesstechnik",
               image: "https://schluesselrp.de/bilder/brusl.jpg",
               url: "https://schluesselrp.de/",
               telephone: "+49 176 236 875 42",

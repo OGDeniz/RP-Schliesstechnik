@@ -12,7 +12,7 @@ export default function Opener() {
                 </h2>
 
                 <p>
-                    <strong>RP Schließtechnik</strong> ist Ihr Fachbetrieb für Sicherheitstechnik mit langjähriger Erfahrung bei Türöffnungen. Wir bieten persönlichen Service rund um Sicherheit und legen großen Wert auf hohe Kundenzufriedenheit.
+                    <strong>RP Schliesstechnik</strong> ist Ihr Fachbetrieb für Sicherheitstechnik mit langjähriger Erfahrung bei Türöffnungen. Wir bieten persönlichen Service rund um Sicherheit und legen großen Wert auf hohe Kundenzufriedenheit.
                 </p>
 
                 <p>

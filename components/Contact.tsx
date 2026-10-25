@@ -44,21 +44,21 @@ const ContactUs = () => {
     return (
         <>
             <Head>
-                <title>Kontakt | RP Schließtechnik</title>
+                <title>Kontakt | RP Schliesstechnik</title>
                 <meta
                     name="description"
-                    content="Kontaktieren Sie RP Schließtechnik für Türöffnung, Schlosswechsel, Einbruchschutz und Schlüsseldienst im Raum Bruchsal."
+                    content="Kontaktieren Sie RP Schliesstechnik für Türöffnung, Schlosswechsel, Einbruchschutz und Schlüsseldienst im Raum Bruchsal."
                 />
                 <meta
                     name="keywords"
-                    content="Schlüsseldienst Bruchsal, Kontakt, Türöffnung, Schlosswechsel, Einbruchschutz, RP Schließtechnik"
+                    content="Schlüsseldienst Bruchsal, Kontakt, Türöffnung, Schlosswechsel, Einbruchschutz, RP Schliesstechnik"
                 />
-                <meta name="author" content="RP Schließtechnik" />
+                <meta name="author" content="RP Schliesstechnik" />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://schluesselrp.de/contact/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Kontakt | RP Schließtechnik" />
-                <meta property="og:description" content="Kontaktieren Sie RP Schließtechnik für Türöffnung, Schlosswechsel, Einbruchschutz und Schlüsseldienst im Raum Bruchsal." />
+                <meta property="og:title" content="Kontakt | RP Schliesstechnik" />
+                <meta property="og:description" content="Kontaktieren Sie RP Schliesstechnik für Türöffnung, Schlosswechsel, Einbruchschutz und Schlüsseldienst im Raum Bruchsal." />
                 <meta property="og:url" content="https://schluesselrp.de/contact/" />
             </Head>
 
@@ -92,7 +92,7 @@ const ContactUs = () => {
                     <div className={styles.heroImage}>
                         <Image
                             src="/bilder/contact.png"
-                            alt="Kontakt RP Schließtechnik"
+                            alt="Kontakt RP Schliesstechnik"
                             width={480}
                             height={480}
                             priority
@@ -113,7 +113,7 @@ const ContactUs = () => {
                     <article className={styles.infoCard}>
                         <div className={styles.infoCardIcon}><FaEnvelope /></div>
                         <h3>E-Mail</h3>
-                        <p>Für allgemeine Anfragen, Rückfragen oder Beratung rund um Schließtechnik.</p>
+                        <p>Für allgemeine Anfragen, Rückfragen oder Beratung rund um Schliesstechnik.</p>
                         <a href="mailto:info@schluesselrp.de">info@schluesselrp.de</a>
                     </article>
 
@@ -222,7 +222,7 @@ const ContactUs = () => {
                                 <li>Schlosswechsel</li>
                                 <li>Autoöffnungen</li>
                                 <li>Einbruchschutz</li>
-                                <li>Schließtechnik & Beratung</li>
+                                <li>Schliesstechnik & Beratung</li>
                             </ul>
                         </div>
 

@@ -7,20 +7,20 @@ const AboutUs = () => {
   return (
     <>
       <Head>
-        <title>Über uns | RP Schließtechnik – Schlüsseldienst Bruchsal</title>
-        <meta name="description" content="RP Schließtechnik aus Bruchsal: Ihr zuverlässiger Partner für Türöffnung, Schlosswechsel, Einbruchschutz und Sicherheitstechnik. Erfahren Sie mehr über unser Team." />
+        <title>Über uns | RP Schliesstechnik – Schlüsseldienst Bruchsal</title>
+        <meta name="description" content="RP Schliesstechnik aus Bruchsal: Ihr zuverlässiger Partner für Türöffnung, Schlosswechsel, Einbruchschutz und Sicherheitstechnik. Erfahren Sie mehr über unser Team." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://schluesselrp.de/aboutus/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Über uns | RP Schließtechnik – Schlüsseldienst Bruchsal" />
-        <meta property="og:description" content="RP Schließtechnik aus Bruchsal: Ihr zuverlässiger Partner für Türöffnung, Schlosswechsel, Einbruchschutz und Sicherheitstechnik." />
+        <meta property="og:title" content="Über uns | RP Schliesstechnik – Schlüsseldienst Bruchsal" />
+        <meta property="og:description" content="RP Schliesstechnik aus Bruchsal: Ihr zuverlässiger Partner für Türöffnung, Schlosswechsel, Einbruchschutz und Sicherheitstechnik." />
         <meta property="og:url" content="https://schluesselrp.de/aboutus/" />
       </Head>
       <div className={homeStyles.container}>
         <div className={`${styles.aboutus} about-us`}>
           <div className="hero">
             <h1>Über RP Schliesstechnik</h1>
-            <p>Ihr zuverlässiger Partner für professionelle Schließtechnik und Sicherheitslösungen</p>
+            <p>Ihr zuverlässiger Partner für professionelle Schliesstechnik und Sicherheitslösungen</p>
           </div>
 
           <section>
@@ -32,7 +32,7 @@ const AboutUs = () => {
             </p>
             <p>
               Unser Team besteht aus qualifizierten Fachleuten, die mit modernster Technik
-              arbeiten und stets auf dem neuesten Stand der Entwicklungen in der Schließtechnik sind.
+              arbeiten und stets auf dem neuesten Stand der Entwicklungen in der Schliesstechnik sind.
             </p>
           </section>
 

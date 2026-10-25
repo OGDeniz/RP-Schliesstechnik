@@ -105,7 +105,7 @@ export default function Navigation() {
               <Link href="/">
                 <Image
                   src="/RP_Logos/RP_white.svg"
-                  alt="RP-Schließtechnik"
+                  alt="RP-Schliesstechnik"
                   width={150}
                   height={150}
                   priority
@@ -189,7 +189,7 @@ export default function Navigation() {
                 <Link href="/" onClick={closeMenu} className={styles.mobileLogo}>
                   <Image
                     src="/RP_Logos/RP_white.svg"
-                    alt="RP-Schließtechnik"
+                    alt="RP-Schliesstechnik"
                     width={120}
                     height={120}
                   />

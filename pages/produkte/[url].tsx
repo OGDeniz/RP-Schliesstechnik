@@ -22,7 +22,7 @@ type Produkt = {
 const Produktseite = ({ produkt }: { produkt: Produkt }) => {
     const isDienstleistung = produkt.kategorie === "Dienstleistung";
     const canonical = `${SITE}/produkte/${produkt.url}/`;
-    const metaTitle = `${produkt.name} in Bruchsal & Umgebung – ab ${produkt.preis} € | RP Schließtechnik`;
+    const metaTitle = `${produkt.name} in Bruchsal & Umgebung – ab ${produkt.preis} € | RP Schliesstechnik`;
     const metaDescription = produkt.produktbeschreibung.slice(0, 155).trim() + "…";
     const imageAbs = produkt.bild.startsWith("http") ? produkt.bild : `${SITE}${produkt.bild}`;
 
@@ -36,7 +36,7 @@ const Produktseite = ({ produkt }: { produkt: Produkt }) => {
         image: imageAbs,
         provider: {
             "@type": "LocalBusiness",
-            name: "RP Schließtechnik",
+            name: "RP Schliesstechnik",
             telephone: PHONE,
             address: {
                 "@type": "PostalAddress",
@@ -121,7 +121,7 @@ const Produktseite = ({ produkt }: { produkt: Produkt }) => {
                         {produkt.bild && (
                             <Image
                                 src={produkt.bild}
-                                alt={`${produkt.name} – RP Schließtechnik Bruchsal`}
+                                alt={`${produkt.name} – RP Schliesstechnik Bruchsal`}
                                 width={800}
                                 height={600}
                                 className={styles.serviceImage}
