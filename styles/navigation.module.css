@@ -554,7 +554,8 @@
     gap: var(--spacing-2);
   }
 
-  .logo img {
+  .logo img,
+  .scrolled .logo img {
     height: 48px !important;
     width: auto !important;
   }
@@ -584,7 +585,8 @@
     padding: var(--spacing-3) var(--spacing-4);
   }
 
-  .logo img {
+  .logo img,
+  .scrolled .logo img {
     height: 40px !important;
     width: auto !important;
   }

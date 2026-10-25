@@ -2,6 +2,9 @@
 const nextConfig = {
     reactStrictMode: true,
 
+    // Erlaubt eine isolierte Preview (NEXT_DIST_DIR=.next-preview) ohne den Prod-Build (.next) anzufassen
+    distDir: process.env.NEXT_DIST_DIR || '.next',
+
     trailingSlash: true, // Stellt sicher, dass alle URLs mit "/" enden
 
     images: {
