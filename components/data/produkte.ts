@@ -2,7 +2,7 @@ const jsonDb = {
   produkte: [
     {
       produktId: 1,
-      name: "Tueröffnung",
+      name: "Türöffnung",
       kategorie: "Dienstleistung",
       produktbeschreibung:
         "Wir öffnen Ihre Tür, wenn Sie sich ausgesperrt haben. Unsere Türöffnungsdienste sind schnell, zuverlässig und professionell. Wir montieren feuerhemmende Wohnungstüren und Türbeschläge für einzelne Wohnungen oder ganze Wohngebäude. Unser bestens geschultes und erfahrenes Personal sorgt dafür, dass Ihre Wohnungstüren ordnungsgemäß installiert werden und alle aktuellen Brandschutz- und Sicherheitsstandards erfüllen. Hochsicherheits- und Türschlösser, Türspione, Türschließer etc. können je nach Bedarf geliefert und eingebaut werden. Vertrauen Sie auf unseren Türnotdienst für maximale Sicherheit und Komfort.",

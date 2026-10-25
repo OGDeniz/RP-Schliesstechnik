@@ -6,7 +6,7 @@ import ElfsightWidget from "../components/ElfsightWidget";
 import GoogleMaps from "../components/GoogleMaps";
 import Accordion from "../components/ui/Accordion";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
-import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield, FaWrench, FaLocationDot, FaTag } from "react-icons/fa6";
+import { FaDoorOpen, FaKey, FaShield, FaCar, FaGear, FaLock, FaUserShield, FaWrench, FaLocationDot, FaTag, FaPhone } from "react-icons/fa6";
 import Partners from "../components/Partners";
 import dynamic from "next/dynamic";
 const AdacBadge = dynamic(() => import("../components/AdacBadge"), { ssr: false });
@@ -30,9 +30,14 @@ export default function Home() {
           property="og:description"
           content="Schnelle & günstige Türöffnungen ab 79€, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung."
         />
-        <meta property="og:image" content="/bilder/opengraph-preview.jpg" />
-        <meta property="og:url" content="https://schluesselrp.de" />
+        <meta property="og:image" content="https://schluesselrp.de/bilder/brusl.jpg" />
+        <meta property="og:url" content="https://schluesselrp.de/" />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="de_DE" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RP Schließtechnik – 24h Schlüsseldienst Bruchsal" />
+        <meta name="twitter:description" content="Schnelle & günstige Türöffnungen ab 79€, Einbruchschutz und Schließanlagen in Bruchsal, Ettlingen und Umgebung." />
+        <meta name="twitter:image" content="https://schluesselrp.de/bilder/brusl.jpg" />
         <link rel="canonical" href="https://schluesselrp.de/" />
 
         <script
@@ -40,19 +45,84 @@ export default function Home() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
+              "@id": "https://schluesselrp.de/#business",
               name: "RP Schließtechnik",
-              image: "https://schluesselrp.de/bilder/logo.png",
-              url: "https://schluesselrp.de",
+              image: "https://schluesselrp.de/bilder/brusl.jpg",
+              url: "https://schluesselrp.de/",
               telephone: "+49 176 236 875 42",
+              priceRange: "ab 79 €",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Schwimmbadstraße 18",
                 addressLocality: "Bruchsal",
                 postalCode: "76646",
+                addressRegion: "Baden-Württemberg",
                 addressCountry: "DE",
               },
-              openingHours: "Mo-So 00:00-24:00",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 49.1244,
+                longitude: 8.5981,
+              },
+              areaServed: [
+                "Bruchsal", "Ettlingen", "Waghäusel", "Bretten", "Stutensee",
+                "Karlsdorf-Neuthard", "Ubstadt-Weiher", "Bad Schönborn", "Philippsburg",
+                "Landkreis Karlsruhe",
+              ],
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday", "Tuesday", "Wednesday", "Thursday",
+                  "Friday", "Saturday", "Sunday",
+                ],
+                opens: "00:00",
+                closes: "23:59",
+              },
+            }),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Was kostet eine Türöffnung?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Eine einfache Türöffnung beginnt bei 79 € – transparent, ohne versteckte Kosten. Der genaue Preis hängt vom Schlosstyp und der Tageszeit ab. Wir nennen Ihnen den Preis immer vor dem Einsatz.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Wie schnell seid ihr vor Ort?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Im Durchschnitt sind wir in rund 20 Minuten bei Ihnen – in Bruchsal und der gesamten Umgebung. Wir sind 24/7 im Einsatz, auch an Wochenenden und Feiertagen.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Seid ihr wirklich 24 Stunden erreichbar?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Ja – 24/7, 365 Tage im Jahr. Egal ob 3 Uhr nachts oder an Heiligabend: Sie erreichen uns jederzeit unter +49 176 236 875 42.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "In welchen Regionen seid ihr tätig?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Unser Einsatzgebiet umfasst Bruchsal, Forst, Karlsdorf-Neuthard, Hambrücken, Ubstadt-Weiher, Bad Schönborn, Kronau, Graben-Neudorf, Waghäusel, Kraichtal, Gondelsheim, Bretten, Walzbachtal, Weingarten, Stutensee, Östringen, Oberhausen-Rheinhausen, Philippsburg, Dettenheim, Linkenheim-Hochstetten und den gesamten Landkreis Karlsruhe.",
+                  },
+                },
+              ],
             }),
           }}
         />
@@ -91,8 +161,8 @@ export default function Home() {
       <Partners />
 
       {/* ③ LEISTUNGEN */}
-      <section className={homeStyles.leistungenSection}>
-        <div className={homeStyles.sectionHeader}>
+      <section id="leistungen" className={homeStyles.leistungenSection}>
+        <div className={homeStyles.sectionHeader} data-eyebrow="Was wir können">
           <h2>Unsere Leistungen</h2>
           <p>Schnell, zuverlässig & transparent – was auch immer Sie brauchen</p>
         </div>
@@ -179,7 +249,7 @@ export default function Home() {
 
       {/* ⑤ EINBRUCHSCHUTZ UPSELL */}
       <section className={homeStyles.upsellSection}>
-        <div className={homeStyles.sectionHeader}>
+        <div className={homeStyles.sectionHeader} data-eyebrow="Einbruchschutz">
           <h2>Nicht nur öffnen – wir sichern Ihr Zuhause</h2>
           <p>Vorsorge ist besser als Schaden. Wir beraten Sie kostenlos.</p>
         </div>
@@ -207,13 +277,13 @@ export default function Home() {
           </div>
         </div>
         <a href="tel:+4917623687542" className={homeStyles.upsellCta}>
-          📞 Jetzt beraten lassen
+          <FaPhone /> Jetzt beraten lassen
         </a>
       </section>
 
       {/* ⑥ FAQ */}
       <section className={homeStyles.faqSection}>
-        <div className={homeStyles.sectionHeader}>
+        <div className={homeStyles.sectionHeader} data-eyebrow="FAQ">
           <h2>Häufige Fragen</h2>
         </div>
         <div className={homeStyles.faqInner}>
@@ -253,7 +323,7 @@ export default function Home() {
         <h2>Jetzt Hilfe anfordern –<br />wir sind sofort erreichbar</h2>
         <p>Kein Warteschleife, kein Callcenter – direkt zum Profi.</p>
         <a href="tel:+4917623687542" className={homeStyles.finalCtaButton}>
-          📞 Jetzt anrufen
+          <FaPhone /> Jetzt anrufen
         </a>
         <span className={homeStyles.finalCtaPhone}>+49 176 236 875 42 · 24/7 Notdienst</span>
       </section>

@@ -11,6 +11,7 @@ const Datenschutz = () => {
                 <title>Datenschutzerklärung - RP Schliesstechnik</title>
                 <meta name="description" content="Datenschutzerklärung von RP Schliesstechnik - Informationen zum Umgang mit Ihren personenbezogenen Daten." />
                 <meta name="robots" content="noindex, follow" />
+                <link rel="canonical" href="https://schluesselrp.de/datenschutz/" />
             </Head>
             <div className={homeStyles.container}>
                 <div className={styles.container} style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', lineHeight: '1.6' }}>

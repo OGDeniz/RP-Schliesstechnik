@@ -16,8 +16,12 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <div>
             <Head>
-                <title>RP Schliesstechnik</title>
-                <meta name="description" content="Liefermax" />
+                <title>RP Schließtechnik – Schlüsseldienst Bruchsal & Umgebung</title>
+                <meta
+                    name="description"
+                    content="RP Schließtechnik – Ihr Schlüsseldienst für Türöffnung, Schlosswechsel, Einbruchschutz und Sicherheitstechnik in Bruchsal, Ettlingen, Waghäusel und Umgebung."
+                />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ClaimBar />

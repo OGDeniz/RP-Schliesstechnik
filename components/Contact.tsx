@@ -54,6 +54,12 @@ const ContactUs = () => {
                     content="Schlüsseldienst Bruchsal, Kontakt, Türöffnung, Schlosswechsel, Einbruchschutz, RP Schließtechnik"
                 />
                 <meta name="author" content="RP Schließtechnik" />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://schluesselrp.de/contact/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Kontakt | RP Schließtechnik" />
+                <meta property="og:description" content="Kontaktieren Sie RP Schließtechnik für Türöffnung, Schlosswechsel, Einbruchschutz und Schlüsseldienst im Raum Bruchsal." />
+                <meta property="og:url" content="https://schluesselrp.de/contact/" />
             </Head>
 
             <section className={styles.hero}>

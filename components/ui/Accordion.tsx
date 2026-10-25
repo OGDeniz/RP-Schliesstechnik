@@ -23,9 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, children, defaultOpen = fa
                 aria-controls={`accordion-content-${title.replace(/\s+/g, '-').toLowerCase()}`}
             >
                 <span className={styles.accordionTitle}>{title}</span>
-                <span className={`${styles.accordionIcon} ${isOpen ? styles.rotated : ''}`}>
-                    ▼
-                </span>
+                <span className={`${styles.accordionIcon} ${isOpen ? styles.rotated : ''}`} aria-hidden="true" />
             </button>
             <div
                 className={`${styles.accordionContent} ${isOpen ? styles.open : ''}`}

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Produktliste from "../../components/features/products/Produktliste";
 import styles from "../../styles/cards.module.css";
 import Accordion from "../../components/ui/Accordion";
@@ -6,6 +7,19 @@ import Accordion from "../../components/ui/Accordion";
 export default function Produkte() {
     return (
         <main className={styles.page}>
+            <Head>
+                <title>Leistungen & Schlüsseldienst Bruchsal | RP Schließtechnik</title>
+                <meta
+                    name="description"
+                    content="Türöffnung, Autoöffnung, Tresoröffnung, Schlosswechsel und Einbruchschutz in Bruchsal, Ettlingen & Umgebung. Festpreise, 24/7 Notdienst – RP Schließtechnik."
+                />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://schluesselrp.de/produkte/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Leistungen & Schlüsseldienst Bruchsal | RP Schließtechnik" />
+                <meta property="og:description" content="Türöffnung, Autoöffnung, Tresoröffnung, Schlosswechsel und Einbruchschutz in Bruchsal & Umgebung. Festpreise, 24/7 Notdienst." />
+                <meta property="og:url" content="https://schluesselrp.de/produkte/" />
+            </Head>
             <section className={styles.hero}>
                 <span className={styles.eyebrow}>Schließtechnik & Sicherheit</span>
                 <h1 className={styles.heroTitle}>Unsere Leistungen</h1>

@@ -3,69 +3,108 @@
    =========================== */
 
 .accordionItem {
-    border: 1px solid #E0E0E0;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border: 1px solid var(--neutral-light);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
     overflow: hidden;
     background: var(--neutral-white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 1px 2px rgba(27, 58, 107, 0.04);
+    transition: box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .accordionItem:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 24px -16px rgba(27, 58, 107, 0.3);
+    border-color: rgba(249, 115, 22, 0.25);
 }
 
 .accordionHeader {
     width: 100%;
-    padding: 1.5rem;
-    background: var(--neutral-off-white);
+    padding: 1.4rem 1.5rem;
+    background: var(--neutral-white);
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     font-family: inherit;
-    transition: all 0.3s ease;
+    transition: background var(--transition-fast);
     text-align: left;
 }
 
 .accordionHeader:hover {
-    background: rgba(220, 38, 38, 0.05);
+    background: var(--neutral-off-white);
 }
 
 .accordionHeader.active {
-    background: rgba(220, 38, 38, 0.1);
-    border-bottom: 1px solid #E0E0E0;
+    background: var(--neutral-off-white);
 }
 
 .accordionTitle {
-    font-size: 1.25rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--primary-dark);
+    font-family: var(--font-family-display);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-black);
+    letter-spacing: -0.01em;
     margin: 0;
 }
 
+/* Plus → Minus Icon, rein in CSS gezeichnet */
 .accordionIcon {
-    font-size: 1rem;
-    color: var(--accent-red);
-    transition: transform 0.3s ease;
-    font-weight: bold;
+    position: relative;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-full);
+    background: rgba(249, 115, 22, 0.1);
+    transition: background var(--transition-base), transform var(--transition-base);
+}
+
+.accordionIcon::before,
+.accordionIcon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.8rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent-red);
+    transform: translate(-50%, -50%);
+    transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.accordionIcon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .accordionIcon.rotated {
+    background: var(--accent-red);
     transform: rotate(180deg);
 }
 
+.accordionIcon.rotated::before,
+.accordionIcon.rotated::after {
+    background: var(--neutral-white);
+}
+
+/* Vertikaler Strich verschwindet → aus Plus wird Minus */
+.accordionIcon.rotated::after {
+    transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+}
+
 .accordionContent {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accordionContent.open {
-    max-height: 1000px;
-    /* Ausreichend hoch für den Inhalt */
+    grid-template-rows: 1fr;
+}
+
+.accordionContent > .accordionBody {
+    overflow: hidden;
 }
 
 .accordionBody {

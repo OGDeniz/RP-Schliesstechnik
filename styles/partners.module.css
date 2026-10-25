@@ -139,14 +139,16 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(0.1) brightness(0.95) contrast(1.05);
+  /* Einheitlich monochrom-hell auf dunklem Grund – ruhiger, hochwertiger Auftritt */
+  filter: grayscale(1) brightness(1.9) contrast(0.9);
   transition: transform var(--transition-base), filter var(--transition-base), opacity var(--transition-base);
-  opacity: 0.95;
+  opacity: 0.55;
 }
 
 .partnerItem:hover .partnerLogo {
   transform: scale(1.04);
-  filter: grayscale(0) brightness(1) contrast(1.08);
+  /* Bei Hover springt das Logo in seine echten Markenfarben */
+  filter: grayscale(0) brightness(1) contrast(1);
   opacity: 1;
 }
 
