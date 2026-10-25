@@ -44,3 +44,11 @@ next-env.d.ts
 *.zip
 components/data/viewCount.json
 public/sitemap-0.xml
+
+# Claude Code (Agents, Skills, Caches – lokale Tools, kein Website-Code)
+.claude/agents/
+.claude/skills/
+.claude/settings.local.json
+skills-lock.json
+*.pyc
+__pycache__/
